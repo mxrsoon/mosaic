@@ -1,0 +1,19 @@
+{
+	"opts": {
+		"template": "./node_modules/foodoc/template",
+		"destination": "./docs",
+		"recurse": true
+	},
+
+	"source": {
+		"include": ["./src"]
+	},
+
+	"templates": {
+		"systemName": "Mosaic",
+		"systemSummary": "A framework for building applications using ECMAScript.",
+		"copyright": "Mosaic Copyright © 2020 Marlon Macedo.",
+		"collapseSymbols": false,
+		"systemColor": "royalblue"
+	}
+}

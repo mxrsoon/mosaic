@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>Color</title>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: royalblue;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: royalblue;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: royalblue;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: royalblue;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"Mosaic","systemSummary":"A framework for building applications using ECMAScript.","systemLogo":"","systemColor":"royalblue","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mosaic Copyright © 2020 Marlon Macedo.","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":null,"stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">
+					Mosaic
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="AccelerateDecelerateInterpolator.html">AccelerateDecelerateInterpolator</a></li>
+											<li><a href="AccelerateInterpolator.html">AccelerateInterpolator</a></li>
+											<li><a href="AnimationState.html">AnimationState</a></li>
+											<li><a href="Animator.html">Animator</a></li>
+											<li><a href="AnticipateInterpolator.html">AnticipateInterpolator</a></li>
+											<li><a href="AnticipateOvershootInterpolator.html">AnticipateOvershootInterpolator</a></li>
+											<li><a href="Application.html">Application</a></li>
+											<li><a href="BounceInterpolator.html">BounceInterpolator</a></li>
+											<li><a href="Canvas.html">Canvas</a></li>
+											<li><a href="Color.html">Color</a></li>
+											<li><a href="Container.html">Container</a></li>
+											<li><a href="CornerRadius.html">CornerRadius</a></li>
+											<li><a href="CycleInterpolator.html">CycleInterpolator</a></li>
+											<li><a href="DecelerateInterpolator.html">DecelerateInterpolator</a></li>
+											<li><a href="Enum.html">Enum</a></li>
+											<li><a href="FillRule.html">FillRule</a></li>
+											<li><a href="FillStyle.html">FillStyle</a></li>
+											<li><a href="Interpolator.html">Interpolator</a></li>
+											<li><a href="Length.html">Length</a></li>
+											<li><a href="LinearInterpolator.html">LinearInterpolator</a></li>
+											<li><a href="NumberAnimator.html">NumberAnimator</a></li>
+											<li><a href="OvershootInterpolator.html">OvershootInterpolator</a></li>
+											<li><a href="PrivateFields.html">PrivateFields</a></li>
+											<li><a href="PropertySet.html">PropertySet</a></li>
+											<li><a href="RectangleShape.html">RectangleShape</a></li>
+											<li><a href="ShadowStyle.html">ShadowStyle</a></li>
+											<li><a href="Shape.html">Shape</a></li>
+											<li><a href="StarShape.html">StarShape</a></li>
+											<li><a href="StrokeStyle.html">StrokeStyle</a></li>
+											<li><a href="Style.html">Style</a></li>
+											<li><a href="Surface.html">Surface</a></li>
+											<li><a href="TimeAnimator.html">TimeAnimator</a></li>
+											<li><a href="View.html">View</a></li>
+											<li><a href="Visibility.html">Visibility</a></li>
+											<li><a href="Widget.html">Widget</a></li>
+											<li><a href="WidgetList.html">WidgetList</a></li>
+									</ul>
+								</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">class</span>
+				<h1><span class="name">Color</span></h1>
+			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-9 main-content">
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="list_class.html">Classes</a></li>
+							<li class="active">Color</li>
+						</ol>
+					<section>
+							<dl class="symbol primary">
+								<dt class="symbol-title class">
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">Color</span><span class="signature-params">( <span class="signature-param">h</span>, <span class="signature-param">s</span>, <span class="signature-param">v</span>, <span class="signature-param">a</span>&nbsp;)</span><span class="signature-type"></span></h2>
+</dt>
+<dd class="symbol-details class" style="max-height: 9999px;">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">Class representing a color.</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>h</code></td>
+							<td><span class="param-type">number</span></td>
+								<td></td>
+							<td class="last">
+									Hue value in [0, 360) range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>s</code></td>
+							<td><span class="param-type">number</span></td>
+								<td></td>
+							<td class="last">
+									Saturation amount in [0, 1] range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>v</code></td>
+							<td><span class="param-type">number</span></td>
+								<td></td>
+							<td class="last">
+									Vibrancy amount in [0, 1] range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>a</code></td>
+							<td><span class="param-type">number</span></td>
+								<td>1</td>
+							<td class="last">
+									Alpha value in [0, 1] range.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="drawing_Color_index.js.html">drawing/Color/index.js</a>, <a href="drawing_Color_index.js.html#line-23">line 23</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+							</dl>
+							<article class="secondary">
+									<h3>Classes</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title class public">
+			<h4 id="Color" class="class public"><a href="Color.html"><span class="signature-new">new&nbsp;</span><span class="name">Color</span><span class="signature-params">( <span class="signature-param">h</span>, <span class="signature-param">s</span>, <span class="signature-param">v</span>, <span class="signature-param">a</span>&nbsp;)</span><span class="signature-type"></span></a></h4>
+		</dt>
+<dd class="symbol-details class public">
+	<div class="symbol-details-inner">
+	</div>
+</dd>
+									</dl>
+									<h3>Methods</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="toHsv" class="function public"><span class="name">toHsv</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="Color.html#~HSVColorObject">Color~HSVColorObject</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Returns an object containing the HSV representation of the color.</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="Color.html#~HSVColorObject">Color~HSVColorObject</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">The HSV representation of the color.</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="drawing_Color_index.js.html">drawing/Color/index.js</a>, <a href="drawing_Color_index.js.html#line-38">line 38</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="toRgb" class="function public"><span class="name">toRgb</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="Color.html#~RGBColorObject">Color~RGBColorObject</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Returns an object containing the RGB representation of the color.</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="Color.html#~RGBColorObject">Color~RGBColorObject</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">The RGB representation of the color.</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="drawing_Color_index.js.html">drawing/Color/index.js</a>, <a href="drawing_Color_index.js.html#line-57">line 57</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="toHex" class="function public"><span class="name">toHex</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{string}</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Returns a string representation of this color in hexadecimal notation.</div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">string</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">The HEX representation of the color in the 6-digit format (#RRGGBB)
+			or 8-digit format (#RRGGBBAA) if the color is not opaque.</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="drawing_Color_index.js.html">drawing/Color/index.js</a>, <a href="drawing_Color_index.js.html#line-66">line 66</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".fromRgb" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">fromRgb</span><span class="signature-params">( <span class="signature-param">r</span>, <span class="signature-param">g</span>, <span class="signature-param">b</span>, <span class="signature-param">a</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="Color.html">Color</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Create a Color object from RGB values.</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>r</code></td>
+							<td><span class="param-type">number</span></td>
+								<td></td>
+							<td class="last">
+									Red amount in [0, 255] range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>g</code></td>
+							<td><span class="param-type">number</span></td>
+								<td></td>
+							<td class="last">
+									Green amount in [0, 255] range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>b</code></td>
+							<td><span class="param-type">number</span></td>
+								<td></td>
+							<td class="last">
+									Blue amount in [0, 255] range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>a</code></td>
+							<td><span class="param-type">number</span></td>
+								<td>1</td>
+							<td class="last">
+									Alpha value in [0, 1] range.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="Color.html">Color</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="drawing_Color_index.js.html">drawing/Color/index.js</a>, <a href="drawing_Color_index.js.html#line-86">line 86</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".fromHsv" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">fromHsv</span><span class="signature-params">( <span class="signature-param">h</span>, <span class="signature-param">s</span>, <span class="signature-param">v</span>, <span class="signature-param">a</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="Color.html">Color</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Create a Color object from HSV values.</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>h</code></td>
+							<td><span class="param-type">number</span></td>
+								<td></td>
+							<td class="last">
+									Hue value in [0, 360) range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>s</code></td>
+							<td><span class="param-type">number</span></td>
+								<td></td>
+							<td class="last">
+									Saturation amount in [0, 1] range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>v</code></td>
+							<td><span class="param-type">number</span></td>
+								<td></td>
+							<td class="last">
+									Vibrancy amount in [0, 1] range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>a</code></td>
+							<td><span class="param-type">number</span></td>
+								<td>1</td>
+							<td class="last">
+									Alpha value in [0, 1] range.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="Color.html">Color</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="drawing_Color_index.js.html">drawing/Color/index.js</a>, <a href="drawing_Color_index.js.html#line-99">line 99</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".fromHex" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">fromHex</span><span class="signature-params">( <span class="signature-param">hex</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="Color.html">Color</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Create a Color object from hexadecimal notation.</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>hex</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									HEX representation of a color in the 3-digit format (#RGB),
+			6-digit format (#RRGGBB) or 8-digit format (#RRGGBBAA).
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="Color.html">Color</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="drawing_Color_index.js.html">drawing/Color/index.js</a>, <a href="drawing_Color_index.js.html#line-109">line 109</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
+									<h3>Type Definitions</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="~HSVColorObject" class="typedef public"><span class="name">HSVColorObject</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>h</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Hue of the color in [0, 360) range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>s</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Saturation of the color in [0, 1] range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>v</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Vibrancy of the color in [0, 1] range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>a</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Alpha of the color in [0, 1] range.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="drawing_Color_index.js.html">drawing/Color/index.js</a>, <a href="drawing_Color_index.js.html#line-265">line 265</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="~RGBColorObject" class="typedef public"><span class="name">RGBColorObject</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>r</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Red amount of the color in [0, 255] range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>g</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Green amount of the color in [0, 255] range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>b</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Blue amount of the color in [0, 255] range.
+							</td>
+						</tr>
+						<tr>
+								<td><code>a</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Alpha of the color in [0, 1] range.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="drawing_Color_index.js.html">drawing/Color/index.js</a>, <a href="drawing_Color_index.js.html#line-273">line 273</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
+							</article>
+					</section>
+			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
+		</div>
+	</div>
+	<footer>
+				<div class="copyright">Mosaic Copyright © 2020 Marlon Macedo.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on 6th May 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>
