@@ -194,15 +194,23 @@ export class Widget {
 		properties.apply(this, props);
 	}
 
+	/**
+	 * Top-left x-axis coordinate of the widget.
+	 * @type {number}
+	 */
 	get x() {
 		return this.$.props.x;
 	}
-
+	
 	set x(val) {
 		this.$.props.x = val;
 		this.invalidate();
 	}
 
+	/**
+	 * Top-left y-axis coordinate of the widget.
+	 * @type {number}
+	 */
 	get y() {
 		return this.$.props.y;
 	}
@@ -210,6 +218,14 @@ export class Widget {
 	set y(val) {
 		this.$.props.y = val;
 		this.invalidate();
+	}
+
+	get intrinsicWidth() {
+		return new Length(0);
+	}
+
+	get intrinsicHeight() {
+		return new Length(0);
 	}
 
 	get width() {

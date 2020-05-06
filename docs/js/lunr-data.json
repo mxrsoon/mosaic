@@ -649,6 +649,28 @@
           "user'",
           "widget"
         ],
+        "Widget.html#x": [
+          "axi",
+          "coordin",
+          "left",
+          "member",
+          "number",
+          "top",
+          "widget",
+          "widget#x",
+          "x"
+        ],
+        "Widget.html#y": [
+          "axi",
+          "coordin",
+          "left",
+          "member",
+          "number",
+          "top",
+          "widget",
+          "widget#i",
+          "y"
+        ],
         "Widget.html#onClick": [
           "handlerlist",
           "member",
@@ -854,15 +876,15 @@
           "sharp",
           "whether"
         ],
-        "CornerRadius.html#topLeft": [
+        "CornerRadius.html#topRight": [
           "corner",
-          "cornerradius#topleft",
-          "left",
+          "cornerradius#topright",
           "member",
           "number|length",
           "radiu",
+          "right",
           "top",
-          "topleft"
+          "topright"
         ],
         "CornerRadius.html#bottomRight": [
           "bottom",
@@ -884,15 +906,15 @@
           "number|length",
           "radiu"
         ],
-        "CornerRadius.html#topRight": [
+        "CornerRadius.html#topLeft": [
           "corner",
-          "cornerradius#topright",
+          "cornerradius#topleft",
+          "left",
           "member",
           "number|length",
           "radiu",
-          "right",
           "top",
-          "topright"
+          "topleft"
         ],
         "FillRule.html": [
           "class",
@@ -1349,7 +1371,7 @@
           "typedef"
         ]
       },
-      "length": 147
+      "length": 149
     },
     "tokenStore": {
       "root": {
@@ -2749,6 +2771,21 @@
                       }
                     }
                   }
+                }
+              }
+            }
+          },
+          "x": {
+            "docs": {},
+            "i": {
+              "docs": {
+                "Widget.html#x": {
+                  "ref": "Widget.html#x",
+                  "tf": 8.333333333333332
+                },
+                "Widget.html#y": {
+                  "ref": "Widget.html#y",
+                  "tf": 8.333333333333332
                 }
               }
             }
@@ -4741,6 +4778,14 @@
                         "ref": "Visibility.html#.gone",
                         "tf": 110
                       },
+                      "Widget.html#x": {
+                        "ref": "Widget.html#x",
+                        "tf": 110
+                      },
+                      "Widget.html#y": {
+                        "ref": "Widget.html#y",
+                        "tf": 110
+                      },
                       "Widget.html#onClick": {
                         "ref": "Widget.html#onClick",
                         "tf": 110
@@ -4769,8 +4814,8 @@
                         "ref": "CornerRadius.html#isSharp",
                         "tf": 110
                       },
-                      "CornerRadius.html#topLeft": {
-                        "ref": "CornerRadius.html#topLeft",
+                      "CornerRadius.html#topRight": {
+                        "ref": "CornerRadius.html#topRight",
                         "tf": 110
                       },
                       "CornerRadius.html#bottomRight": {
@@ -4781,8 +4826,8 @@
                         "ref": "CornerRadius.html#bottomLeft",
                         "tf": 110
                       },
-                      "CornerRadius.html#topRight": {
-                        "ref": "CornerRadius.html#topRight",
+                      "CornerRadius.html#topLeft": {
+                        "ref": "CornerRadius.html#topLeft",
                         "tf": 110
                       },
                       "FillRule.html#.nonZero": {
@@ -5326,8 +5371,8 @@
                       "ref": "CornerRadius.html#isSharp",
                       "tf": 10
                     },
-                    "CornerRadius.html#topLeft": {
-                      "ref": "CornerRadius.html#topLeft",
+                    "CornerRadius.html#topRight": {
+                      "ref": "CornerRadius.html#topRight",
                       "tf": 12.5
                     },
                     "CornerRadius.html#bottomRight": {
@@ -5338,8 +5383,8 @@
                       "ref": "CornerRadius.html#bottomLeft",
                       "tf": 12.5
                     },
-                    "CornerRadius.html#topRight": {
-                      "ref": "CornerRadius.html#topRight",
+                    "CornerRadius.html#topLeft": {
+                      "ref": "CornerRadius.html#topLeft",
                       "tf": 12.5
                     }
                   },
@@ -5450,12 +5495,12 @@
                 "docs": {},
                 "t": {
                   "docs": {
-                    "CornerRadius.html#bottomRight": {
-                      "ref": "CornerRadius.html#bottomRight",
-                      "tf": 12.5
-                    },
                     "CornerRadius.html#topRight": {
                       "ref": "CornerRadius.html#topRight",
+                      "tf": 12.5
+                    },
+                    "CornerRadius.html#bottomRight": {
+                      "ref": "CornerRadius.html#bottomRight",
                       "tf": 12.5
                     }
                   }
@@ -6983,6 +7028,30 @@
                 }
               }
             },
+            "o": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "d": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "Widget.html#x": {
+                          "ref": "Widget.html#x",
+                          "tf": 8.333333333333332
+                        },
+                        "Widget.html#y": {
+                          "ref": "Widget.html#y",
+                          "tf": 8.333333333333332
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "l": {
               "docs": {},
               "o": {
@@ -7260,8 +7329,8 @@
                         "ref": "CornerRadius.html#isSharp",
                         "tf": 10
                       },
-                      "CornerRadius.html#topLeft": {
-                        "ref": "CornerRadius.html#topLeft",
+                      "CornerRadius.html#topRight": {
+                        "ref": "CornerRadius.html#topRight",
                         "tf": 12.5
                       },
                       "CornerRadius.html#bottomRight": {
@@ -7272,8 +7341,8 @@
                         "ref": "CornerRadius.html#bottomLeft",
                         "tf": 12.5
                       },
-                      "CornerRadius.html#topRight": {
-                        "ref": "CornerRadius.html#topRight",
+                      "CornerRadius.html#topLeft": {
+                        "ref": "CornerRadius.html#topLeft",
                         "tf": 12.5
                       },
                       "RectangleShape.html#cornerRadius": {
@@ -7336,23 +7405,6 @@
                                       "docs": {},
                                       "p": {
                                         "docs": {},
-                                        "l": {
-                                          "docs": {},
-                                          "e": {
-                                            "docs": {},
-                                            "f": {
-                                              "docs": {},
-                                              "t": {
-                                                "docs": {
-                                                  "CornerRadius.html#topLeft": {
-                                                    "ref": "CornerRadius.html#topLeft",
-                                                    "tf": 1150
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        },
                                         "r": {
                                           "docs": {},
                                           "i": {
@@ -7367,6 +7419,23 @@
                                                       "ref": "CornerRadius.html#topRight",
                                                       "tf": 1150
                                                     }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "l": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "f": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {
+                                                  "CornerRadius.html#topLeft": {
+                                                    "ref": "CornerRadius.html#topLeft",
+                                                    "tf": 1150
                                                   }
                                                 }
                                               }
@@ -7855,12 +7924,20 @@
               "docs": {},
               "t": {
                 "docs": {
-                  "CornerRadius.html#topLeft": {
-                    "ref": "CornerRadius.html#topLeft",
-                    "tf": 12.5
+                  "Widget.html#x": {
+                    "ref": "Widget.html#x",
+                    "tf": 8.333333333333332
+                  },
+                  "Widget.html#y": {
+                    "ref": "Widget.html#y",
+                    "tf": 8.333333333333332
                   },
                   "CornerRadius.html#bottomLeft": {
                     "ref": "CornerRadius.html#bottomLeft",
+                    "tf": 12.5
+                  },
+                  "CornerRadius.html#topLeft": {
+                    "ref": "CornerRadius.html#topLeft",
                     "tf": 12.5
                   }
                 }
@@ -9355,22 +9432,65 @@
               }
             }
           },
-          "e": {
+          "o": {
             "docs": {},
-            "x": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "Canvas.html": {
-                    "ref": "Canvas.html",
-                    "tf": 8.333333333333332
+            "p": {
+              "docs": {
+                "Widget.html#x": {
+                  "ref": "Widget.html#x",
+                  "tf": 8.333333333333332
+                },
+                "Widget.html#y": {
+                  "ref": "Widget.html#y",
+                  "tf": 8.333333333333332
+                },
+                "CornerRadius.html#topRight": {
+                  "ref": "CornerRadius.html#topRight",
+                  "tf": 12.5
+                },
+                "CornerRadius.html#topLeft": {
+                  "ref": "CornerRadius.html#topLeft",
+                  "tf": 12.5
+                }
+              },
+              "r": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "g": {
+                    "docs": {},
+                    "h": {
+                      "docs": {},
+                      "t": {
+                        "docs": {
+                          "CornerRadius.html#topRight": {
+                            "ref": "CornerRadius.html#topRight",
+                            "tf": 700
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "l": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "f": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "CornerRadius.html#topLeft": {
+                          "ref": "CornerRadius.html#topLeft",
+                          "tf": 700
+                        }
+                      }
+                    }
                   }
                 }
               }
-            }
-          },
-          "o": {
-            "docs": {},
+            },
             "h": {
               "docs": {},
               "s": {
@@ -9410,55 +9530,6 @@
                 }
               }
             },
-            "p": {
-              "docs": {
-                "CornerRadius.html#topLeft": {
-                  "ref": "CornerRadius.html#topLeft",
-                  "tf": 12.5
-                },
-                "CornerRadius.html#topRight": {
-                  "ref": "CornerRadius.html#topRight",
-                  "tf": 12.5
-                }
-              },
-              "l": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "f": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "CornerRadius.html#topLeft": {
-                          "ref": "CornerRadius.html#topLeft",
-                          "tf": 700
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "r": {
-                "docs": {},
-                "i": {
-                  "docs": {},
-                  "g": {
-                    "docs": {},
-                    "h": {
-                      "docs": {},
-                      "t": {
-                        "docs": {
-                          "CornerRadius.html#topRight": {
-                            "ref": "CornerRadius.html#topRight",
-                            "tf": 700
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
             "s": {
               "docs": {},
               "t": {
@@ -9489,6 +9560,20 @@
                         }
                       }
                     }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "x": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "Canvas.html": {
+                    "ref": "Canvas.html",
+                    "tf": 8.333333333333332
                   }
                 }
               }
@@ -9589,6 +9674,14 @@
                       },
                       "Application.html#height": {
                         "ref": "Application.html#height",
+                        "tf": 50
+                      },
+                      "Widget.html#x": {
+                        "ref": "Widget.html#x",
+                        "tf": 50
+                      },
+                      "Widget.html#y": {
+                        "ref": "Widget.html#y",
                         "tf": 50
                       },
                       "ShadowStyle.html#offsetX": {
@@ -9788,8 +9881,8 @@
                                 "docs": {},
                                 "h": {
                                   "docs": {
-                                    "CornerRadius.html#topLeft": {
-                                      "ref": "CornerRadius.html#topLeft",
+                                    "CornerRadius.html#topRight": {
+                                      "ref": "CornerRadius.html#topRight",
                                       "tf": 50
                                     },
                                     "CornerRadius.html#bottomRight": {
@@ -9800,8 +9893,8 @@
                                       "ref": "CornerRadius.html#bottomLeft",
                                       "tf": 50
                                     },
-                                    "CornerRadius.html#topRight": {
-                                      "ref": "CornerRadius.html#topRight",
+                                    "CornerRadius.html#topLeft": {
+                                      "ref": "CornerRadius.html#topLeft",
                                       "tf": 50
                                     }
                                   }
@@ -10961,6 +11054,14 @@
                         "ref": "Widget.html",
                         "tf": 1910
                       },
+                      "Widget.html#x": {
+                        "ref": "Widget.html#x",
+                        "tf": 8.333333333333332
+                      },
+                      "Widget.html#y": {
+                        "ref": "Widget.html#y",
+                        "tf": 8.333333333333332
+                      },
                       "WidgetList.html": {
                         "ref": "WidgetList.html",
                         "tf": 16.666666666666664
@@ -11004,6 +11105,22 @@
                     },
                     "#": {
                       "docs": {},
+                      "x": {
+                        "docs": {
+                          "Widget.html#x": {
+                            "ref": "Widget.html#x",
+                            "tf": 1150
+                          }
+                        }
+                      },
+                      "i": {
+                        "docs": {
+                          "Widget.html#y": {
+                            "ref": "Widget.html#y",
+                            "tf": 1150
+                          }
+                        }
+                      },
                       "o": {
                         "docs": {},
                         "n": {
@@ -11767,6 +11884,10 @@
         },
         "x": {
           "docs": {
+            "Widget.html#x": {
+              "ref": "Widget.html#x",
+              "tf": 708.3333333333334
+            },
             "Canvas.html#drawRect": {
               "ref": "Canvas.html#drawRect",
               "tf": 16.666666666666664
@@ -11779,6 +11900,10 @@
         },
         "y": {
           "docs": {
+            "Widget.html#y": {
+              "ref": "Widget.html#y",
+              "tf": 708.3333333333334
+            },
             "Canvas.html#drawRect": {
               "ref": "Canvas.html#drawRect",
               "tf": 16.666666666666664
@@ -11807,7 +11932,7 @@
           }
         }
       },
-      "length": 1015
+      "length": 1033
     },
     "corpusTokens": [
       "0",
@@ -11863,6 +11988,7 @@
       "application.definecustomel",
       "array",
       "array.&lt;widget&gt",
+      "axi",
       "b",
       "back",
       "background",
@@ -11908,6 +12034,7 @@
       "container#children",
       "container'",
       "context",
+      "coordin",
       "corner",
       "cornerradiu",
       "cornerradius#bottomleft",
@@ -12185,12 +12312,14 @@
       "web",
       "whether",
       "widget",
+      "widget#i",
       "widget#onclick",
       "widget#onfocu",
       "widget#onfocuslost",
       "widget#onpointerdown",
       "widget#onpointermov",
       "widget#onpointerup",
+      "widget#x",
       "widgetlist",
       "widgetlist#add",
       "widgetlist#get",
@@ -12967,6 +13096,26 @@
       "description": "A widget that can be drawn on user's screen by the application.",
       "body": ""
     },
+    "Widget.html#x": {
+      "id": "Widget.html#x",
+      "kind": "member",
+      "title": "x :number",
+      "longname": "Widget#x",
+      "name": "x",
+      "tags": "Widget#x x",
+      "summary": "",
+      "description": "Top-left x-axis coordinate of the widget."
+    },
+    "Widget.html#y": {
+      "id": "Widget.html#y",
+      "kind": "member",
+      "title": "y :number",
+      "longname": "Widget#y",
+      "name": "y",
+      "tags": "Widget#y y",
+      "summary": "",
+      "description": "Top-left y-axis coordinate of the widget."
+    },
     "Widget.html#onClick": {
       "id": "Widget.html#onClick",
       "kind": "member",
@@ -13200,15 +13349,15 @@
       "summary": "",
       "description": "Whether all corners are sharp, with 0 radius."
     },
-    "CornerRadius.html#topLeft": {
-      "id": "CornerRadius.html#topLeft",
+    "CornerRadius.html#topRight": {
+      "id": "CornerRadius.html#topRight",
       "kind": "member",
-      "title": "topLeft :number|Length",
-      "longname": "CornerRadius#topLeft",
-      "name": "topLeft",
-      "tags": "CornerRadius#topLeft topLeft",
+      "title": "topRight :number|Length",
+      "longname": "CornerRadius#topRight",
+      "name": "topRight",
+      "tags": "CornerRadius#topRight topRight",
       "summary": "",
-      "description": "Top-left corner radius."
+      "description": "Top-right corner radius."
     },
     "CornerRadius.html#bottomRight": {
       "id": "CornerRadius.html#bottomRight",
@@ -13230,15 +13379,15 @@
       "summary": "",
       "description": "Bottom-left corner radius."
     },
-    "CornerRadius.html#topRight": {
-      "id": "CornerRadius.html#topRight",
+    "CornerRadius.html#topLeft": {
+      "id": "CornerRadius.html#topLeft",
       "kind": "member",
-      "title": "topRight :number|Length",
-      "longname": "CornerRadius#topRight",
-      "name": "topRight",
-      "tags": "CornerRadius#topRight topRight",
+      "title": "topLeft :number|Length",
+      "longname": "CornerRadius#topLeft",
+      "name": "topLeft",
+      "tags": "CornerRadius#topLeft topLeft",
       "summary": "",
-      "description": "Top-right corner radius."
+      "description": "Top-left corner radius."
     },
     "FillRule.html": {
       "id": "FillRule.html",

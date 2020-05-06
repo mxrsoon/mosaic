@@ -62,15 +62,23 @@ export class Widget {
 		properties.apply(this, props);
 	}
 
+	/**
+	 * Top-left x-axis coordinate of the widget.
+	 * @type {number}
+	 */
 	get x() {
 		return this.$.props.x;
 	}
-
+	
 	set x(val) {
 		this.$.props.x = val;
 		this.invalidate();
 	}
 
+	/**
+	 * Top-left y-axis coordinate of the widget.
+	 * @type {number}
+	 */
 	get y() {
 		return this.$.props.y;
 	}
