@@ -1,0 +1,38 @@
+import { Length } from "../index.js";
+import { PrivateFields } from "../../utils/index.js";
+
+/* Private fields for ComplexLength class */
+const privates = new PrivateFields(function(calculator) {
+    return {
+        calculator: calculator
+    };
+});
+
+export class ComplexLength extends Length {
+    constructor(calculator) {
+        super(0);
+        privates.apply(this, calculator);
+    }
+
+    get calculator() {
+        return this.$.calculator;
+    }
+
+    set calculator(val) {
+        this.$.calculator = val;
+    }
+
+    valueOf() {
+        let value;
+        
+        if (typeof(this.calculator) === "function") {
+            value = this.calculator();
+        }
+
+        if (!window.isFinite(value)) {
+            throw new Error("Calculator function must return a finite numeric value");
+        }
+
+        return value;
+    }
+}
