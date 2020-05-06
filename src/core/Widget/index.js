@@ -80,6 +80,14 @@ export class Widget {
 		this.invalidate();
 	}
 
+	get intrinsicWidth() {
+		return new Length(0);
+	}
+
+	get intrinsicHeight() {
+		return new Length(0);
+	}
+
 	get width() {
 		return this.visibility !== Visibility.gone ? this.$.props.width : 0
 	}
