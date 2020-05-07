@@ -3,7 +3,7 @@ export class Abstract {
         let constructor = Object.getPrototypeOf(this).constructor;
         
         if (constructor === Abstract || Object.getPrototypeOf(constructor) === Abstract) {
-            throw new Error("Unable to instantiate abstract class");
+            throw new Error("Abstract classes cannot be instantiated");
         }
     }
 }

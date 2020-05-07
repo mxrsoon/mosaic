@@ -1,5 +1,5 @@
 export class Static {
     constructor() {
-        throw new Error("Unable to instantiate static class");
+        throw new Error("Static classes cannot be instantiated");
     }
 }
