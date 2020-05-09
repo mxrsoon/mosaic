@@ -2,6 +2,8 @@ import { PrivateFields, PropertySet, HandlerList } from "../../utils/index.js";
 import { View, Widget } from "../index.js";
 import { Canvas } from "../../drawing/index.js";
 import { Theme } from "../../resources/index.js";
+import { Platform } from "../../platform/index.js";
+import { Viewport } from "../../platform/viewport/index.js";
 
 /* Default properties for Application class. */
 const properties = new PropertySet(function() {
@@ -14,8 +16,7 @@ const properties = new PropertySet(function() {
 /* Private fields for Application class. */
 const privates = new PrivateFields(function(props = {}) {
 	return {
-		canvas: undefined,
-		webCanvas: undefined,
+		viewport: undefined,
 		drawHandle: undefined,
 		focusedWidget: undefined,
 
@@ -31,42 +32,8 @@ const privates = new PrivateFields(function(props = {}) {
 			return props;
 		},
 
-		createDefaultStyle() {
-			const styleSheet = new CSSStyleSheet();
-			
-			styleSheet.replaceSync(`
-				:host, canvas {
-					display: block;
-					
-					position: fixed;
-					top: 0;
-					right: 0;
-					bottom: 0;
-					left: 0;
-
-					width: 100%;
-					height: 100%;
-
-					overflow: hidden;
-					overscroll-behavior: none;
-					touch-action: none;
-				}
-
-				canvas {
-					position: absolute;
-					background: transparent;
-					pointer-events: none;
-				}
-			`);
-
-			return styleSheet;
-		},
-
-		resize(e) {
-			this.scaleFactor = window.devicePixelRatio;
-			this.style.width = `${window.innerWidth}px`;
-			this.style.height = `${window.innerHeight}px`;
-			this.onResize.invoke(window.innerWidth, window.innerHeight);
+		resize(width, height) {
+			this.onResize.invoke(width, height);
 			this.invalidate();
 		},
 
@@ -102,8 +69,7 @@ const privates = new PrivateFields(function(props = {}) {
 			window.addEventListener("pointerdown", this.$.filterPointerEvent("onPointerDown"));
 			window.addEventListener("pointermove", this.$.filterPointerEvent("onPointerMove"));
 			window.addEventListener("pointerup", this.$.filterPointerEvent("onPointerUp"));
-			
-			window.addEventListener("resize", this.$.resize);
+			this.viewport.onResize.add(this.onResize);
 		}
 	};
 });
@@ -111,23 +77,14 @@ const privates = new PrivateFields(function(props = {}) {
 /**
  * An application that can draw and manage Views.
  */
-export class Application extends HTMLElement {
+export class Application {
 	constructor(props = {}) {
-		super();
-
 		privates.apply(this);
-
-		const shadow = this.attachShadow({ mode: "closed" });
-		const canvas = document.createElement("canvas");
 		
-		this.$.webCanvas = canvas;
-		this.$.canvas = new Canvas(canvas);
-		
-		shadow.adoptedStyleSheets = [this.$.createDefaultStyle()];
-		shadow.appendChild(canvas);
+		this.$.viewport = Platform.current.viewport;
 
 		this.$.setupEvents();
-		this.$.resize();
+		this.$.resize(this.viewport.width, this.viewport.height);
 		
 		properties.apply(this, props);
 	}
@@ -157,12 +114,7 @@ export class Application extends HTMLElement {
 	 * @type {number}
 	 */
 	get scaleFactor() {
-		return this.canvas.scaleFactor;
-	}
-
-	set scaleFactor(val) {
-		this.canvas.scaleFactor = val;
-		this.invalidate();
+		return this.viewport.scaleFactor;
 	}
 
 	/**
@@ -170,7 +122,7 @@ export class Application extends HTMLElement {
 	 * @type {number}
 	 */
 	get width() {
-		return this.$.canvas.width / this.scaleFactor;
+		return this.viewport.width;
 	}
 
 	/**
@@ -178,7 +130,7 @@ export class Application extends HTMLElement {
 	 * @type {number}
 	 */
 	get height() {
-		return this.$.canvas.height / this.scaleFactor;
+		return this.viewport.height;
 	}
 
 	/**
@@ -190,11 +142,11 @@ export class Application extends HTMLElement {
 	}
 
 	/**
-	 * Canvas used for drawing this application on the screen.
-	 * @type {Canvas}
+	 * Current viewport used for displaying this application.
+	 * @type {Viewport}
 	 */
-	get canvas() {
-		return this.$.canvas;
+	get viewport() {
+		return this.$.viewport;
 	}
 
 	/**
@@ -291,10 +243,10 @@ export class Application extends HTMLElement {
 		throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
 	}
 	
-	/** Draws the application on screen. */
+	/** Draw the application on screen. */
 	draw() {
 		/** @type {Canvas} */
-		const canvas = this.$.canvas;
+		const canvas = this.viewport.canvas;
 
 		canvas.width = window.innerWidth * this.scaleFactor;
 		canvas.height = window.innerHeight * this.scaleFactor;
@@ -307,7 +259,7 @@ export class Application extends HTMLElement {
 		}
 	}
 
-	/** Invalidates the current render, scheduling draw for next frame. */
+	/** Invalidate the current render and schedule draw for next frame. */
 	invalidate() {
 		if (typeof(this.$.drawHandle) === "undefined") {
 			this.$.drawHandle = requestAnimationFrame(() => {
@@ -315,13 +267,5 @@ export class Application extends HTMLElement {
 				this.$.drawHandle = undefined;
 			});
 		}
-	}
-
-	/** 
-	 * Defines the Application custom element for using in web pages.
-	 * @param {string} tagName - Tag name to be used in registration.
-	 */
-	static defineCustomElement(tagName = "wjs-application") {
-		customElements.define(tagName, Application);
 	}
 }
