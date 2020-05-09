@@ -23,16 +23,38 @@ export class PropertySet {
 		this.defaultsGenerator = defaultsGenerator;
 	}
 
-	apply(object, overrides, ...generatorArgs) {
+	/**
+	 * Merge default values with overrides, without applying the properties to any object.
+	 * @param {object} overrides - Object containing values that will override the defaults. 
+	 * @param  {...any} generatorArgs - Arguments that will be passed to the defaults generator.
+	 */
+	merge(overrides, ...generatorArgs) {
 		const defaults = this.defaultsGenerator.call(object, ...generatorArgs);
+		const output = {};
 
 		for (let prop in defaults) {
 			if (defaults.hasOwnProperty(prop)) {
-				const descriptor = getDescriptor(object, prop);
+				output[prop] = overrides.hasOwnProperty(prop) ? overrides[prop] : defaults[prop];
+			}
+		}
 
-				if (!descriptor || descriptor.writable || typeof(descriptor.set) === "function") {
-					object[prop] = overrides.hasOwnProperty(prop) ? overrides[prop] : defaults[prop];
-				}
+		return output;
+	}
+
+	/**
+	 * Merge default values with overrides, and apply them to an object.
+	 * @param {object} object - Object where the properties will be applied.
+	 * @param {object} overrides - Object containing values that will override the defaults. 
+	 * @param  {...any} generatorArgs - Arguments that will be passed to the defaults generator.
+	 */
+	apply(object, overrides, ...generatorArgs) {
+		const values = this.merge(overrides, generatorArgs);
+
+		for (let prop in values) {
+			const descriptor = getDescriptor(object, prop);
+
+			if (!descriptor || descriptor.writable || typeof(descriptor.set) === "function") {
+				object[prop] = values[prop];
 			}
 		}
 
