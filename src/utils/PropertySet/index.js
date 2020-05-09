@@ -43,16 +43,24 @@ export class PropertySet {
 	/**
 	 * Merge default values with overrides, and apply them to an object.
 	 * @param {object} object - Object where the properties will be applied.
-	 * @param {object} overrides - Object containing values that will override the defaults. 
+	 * @param {object} overrides - Object containing values that will override the defaults.
+	 * @param {(boolean|string[])} [ignoreErrors] - A boolean indicating whether to ignore errors when applying
+	 * each property. Can be an array of property names to ignore errors just when applying them.
 	 */
-	apply(object, overrides) {
+	apply(object, overrides, ignoreErrors = false) {
 		const values = this.merge(overrides, generatorArgs);
 
 		for (let prop in values) {
 			const descriptor = getDescriptor(object, prop);
 
 			if (!descriptor || descriptor.writable || typeof(descriptor.set) === "function") {
-				object[prop] = values[prop];
+				try {
+					object[prop] = values[prop];
+				} catch (e) {
+					if (!ignoreErrors || Array.isArray(ignoreErrors) && !ignoreErrors.includes(prop)) {
+						throw e;
+					}
+				}
 			}
 		}
 
