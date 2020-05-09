@@ -25,7 +25,8 @@ export class PropertySet {
 
 	/**
 	 * Merge default values with overrides, without applying the properties to any object.
-	 * @param {object} overrides - Object containing values that will override the defaults. 
+	 * @param {object} overrides - Object containing values that will override the defaults.
+	 * @returns {object} Object containing the final values for the properties.
 	 */
 	merge(overrides) {
 		const defaults = this.defaultsGenerator.call(object, ...generatorArgs);
@@ -46,6 +47,7 @@ export class PropertySet {
 	 * @param {object} overrides - Object containing values that will override the defaults.
 	 * @param {(boolean|string[])} [ignoreErrors] - A boolean indicating whether to ignore errors when applying
 	 * each property. Can be an array of property names to ignore errors just when applying them.
+	 * @returns {object} Object containing the final values for the properties.
 	 */
 	apply(object, overrides, ignoreErrors = false) {
 		const values = this.merge(overrides, generatorArgs);
@@ -64,6 +66,6 @@ export class PropertySet {
 			}
 		}
 
-		return object;
+		return values;
 	}
 }
