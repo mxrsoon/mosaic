@@ -29,7 +29,7 @@ export class PropertySet {
 	 * @returns {object} Object containing the final values for the properties.
 	 */
 	merge(overrides) {
-		const defaults = this.defaultsGenerator.call(object, ...generatorArgs);
+		const defaults = this.defaultsGenerator.call(object);
 		const output = {};
 
 		for (let prop in defaults) {
@@ -50,7 +50,7 @@ export class PropertySet {
 	 * @returns {object} Object containing the final values for the properties.
 	 */
 	apply(object, overrides, ignoreErrors = false) {
-		const values = this.merge(overrides, generatorArgs);
+		const values = this.merge(overrides);
 
 		for (let prop in values) {
 			const descriptor = getDescriptor(object, prop);
