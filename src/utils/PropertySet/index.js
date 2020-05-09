@@ -24,12 +24,14 @@ export class PropertySet {
 	}
 
 	/**
-	 * Merge default values with overrides, without applying the properties to any object.
+	 * Merge default values with overrides, without applying the properties to the object.
+	 * @param {object} thisArg - Object where the properties would be applied. It's require for using 'this'
+	 * inside the defaults generator function.
 	 * @param {object} overrides - Object containing values that will override the defaults.
 	 * @returns {object} Object containing the final values for the properties.
 	 */
-	merge(overrides) {
-		const defaults = this.defaultsGenerator.call(object);
+	merge(thisArg, overrides) {
+		const defaults = this.defaultsGenerator.call(thisArg);
 		const output = {};
 
 		for (let prop in defaults) {
@@ -50,7 +52,7 @@ export class PropertySet {
 	 * @returns {object} Object containing the final values for the properties.
 	 */
 	apply(object, overrides, ignoreErrors = false) {
-		const values = this.merge(overrides);
+		const values = this.merge(object, overrides);
 
 		for (let prop in values) {
 			const descriptor = getDescriptor(object, prop);
