@@ -26,9 +26,8 @@ export class PropertySet {
 	/**
 	 * Merge default values with overrides, without applying the properties to any object.
 	 * @param {object} overrides - Object containing values that will override the defaults. 
-	 * @param  {...any} generatorArgs - Arguments that will be passed to the defaults generator.
 	 */
-	merge(overrides, ...generatorArgs) {
+	merge(overrides) {
 		const defaults = this.defaultsGenerator.call(object, ...generatorArgs);
 		const output = {};
 
@@ -45,9 +44,8 @@ export class PropertySet {
 	 * Merge default values with overrides, and apply them to an object.
 	 * @param {object} object - Object where the properties will be applied.
 	 * @param {object} overrides - Object containing values that will override the defaults. 
-	 * @param  {...any} generatorArgs - Arguments that will be passed to the defaults generator.
 	 */
-	apply(object, overrides, ...generatorArgs) {
+	apply(object, overrides) {
 		const values = this.merge(overrides, generatorArgs);
 
 		for (let prop in values) {
