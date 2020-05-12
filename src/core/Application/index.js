@@ -42,27 +42,31 @@ const privates = new PrivateFields(function(props = {}) {
 
 		filterPointerEvent(handlerName) {
 			return (e) => {
-				const widgets = this.view.getWidgetsAt(e.clientX, e.clientY);
-				let handled = false;
+				if (this.view) {
+					const widgets = this.view.getWidgetsAt(e.clientX, e.clientY);
+					let handled = false;
 
-				for (let widget of widgets) {
-					handled = widget[handlerName].invoke({ x: e.offsetX - widget.x, y: e.offsetY - widget.y });
-					
-					if (handled) {
-						break;
+					for (let widget of widgets) {
+						handled = widget[handlerName].invoke({ x: e.offsetX - widget.x, y: e.offsetY - widget.y });
+						
+						if (handled) {
+							break;
+						}
 					}
-				}
 
-				if (!handled) {
+					if (!handled) {
+						this[handlerName].invoke({ x: e.clientX, y: e.clientY });
+					}
+
+					if (handlerName === "onClick") {
+						if (widgets.length > 0 && widgets[0].focusable) {
+							this.focusedWidget = widgets[0];
+						} else {
+							this.focusedWidget = undefined;
+						}
+					}
+				} else {
 					this[handlerName].invoke({ x: e.clientX, y: e.clientY });
-				}
-
-				if (handlerName === "onClick") {
-					if (widgets.length > 0 && widgets[0].focusable) {
-						this.focusedWidget = widgets[0];
-					} else {
-						this.focusedWidget = undefined;
-					}
 				}
 			};
 		},
