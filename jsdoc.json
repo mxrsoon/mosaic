@@ -11,7 +11,7 @@
 
 	"templates": {
 		"systemName": "Mosaic",
-		"systemSummary": "A framework for building applications using ECMAScript.",
+		"systemSummary": "WIP framework for building portable JavaScript apps inspired by Android, UWP and Flutter.",
 		"copyright": "Mosaic Copyright © 2020 Marlon Macedo.",
 		"collapseSymbols": false,
 		"systemColor": "royalblue"
