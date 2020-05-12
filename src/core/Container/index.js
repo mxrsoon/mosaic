@@ -86,6 +86,21 @@ export class Container extends Widget {
         return this.children.get(index);
     }
 
+    /**
+     * Search for a Widget with the specified id that is descendant of this container.
+     * @param {string} id - ID to search for.
+     * @returns {?Widget} A widget with the searched ID if it was found, or undefined if not.
+     */
+    findId(id) {
+        for (let child of this.children) {
+            if (child.id === id) {
+                return child;
+            } else if (child instanceof Container) {
+                return child.findId(id);
+            }
+        }
+    }
+
     getWidgetsAt(x, y) {
         const result = [];
         let child;

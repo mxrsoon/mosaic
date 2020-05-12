@@ -1,7 +1,7 @@
 import { PropertySet } from "../../utils/index.js";
-import { Container } from "../../widgets/index.js";
 import { ThemeColor } from "../../resources/index.js";
 import { Color, FillStyle } from "../../drawing/index.js";
+import { Container } from "../index.js";
 
 /* Default properties for Container class. */
 const properties = new PropertySet(function() {

@@ -5,6 +5,7 @@ import { Visibility } from "../index.js";
 /* Default properties for Widget class. */
 const properties = new PropertySet(function() {
 	return {
+		id: undefined,
 		x: 0,
 		y: 0,
 		width: 0,
@@ -60,6 +61,22 @@ export class Widget {
 		});
 
 		properties.apply(this, props);
+	}
+
+	/** 
+	 * Widget instance custom identifier.
+	 * @type {?number}
+	 */
+	get id() {
+		return this.$.props.id;
+	}
+
+	set id(val) {
+		if (typeof(val) === "string" || val instanceof String || val == null) {
+			this.$.props.id = val;
+		} else {
+			throw new Error("Widget ID must be a string or a nullish value");
+		}
 	}
 
 	/**

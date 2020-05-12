@@ -242,6 +242,17 @@ export class Application {
 	set onPointerUp(val) {
 		throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
 	}
+
+	/**
+     * Search for a Widget with the specified id.
+     * @param {string} id - ID to search for.
+     * @returns {?Widget} A widget with the searched ID if it was found, or undefined if not.
+     */
+    findId(id) {
+        if (this.view) {
+			return this.view.findId(id);
+		}
+    }
 	
 	/** Draw the application on screen. */
 	draw() {
