@@ -6,7 +6,7 @@ import { Surface } from "../index.js";
 /* Default properties for AppBar class. */
 const properties = new PropertySet(function() {
 	return {
-		background: new ThemeColor(this, "appBarBackground", new ThemeColor(this, "primary", Color.royalBlue)),
+		background: new ThemeColor("appBarBackground", new ThemeColor("primary", Color.royalBlue)),
 		shadow: new ShadowStyle(0, 4, 6, Color.fromRgb(0, 0, 0, .25))
 	};
 });

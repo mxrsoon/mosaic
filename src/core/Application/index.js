@@ -5,6 +5,9 @@ import { Theme } from "../../resources/index.js";
 import { Platform } from "../../platform/index.js";
 import { Viewport } from "../../platform/viewport/index.js";
 
+/* Reference to the Application instance associated with current JS context. */
+let currentApplication;
+
 /* Default properties for Application class. */
 const properties = new PropertySet(function() {
 	return {
@@ -79,6 +82,10 @@ const privates = new PrivateFields(function(props = {}) {
  */
 export class Application {
 	constructor(props = {}) {
+		if (Application.current) {
+			throw new Error("Only one Application instance per JavaScript context is allowed");
+		}
+
 		privates.apply(this);
 		
 		this.$.viewport = Platform.current.viewport;
@@ -87,6 +94,8 @@ export class Application {
 		this.$.resize(this.viewport.width, this.viewport.height);
 		
 		properties.apply(this, props);
+
+		currentApplication = this;
 	}
 
 	/**
@@ -278,5 +287,9 @@ export class Application {
 				this.$.drawHandle = undefined;
 			});
 		}
+	}
+
+	static get current() {
+		return currentApplication;
 	}
 }

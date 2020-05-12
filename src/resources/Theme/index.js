@@ -25,7 +25,7 @@ export class Theme {
         if (color instanceof Color) {
             this.$.colors[colorName] = color;
         } else if (typeof(color) === "string") {
-            this.$.colors[colorName] = new ThemeColor(this, color, Color.transparent);
+            this.$.colors[colorName] = new ThemeColor(color, Color.transparent);
         } else if (color == null) {
             this.$.colors[colorName] = undefined;
         }

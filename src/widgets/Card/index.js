@@ -6,7 +6,7 @@ import { Surface } from "../index.js";
 /* Default properties for Card class. */
 const properties = new PropertySet(function() {
 	return {
-		background: new ThemeColor(this, "cardBackground", new ThemeColor(this, "background", Color.white)),
+		background: new ThemeColor("cardBackground", new ThemeColor("background", Color.white)),
 		shadow: new ShadowStyle(0, 1, 5, Color.fromRgb(0, 0, 0, .25)),
 		shape: new RectangleShape(new CornerRadius(4))
 	};

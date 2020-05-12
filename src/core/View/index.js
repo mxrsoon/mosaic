@@ -6,7 +6,7 @@ import { Container } from "../index.js";
 /* Default properties for Container class. */
 const properties = new PropertySet(function() {
 	return {
-		background: new ThemeColor(this, "background", Color.transparent),
+		background: new ThemeColor("background", Color.transparent),
 		width: "100%",
 		height: "100%"
 	};

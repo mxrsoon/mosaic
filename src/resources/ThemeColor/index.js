@@ -1,21 +1,17 @@
 import { PrivateFields } from "../../utils/index.js";
 import { Color } from "../../drawing/index.js";
 import { Theme } from "../index.js";
+import { Application } from "../../core/index.js";
 
 /* Private fields for ThemeColor class */
-const privates = new PrivateFields(function(context, name, defColor) {
+const privates = new PrivateFields(function(name, defColor) {
     return {
-        context: context,
         colorName: name,
         defaultColor: defColor,
 
         get theme() {
             try {
-                if (this.$.context instanceof Theme) {
-                    return this.$.context;
-                }
-
-                return this.$.context.application.theme;
+                return Application.current.theme;
             } catch {
                 return undefined;
             }
@@ -32,9 +28,9 @@ const privates = new PrivateFields(function(context, name, defColor) {
 });
 
 export class ThemeColor extends Color {
-	constructor(context, colorName, defaultColor = Color.transparent) {
+	constructor(colorName, defaultColor = Color.transparent) {
         super(defaultColor.toHsv().h, defaultColor.toHsv().s, defaultColor.toHsv().v, defaultColor.toHsv().a);
-        privates.apply(this, context, colorName, defaultColor);
+        privates.apply(this, colorName, defaultColor);
 
         if (!(defaultColor instanceof Color)) {
             throw new Error("Argument 'defaultColor' must be of type Color");

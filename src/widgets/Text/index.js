@@ -10,7 +10,7 @@ const properties = new PropertySet(function() {
         text: "",
         fontSize: new Length(16),
         fontFamily: "Segoe UI, Roboto, sans-serif",
-        color: new ThemeColor(this, "text", Color.fromHex("#000000d0"))
+        color: new ThemeColor("text", Color.fromHex("#000000d0"))
     };
 });
 
