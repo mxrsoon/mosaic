@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>core/Visibility/index.js</title>
+		<title>platform/WebPlatform/index.js</title>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -127,7 +127,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">source</span>
-				<h1><span class="name">core/Visibility/index.js</span></h1>
+				<h1><span class="name">platform/WebPlatform/index.js</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -135,32 +135,50 @@
 			<div class="col-md-12 main-content">
 		<section class="source-section">
 			<article></article>
-			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">import { Enum } from "../../utils/index.js";
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">import { WebViewport } from "../viewport/index.js";
+import { PrivateFields } from "../../utils/index.js";
+import { Platform } from "../index.js";
+
+/* Private fields for WebPlatform class. */
+const privates = new PrivateFields(function() {
+    return {
+        viewport: undefined
+    };
+});
 
 /**
- * Enumerated values that indicates visibility state.
- * @hideconstructor
- * @abstract
+ * Contains information about the current web platform and associated managers.
  */
-export class Visibility extends Enum {
-    /** 
-     * Visible.
+export class WebPlatform extends Platform {
+    constructor() {
+        super();
+        privates.apply(this);
+    }
+    
+    /**
+     * Navigator user-agent string.
      * @type {string}
      */
-    static get visible() { return "visible"; }
+    get userAgent() {
+        return navigator.userAgent;
+    }
 
-    /** 
-     * Invisible but interactive and measurable.
-     * @type {string}
-     */
-    static get hidden() { return "hidden"; }
+    get name() {
+        return "web";
+    }
 
-    /** 
-     * Invisible and not interactive nor measurable.
-     * @type {string}
-     */
-    static get gone() { return "gone"; }
-};</code></pre>
+    get viewport() {
+        return this.$.viewport;
+    }
+
+    initialize() {
+        this.$.viewport = new WebViewport(this);
+    }
+
+    static isCurrentPlatform() {
+        return new Function("try { return this === window; } catch (e) { return false; }")();
+    }
+}</code></pre>
 		</section>
 			</div>
 		</div>

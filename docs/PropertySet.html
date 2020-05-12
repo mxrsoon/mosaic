@@ -87,6 +87,7 @@
 											<li><a href="LinearInterpolator.html">LinearInterpolator</a></li>
 											<li><a href="NumberAnimator.html">NumberAnimator</a></li>
 											<li><a href="OvershootInterpolator.html">OvershootInterpolator</a></li>
+											<li><a href="Platform.html">Platform</a></li>
 											<li><a href="PrivateFields.html">PrivateFields</a></li>
 											<li><a href="PropertySet.html">PropertySet</a></li>
 											<li><a href="RectangleShape.html">RectangleShape</a></li>
@@ -98,7 +99,11 @@
 											<li><a href="Surface.html">Surface</a></li>
 											<li><a href="TimeAnimator.html">TimeAnimator</a></li>
 											<li><a href="View.html">View</a></li>
+											<li><a href="Viewport_Viewport.html">Viewport#Viewport</a></li>
 											<li><a href="Visibility.html">Visibility</a></li>
+											<li><a href="WebCanvas.html">WebCanvas</a></li>
+											<li><a href="WebPlatform.html">WebPlatform</a></li>
+											<li><a href="WebViewport_WebViewport.html">WebViewport#WebViewport</a></li>
 											<li><a href="Widget.html">Widget</a></li>
 											<li><a href="WidgetList.html">WidgetList</a></li>
 									</ul>
@@ -205,6 +210,172 @@
 	</div>
 </dd>
 									</dl>
+									<h3>Methods</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="merge" class="function public"><span class="name">merge</span><span class="signature-params">( <span class="signature-param">thisArg</span>, <span class="signature-param">overrides</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{object}</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Merge default values with overrides, without applying the properties to the object.</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>thisArg</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									Object where the properties would be applied. It's require for using 'this'
+			inside the defaults generator function.
+							</td>
+						</tr>
+						<tr>
+								<td><code>overrides</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									Object containing values that will override the defaults.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">Object containing the final values for the properties.</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="utils_PropertySet_index.js.html">utils/PropertySet/index.js</a>, <a href="utils_PropertySet_index.js.html#line-33">line 33</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="apply" class="function public"><span class="name">apply</span><span class="signature-params">( <span class="signature-param">object</span>, <span class="signature-param">overrides</span> [,&nbsp;<span class="signature-param">ignoreErrors</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{object}</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Merge default values with overrides, and apply them to an object.</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>object</code></td>
+							<td><span class="param-type">object</span></td>
+								<td class="attributes"></td>
+								<td></td>
+							<td class="last">
+									Object where the properties will be applied.
+							</td>
+						</tr>
+						<tr>
+								<td><code>overrides</code></td>
+							<td><span class="param-type">object</span></td>
+								<td class="attributes"></td>
+								<td></td>
+							<td class="last">
+									Object containing values that will override the defaults.
+							</td>
+						</tr>
+						<tr>
+								<td><code>ignoreErrors</code></td>
+							<td><span class="param-type">boolean</span> | <span class="param-type">Array.&lt;string></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>false</td>
+							<td class="last">
+									A boolean indicating whether to ignore errors when applying
+			each property. Can be an array of property names to ignore errors just when applying them.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">Object containing the final values for the properties.</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="utils_PropertySet_index.js.html">utils/PropertySet/index.js</a>, <a href="utils_PropertySet_index.js.html#line-54">line 54</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
 							</article>
 					</section>
 			</div>
@@ -215,7 +386,7 @@
 	</div>
 	<footer>
 				<div class="copyright">Mosaic Copyright © 2020 Marlon Macedo.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on 6th May 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on 11th May 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

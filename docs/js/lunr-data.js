@@ -513,14 +513,14 @@ window.lunrData = {
           "member",
           "refer"
         ],
-        "Application.html#canvas": [
+        "Application.html#viewport": [
           "applic",
-          "application#canva",
-          "canva",
-          "draw",
+          "application#viewport",
+          "current",
+          "display",
           "member",
-          "screen",
-          "us"
+          "us",
+          "viewport"
         ],
         "Application.html#focusedWidget": [
           "application#focusedwidget",
@@ -567,6 +567,15 @@ window.lunrData = {
           "member",
           "onpointerup"
         ],
+        "Application.html#findId": [
+          "application#findid",
+          "findid",
+          "function",
+          "id",
+          "search",
+          "specifi",
+          "widget"
+        ],
         "Application.html#draw": [
           "applic",
           "application#draw",
@@ -585,19 +594,30 @@ window.lunrData = {
           "render",
           "schedul"
         ],
-        "Application.html#.defineCustomElement": [
-          "applic",
-          "application.definecustomel",
-          "custom",
-          "defin",
-          "definecustomel",
-          "element",
+        "Container.html": [
+          "class",
+          "contain",
+          "widget"
+        ],
+        "Container.html#children": [
+          "child",
+          "children",
+          "container#children",
+          "container'",
+          "member",
+          "widget",
+          "widgetlist"
+        ],
+        "Container.html#findId": [
+          "contain",
+          "container#findid",
+          "descend",
+          "findid",
           "function",
-          "lt;static&gt",
-          "page",
-          "tagnam",
-          "us",
-          "web"
+          "id",
+          "search",
+          "specifi",
+          "widget"
         ],
         "View.html": [
           "class",
@@ -648,6 +668,17 @@ window.lunrData = {
           "screen",
           "user'",
           "widget"
+        ],
+        "Widget.html#id": [
+          "custom",
+          "id",
+          "identifi",
+          "instanc",
+          "lt;nullable&gt",
+          "member",
+          "number",
+          "widget",
+          "widget#id"
         ],
         "Widget.html#x": [
           "axi",
@@ -876,6 +907,16 @@ window.lunrData = {
           "sharp",
           "whether"
         ],
+        "CornerRadius.html#topLeft": [
+          "corner",
+          "cornerradius#topleft",
+          "left",
+          "member",
+          "number|length",
+          "radiu",
+          "top",
+          "topleft"
+        ],
         "CornerRadius.html#topRight": [
           "corner",
           "cornerradius#topright",
@@ -905,16 +946,6 @@ window.lunrData = {
           "member",
           "number|length",
           "radiu"
-        ],
-        "CornerRadius.html#topLeft": [
-          "corner",
-          "cornerradius#topleft",
-          "left",
-          "member",
-          "number|length",
-          "radiu",
-          "top",
-          "topleft"
         ],
         "FillRule.html": [
           "class",
@@ -995,15 +1026,6 @@ window.lunrData = {
           "shadowstyl",
           "style"
         ],
-        "ShadowStyle.html#offsetX": [
-          "horizont",
-          "member",
-          "number",
-          "offset",
-          "offsetx",
-          "shadow'",
-          "shadowstyle#offsetx"
-        ],
         "ShadowStyle.html#offsetY": [
           "member",
           "number",
@@ -1027,6 +1049,15 @@ window.lunrData = {
           "member",
           "shadow'",
           "shadowstyle#color"
+        ],
+        "ShadowStyle.html#offsetX": [
+          "horizont",
+          "member",
+          "number",
+          "offset",
+          "offsetx",
+          "shadow'",
+          "shadowstyle#offsetx"
         ],
         "Shape.html": [
           "class",
@@ -1188,6 +1219,134 @@ window.lunrData = {
           "relativeto",
           "valu"
         ],
+        "WebCanvas.html": [
+          "canva",
+          "class",
+          "draw",
+          "imag",
+          "path",
+          "shape",
+          "text",
+          "webcanva"
+        ],
+        "WebCanvas.html#drawRect": [
+          "draw",
+          "drawrect",
+          "function",
+          "height",
+          "rectangl",
+          "style",
+          "webcanvas#drawrect",
+          "width",
+          "x",
+          "y"
+        ],
+        "WebCanvas.html#drawShape": [
+          "draw",
+          "drawshap",
+          "function",
+          "height",
+          "object",
+          "shape",
+          "style",
+          "webcanvas#drawshap",
+          "width",
+          "x",
+          "y"
+        ],
+        "WebCanvas.html#drawImage": [
+          "destheight",
+          "desti",
+          "destwidth",
+          "destx",
+          "draw",
+          "drawimag",
+          "function",
+          "imag",
+          "srcheight",
+          "srci",
+          "srcwidth",
+          "srcx",
+          "webcanvas#drawimag"
+        ],
+        "WebCanvas.html#clear": [
+          "canva",
+          "clear",
+          "entir",
+          "function",
+          "webcanvas#clear"
+        ],
+        "Platform.html": [
+          "associ",
+          "class",
+          "contain",
+          "current",
+          "inform",
+          "manag",
+          "platform"
+        ],
+        "Platform.html#name": [
+          "current",
+          "member",
+          "name",
+          "platform",
+          "platform#nam",
+          "short",
+          "string"
+        ],
+        "Platform.html#viewport": [
+          "manag",
+          "member",
+          "platform",
+          "platform#viewport",
+          "viewport"
+        ],
+        "Platform.html#.current": [
+          "current",
+          "lt;static&gt",
+          "member",
+          "object",
+          "platform",
+          "platform.curr"
+        ],
+        "Platform.html#initialize": [
+          "function",
+          "initi",
+          "platform",
+          "platform#initi",
+          "relat",
+          "thing"
+        ],
+        "Viewport_Viewport.html": [
+          "class",
+          "viewport",
+          "viewport#viewport"
+        ],
+        "WebViewport_WebViewport.html": [
+          "class",
+          "webviewport",
+          "webviewport#webviewport"
+        ],
+        "WebPlatform.html": [
+          "associ",
+          "class",
+          "contain",
+          "current",
+          "inform",
+          "manag",
+          "platform",
+          "web",
+          "webplatform"
+        ],
+        "WebPlatform.html#userAgent": [
+          "agent",
+          "member",
+          "navig",
+          "string",
+          "user",
+          "userag",
+          "webplatform#userag"
+        ],
         "Enum.html": [
           "class",
           "enum",
@@ -1210,6 +1369,30 @@ window.lunrData = {
           "properti",
           "propertyset",
           "util"
+        ],
+        "PropertySet.html#merge": [
+          "appli",
+          "default",
+          "function",
+          "merg",
+          "object",
+          "overrid",
+          "properti",
+          "propertyset#merg",
+          "thisarg",
+          "valu",
+          "without"
+        ],
+        "PropertySet.html#apply": [
+          "appli",
+          "default",
+          "function",
+          "ignoreerror",
+          "merg",
+          "object",
+          "overrid",
+          "propertyset#appli",
+          "valu"
         ],
         "WidgetList.html": [
           "class",
@@ -1310,20 +1493,6 @@ window.lunrData = {
           "typedef",
           "widgetlist~observ"
         ],
-        "Container.html": [
-          "class",
-          "contain",
-          "widget"
-        ],
-        "Container.html#children": [
-          "child",
-          "children",
-          "container#children",
-          "container'",
-          "member",
-          "widget",
-          "widgetlist"
-        ],
         "Surface.html": [
           "class",
           "color",
@@ -1371,7 +1540,7 @@ window.lunrData = {
           "typedef"
         ]
       },
-      "length": 149
+      "length": 167
     },
     "tokenStore": {
       "root": {
@@ -1421,6 +1590,14 @@ window.lunrData = {
                     "Style.html#apply": {
                       "ref": "Style.html#apply",
                       "tf": 693.3333333333334
+                    },
+                    "PropertySet.html#merge": {
+                      "ref": "PropertySet.html#merge",
+                      "tf": 6.25
+                    },
+                    "PropertySet.html#apply": {
+                      "ref": "PropertySet.html#apply",
+                      "tf": 678.3333333333334
                     }
                   },
                   "c": {
@@ -1453,8 +1630,8 @@ window.lunrData = {
                         "ref": "Application.html#application",
                         "tf": 762.5
                       },
-                      "Application.html#canvas": {
-                        "ref": "Application.html#canvas",
+                      "Application.html#viewport": {
+                        "ref": "Application.html#viewport",
                         "tf": 10
                       },
                       "Application.html#view": {
@@ -1464,10 +1641,6 @@ window.lunrData = {
                       "Application.html#draw": {
                         "ref": "Application.html#draw",
                         "tf": 16.666666666666664
-                      },
-                      "Application.html#.defineCustomElement": {
-                        "ref": "Application.html#.defineCustomElement",
-                        "tf": 7.142857142857142
                       },
                       "Widget.html": {
                         "ref": "Widget.html",
@@ -1601,19 +1774,33 @@ window.lunrData = {
                                     }
                                   }
                                 },
-                                "c": {
+                                "v": {
                                   "docs": {},
-                                  "a": {
+                                  "i": {
                                     "docs": {},
-                                    "n": {
+                                    "e": {
                                       "docs": {},
-                                      "v": {
-                                        "docs": {},
-                                        "a": {
-                                          "docs": {
-                                            "Application.html#canvas": {
-                                              "ref": "Application.html#canvas",
-                                              "tf": 1150
+                                      "w": {
+                                        "docs": {
+                                          "Application.html#view": {
+                                            "ref": "Application.html#view",
+                                            "tf": 1150
+                                          }
+                                        },
+                                        "p": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "r": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {
+                                                  "Application.html#viewport": {
+                                                    "ref": "Application.html#viewport",
+                                                    "tf": 1150
+                                                  }
+                                                }
+                                              }
                                             }
                                           }
                                         }
@@ -1663,19 +1850,22 @@ window.lunrData = {
                                         }
                                       }
                                     }
-                                  }
-                                },
-                                "v": {
-                                  "docs": {},
+                                  },
                                   "i": {
                                     "docs": {},
-                                    "e": {
+                                    "n": {
                                       "docs": {},
-                                      "w": {
-                                        "docs": {
-                                          "Application.html#view": {
-                                            "ref": "Application.html#view",
-                                            "tf": 1150
+                                      "d": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "d": {
+                                            "docs": {
+                                              "Application.html#findId": {
+                                                "ref": "Application.html#findId",
+                                                "tf": 1150
+                                              }
+                                            }
                                           }
                                         }
                                       }
@@ -1819,56 +2009,6 @@ window.lunrData = {
                                                 "Application.html#invalidate": {
                                                   "ref": "Application.html#invalidate",
                                                   "tf": 1150
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              },
-                              ".": {
-                                "docs": {},
-                                "d": {
-                                  "docs": {},
-                                  "e": {
-                                    "docs": {},
-                                    "f": {
-                                      "docs": {},
-                                      "i": {
-                                        "docs": {},
-                                        "n": {
-                                          "docs": {},
-                                          "e": {
-                                            "docs": {},
-                                            "c": {
-                                              "docs": {},
-                                              "u": {
-                                                "docs": {},
-                                                "s": {
-                                                  "docs": {},
-                                                  "t": {
-                                                    "docs": {},
-                                                    "o": {
-                                                      "docs": {},
-                                                      "m": {
-                                                        "docs": {},
-                                                        "e": {
-                                                          "docs": {},
-                                                          "l": {
-                                                            "docs": {
-                                                              "Application.html#.defineCustomElement": {
-                                                                "ref": "Application.html#.defineCustomElement",
-                                                                "tf": 1150
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
                                                 }
                                               }
                                             }
@@ -2841,6 +2981,47 @@ window.lunrData = {
               }
             }
           },
+          "s": {
+            "docs": {},
+            "s": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "i": {
+                    "docs": {
+                      "Platform.html": {
+                        "ref": "Platform.html",
+                        "tf": 8.333333333333332
+                      },
+                      "WebPlatform.html": {
+                        "ref": "WebPlatform.html",
+                        "tf": 7.142857142857142
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "g": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "WebPlatform.html#userAgent": {
+                      "ref": "WebPlatform.html#userAgent",
+                      "tf": 12.5
+                    }
+                  }
+                }
+              }
+            }
+          },
           "d": {
             "docs": {
               "WidgetList.html#~observer": {
@@ -3444,6 +3625,10 @@ window.lunrData = {
                     "Canvas.html#clear": {
                       "ref": "Canvas.html#clear",
                       "tf": 16.666666666666664
+                    },
+                    "WebCanvas.html#clear": {
+                      "ref": "WebCanvas.html#clear",
+                      "tf": 16.666666666666664
                     }
                   }
                 }
@@ -3485,29 +3670,6 @@ window.lunrData = {
                       "Animator.html#delay": {
                         "ref": "Animator.html#delay",
                         "tf": 5.555555555555555
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "l": {
-            "docs": {},
-            "e": {
-              "docs": {},
-              "m": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "n": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "Application.html#.defineCustomElement": {
-                          "ref": "Application.html#.defineCustomElement",
-                          "tf": 7.142857142857142
-                        }
                       }
                     }
                   }
@@ -3727,6 +3889,10 @@ window.lunrData = {
                             "ref": "TimeAnimator.html#callback",
                             "tf": 10
                           },
+                          "Application.html#findId": {
+                            "ref": "Application.html#findId",
+                            "tf": 110
+                          },
                           "Application.html#draw": {
                             "ref": "Application.html#draw",
                             "tf": 110
@@ -3735,8 +3901,8 @@ window.lunrData = {
                             "ref": "Application.html#invalidate",
                             "tf": 110
                           },
-                          "Application.html#.defineCustomElement": {
-                            "ref": "Application.html#.defineCustomElement",
+                          "Container.html#findId": {
+                            "ref": "Container.html#findId",
                             "tf": 110
                           },
                           "Canvas.html#drawRect": {
@@ -3813,6 +3979,34 @@ window.lunrData = {
                           },
                           "Length.html#.parse": {
                             "ref": "Length.html#.parse",
+                            "tf": 110
+                          },
+                          "WebCanvas.html#drawRect": {
+                            "ref": "WebCanvas.html#drawRect",
+                            "tf": 110
+                          },
+                          "WebCanvas.html#drawShape": {
+                            "ref": "WebCanvas.html#drawShape",
+                            "tf": 110
+                          },
+                          "WebCanvas.html#drawImage": {
+                            "ref": "WebCanvas.html#drawImage",
+                            "tf": 110
+                          },
+                          "WebCanvas.html#clear": {
+                            "ref": "WebCanvas.html#clear",
+                            "tf": 110
+                          },
+                          "Platform.html#initialize": {
+                            "ref": "Platform.html#initialize",
+                            "tf": 110
+                          },
+                          "PropertySet.html#merge": {
+                            "ref": "PropertySet.html#merge",
+                            "tf": 110
+                          },
+                          "PropertySet.html#apply": {
+                            "ref": "PropertySet.html#apply",
                             "tf": 110
                           },
                           "WidgetList.html#add": {
@@ -3986,6 +4180,24 @@ window.lunrData = {
                     "NumberAnimator.html#to": {
                       "ref": "NumberAnimator.html#to",
                       "tf": 16.666666666666664
+                    }
+                  }
+                }
+              },
+              "d": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "d": {
+                    "docs": {
+                      "Application.html#findId": {
+                        "ref": "Application.html#findId",
+                        "tf": 683.3333333333334
+                      },
+                      "Container.html#findId": {
+                        "ref": "Container.html#findId",
+                        "tf": 683.3333333333334
+                      }
                     }
                   }
                 }
@@ -4403,6 +4615,10 @@ window.lunrData = {
                     "NumberAnimator.html#from": {
                       "ref": "NumberAnimator.html#from",
                       "tf": 16.666666666666664
+                    },
+                    "Platform.html#initialize": {
+                      "ref": "Platform.html#initialize",
+                      "tf": 762.5
                     }
                   }
                 }
@@ -4447,6 +4663,20 @@ window.lunrData = {
               "docs": {},
               "t": {
                 "docs": {},
+                "a": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "c": {
+                      "docs": {
+                        "Widget.html#id": {
+                          "ref": "Widget.html#id",
+                          "tf": 12.5
+                        }
+                      }
+                    }
+                  }
+                },
                 "r": {
                   "docs": {},
                   "u": {
@@ -4474,6 +4704,27 @@ window.lunrData = {
                       "WidgetList.html#insert": {
                         "ref": "WidgetList.html#insert",
                         "tf": 687.5
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "f": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "m": {
+                    "docs": {
+                      "Platform.html": {
+                        "ref": "Platform.html",
+                        "tf": 8.333333333333332
+                      },
+                      "WebPlatform.html": {
+                        "ref": "WebPlatform.html",
+                        "tf": 7.142857142857142
                       }
                     }
                   }
@@ -4520,6 +4771,45 @@ window.lunrData = {
               }
             }
           },
+          "d": {
+            "docs": {
+              "Application.html#findId": {
+                "ref": "Application.html#findId",
+                "tf": 45.83333333333333
+              },
+              "Container.html#findId": {
+                "ref": "Container.html#findId",
+                "tf": 41.66666666666666
+              },
+              "Widget.html#id": {
+                "ref": "Widget.html#id",
+                "tf": 683.3333333333334
+              }
+            },
+            "e": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "f": {
+                      "docs": {},
+                      "i": {
+                        "docs": {
+                          "Widget.html#id": {
+                            "ref": "Widget.html#id",
+                            "tf": 12.5
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "m": {
             "docs": {},
             "a": {
@@ -4532,6 +4822,14 @@ window.lunrData = {
                   },
                   "Canvas.html#drawImage": {
                     "ref": "Canvas.html#drawImage",
+                    "tf": 35
+                  },
+                  "WebCanvas.html": {
+                    "ref": "WebCanvas.html",
+                    "tf": 8.333333333333332
+                  },
+                  "WebCanvas.html#drawImage": {
+                    "ref": "WebCanvas.html#drawImage",
                     "tf": 35
                   }
                 }
@@ -4553,6 +4851,41 @@ window.lunrData = {
                         "CornerRadius.html#isSharp": {
                           "ref": "CornerRadius.html#isSharp",
                           "tf": 700
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "g": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "r": {
+                              "docs": {
+                                "PropertySet.html#apply": {
+                                  "ref": "PropertySet.html#apply",
+                                  "tf": 20
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
@@ -4734,8 +5067,8 @@ window.lunrData = {
                         "ref": "Application.html#application",
                         "tf": 110
                       },
-                      "Application.html#canvas": {
-                        "ref": "Application.html#canvas",
+                      "Application.html#viewport": {
+                        "ref": "Application.html#viewport",
                         "tf": 110
                       },
                       "Application.html#focusedWidget": {
@@ -4766,6 +5099,10 @@ window.lunrData = {
                         "ref": "Application.html#onPointerUp",
                         "tf": 110
                       },
+                      "Container.html#children": {
+                        "ref": "Container.html#children",
+                        "tf": 110
+                      },
                       "Visibility.html#.visible": {
                         "ref": "Visibility.html#.visible",
                         "tf": 110
@@ -4776,6 +5113,10 @@ window.lunrData = {
                       },
                       "Visibility.html#.gone": {
                         "ref": "Visibility.html#.gone",
+                        "tf": 110
+                      },
+                      "Widget.html#id": {
+                        "ref": "Widget.html#id",
                         "tf": 110
                       },
                       "Widget.html#x": {
@@ -4814,6 +5155,10 @@ window.lunrData = {
                         "ref": "CornerRadius.html#isSharp",
                         "tf": 110
                       },
+                      "CornerRadius.html#topLeft": {
+                        "ref": "CornerRadius.html#topLeft",
+                        "tf": 110
+                      },
                       "CornerRadius.html#topRight": {
                         "ref": "CornerRadius.html#topRight",
                         "tf": 110
@@ -4824,10 +5169,6 @@ window.lunrData = {
                       },
                       "CornerRadius.html#bottomLeft": {
                         "ref": "CornerRadius.html#bottomLeft",
-                        "tf": 110
-                      },
-                      "CornerRadius.html#topLeft": {
-                        "ref": "CornerRadius.html#topLeft",
                         "tf": 110
                       },
                       "FillRule.html#.nonZero": {
@@ -4842,10 +5183,6 @@ window.lunrData = {
                         "ref": "RectangleShape.html#cornerRadius",
                         "tf": 110
                       },
-                      "ShadowStyle.html#offsetX": {
-                        "ref": "ShadowStyle.html#offsetX",
-                        "tf": 110
-                      },
                       "ShadowStyle.html#offsetY": {
                         "ref": "ShadowStyle.html#offsetY",
                         "tf": 110
@@ -4858,12 +5195,28 @@ window.lunrData = {
                         "ref": "ShadowStyle.html#color",
                         "tf": 110
                       },
-                      "WidgetList.html#length": {
-                        "ref": "WidgetList.html#length",
+                      "ShadowStyle.html#offsetX": {
+                        "ref": "ShadowStyle.html#offsetX",
                         "tf": 110
                       },
-                      "Container.html#children": {
-                        "ref": "Container.html#children",
+                      "Platform.html#name": {
+                        "ref": "Platform.html#name",
+                        "tf": 110
+                      },
+                      "Platform.html#viewport": {
+                        "ref": "Platform.html#viewport",
+                        "tf": 110
+                      },
+                      "Platform.html#.current": {
+                        "ref": "Platform.html#.current",
+                        "tf": 110
+                      },
+                      "WebPlatform.html#userAgent": {
+                        "ref": "WebPlatform.html#userAgent",
+                        "tf": 110
+                      },
+                      "WidgetList.html#length": {
+                        "ref": "WidgetList.html#length",
                         "tf": 110
                       },
                       "Surface.html#background": {
@@ -4924,6 +5277,21 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "r": {
+              "docs": {},
+              "g": {
+                "docs": {
+                  "PropertySet.html#merge": {
+                    "ref": "PropertySet.html#merge",
+                    "tf": 681.25
+                  },
+                  "PropertySet.html#apply": {
+                    "ref": "PropertySet.html#apply",
+                    "tf": 8.333333333333332
+                  }
+                }
+              }
             }
           },
           "a": {
@@ -4945,6 +5313,18 @@ window.lunrData = {
                     "Application.html": {
                       "ref": "Application.html",
                       "tf": 12.5
+                    },
+                    "Platform.html": {
+                      "ref": "Platform.html",
+                      "tf": 8.333333333333332
+                    },
+                    "Platform.html#viewport": {
+                      "ref": "Platform.html#viewport",
+                      "tf": 16.666666666666664
+                    },
+                    "WebPlatform.html": {
+                      "ref": "WebPlatform.html",
+                      "tf": 7.142857142857142
                     }
                   }
                 }
@@ -5165,6 +5545,10 @@ window.lunrData = {
                           "RectangleShape.html#cornerRadius": {
                             "ref": "RectangleShape.html#cornerRadius",
                             "tf": 16.666666666666664
+                          },
+                          "WebCanvas.html#drawRect": {
+                            "ref": "WebCanvas.html#drawRect",
+                            "tf": 25
                           }
                         },
                         "e": {
@@ -5272,7 +5656,12 @@ window.lunrData = {
               "a": {
                 "docs": {},
                 "t": {
-                  "docs": {},
+                  "docs": {
+                    "Platform.html#initialize": {
+                      "ref": "Platform.html#initialize",
+                      "tf": 12.5
+                    }
+                  },
                   "i": {
                     "docs": {},
                     "v": {
@@ -5371,6 +5760,10 @@ window.lunrData = {
                       "ref": "CornerRadius.html#isSharp",
                       "tf": 10
                     },
+                    "CornerRadius.html#topLeft": {
+                      "ref": "CornerRadius.html#topLeft",
+                      "tf": 12.5
+                    },
                     "CornerRadius.html#topRight": {
                       "ref": "CornerRadius.html#topRight",
                       "tf": 12.5
@@ -5381,10 +5774,6 @@ window.lunrData = {
                     },
                     "CornerRadius.html#bottomLeft": {
                       "ref": "CornerRadius.html#bottomLeft",
-                      "tf": 12.5
-                    },
-                    "CornerRadius.html#topLeft": {
-                      "ref": "CornerRadius.html#topLeft",
                       "tf": 12.5
                     }
                   },
@@ -5533,24 +5922,36 @@ window.lunrData = {
                 "ref": "TimeAnimator.html",
                 "tf": 8.333333333333332
               },
-              "Application.html#canvas": {
-                "ref": "Application.html#canvas",
+              "Application.html#viewport": {
+                "ref": "Application.html#viewport",
                 "tf": 10
-              },
-              "Application.html#.defineCustomElement": {
-                "ref": "Application.html#.defineCustomElement",
-                "tf": 7.142857142857142
               }
             },
             "e": {
               "docs": {},
               "r": {
-                "docs": {},
+                "docs": {
+                  "WebPlatform.html#userAgent": {
+                    "ref": "WebPlatform.html#userAgent",
+                    "tf": 12.5
+                  }
+                },
                 "'": {
                   "docs": {
                     "Widget.html": {
                       "ref": "Widget.html",
                       "tf": 10
+                    }
+                  }
+                },
+                "a": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "WebPlatform.html#userAgent": {
+                        "ref": "WebPlatform.html#userAgent",
+                        "tf": 700
+                      }
                     }
                   }
                 }
@@ -5796,71 +6197,25 @@ window.lunrData = {
                 }
               }
             },
-            "f": {
+            "s": {
               "docs": {},
-              "i": {
+              "c": {
                 "docs": {},
-                "n": {
-                  "docs": {
-                    "Application.html#.defineCustomElement": {
-                      "ref": "Application.html#.defineCustomElement",
-                      "tf": 7.142857142857142
-                    }
-                  },
-                  "e": {
-                    "docs": {},
-                    "c": {
-                      "docs": {},
-                      "u": {
-                        "docs": {},
-                        "s": {
-                          "docs": {},
-                          "t": {
-                            "docs": {},
-                            "o": {
-                              "docs": {},
-                              "m": {
-                                "docs": {},
-                                "e": {
-                                  "docs": {},
-                                  "l": {
-                                    "docs": {
-                                      "Application.html#.defineCustomElement": {
-                                        "ref": "Application.html#.defineCustomElement",
-                                        "tf": 683.3333333333334
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "a": {
-                "docs": {},
-                "u": {
+                "e": {
                   "docs": {},
-                  "l": {
+                  "n": {
                     "docs": {},
-                    "t": {
+                    "d": {
                       "docs": {
-                        "PropertySet.html": {
-                          "ref": "PropertySet.html",
+                        "Container.html#findId": {
+                          "ref": "Container.html#findId",
                           "tf": 8.333333333333332
                         }
                       }
                     }
                   }
                 }
-              }
-            },
-            "s": {
-              "docs": {},
+              },
               "t": {
                 "docs": {},
                 "h": {
@@ -5878,6 +6233,10 @@ window.lunrData = {
                               "Canvas.html#drawImage": {
                                 "ref": "Canvas.html#drawImage",
                                 "tf": 10
+                              },
+                              "WebCanvas.html#drawImage": {
+                                "ref": "WebCanvas.html#drawImage",
+                                "tf": 10
                               }
                             }
                           }
@@ -5890,6 +6249,10 @@ window.lunrData = {
                   "docs": {
                     "Canvas.html#drawImage": {
                       "ref": "Canvas.html#drawImage",
+                      "tf": 10
+                    },
+                    "WebCanvas.html#drawImage": {
+                      "ref": "WebCanvas.html#drawImage",
                       "tf": 10
                     }
                   }
@@ -5907,6 +6270,10 @@ window.lunrData = {
                             "Canvas.html#drawImage": {
                               "ref": "Canvas.html#drawImage",
                               "tf": 10
+                            },
+                            "WebCanvas.html#drawImage": {
+                              "ref": "WebCanvas.html#drawImage",
+                              "tf": 10
                             }
                           }
                         }
@@ -5918,6 +6285,10 @@ window.lunrData = {
                   "docs": {
                     "Canvas.html#drawImage": {
                       "ref": "Canvas.html#drawImage",
+                      "tf": 10
+                    },
+                    "WebCanvas.html#drawImage": {
+                      "ref": "WebCanvas.html#drawImage",
                       "tf": 10
                     }
                   }
@@ -5934,6 +6305,34 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "f": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "l": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "PropertySet.html": {
+                          "ref": "PropertySet.html",
+                          "tf": 8.333333333333332
+                        },
+                        "PropertySet.html#merge": {
+                          "ref": "PropertySet.html#merge",
+                          "tf": 6.25
+                        },
+                        "PropertySet.html#apply": {
+                          "ref": "PropertySet.html#apply",
+                          "tf": 8.333333333333332
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "r": {
@@ -5945,10 +6344,6 @@ window.lunrData = {
                   "Application.html": {
                     "ref": "Application.html",
                     "tf": 12.5
-                  },
-                  "Application.html#canvas": {
-                    "ref": "Application.html#canvas",
-                    "tf": 10
                   },
                   "Application.html#draw": {
                     "ref": "Application.html#draw",
@@ -6001,6 +6396,22 @@ window.lunrData = {
                   "Style.html#apply": {
                     "ref": "Style.html#apply",
                     "tf": 10
+                  },
+                  "WebCanvas.html": {
+                    "ref": "WebCanvas.html",
+                    "tf": 8.333333333333332
+                  },
+                  "WebCanvas.html#drawRect": {
+                    "ref": "WebCanvas.html#drawRect",
+                    "tf": 25
+                  },
+                  "WebCanvas.html#drawShape": {
+                    "ref": "WebCanvas.html#drawShape",
+                    "tf": 16.666666666666664
+                  },
+                  "WebCanvas.html#drawImage": {
+                    "ref": "WebCanvas.html#drawImage",
+                    "tf": 25
                   }
                 },
                 "n": {
@@ -6042,6 +6453,10 @@ window.lunrData = {
                           "Canvas.html#drawRect": {
                             "ref": "Canvas.html#drawRect",
                             "tf": 666.6666666666666
+                          },
+                          "WebCanvas.html#drawRect": {
+                            "ref": "WebCanvas.html#drawRect",
+                            "tf": 666.6666666666666
                           }
                         }
                       }
@@ -6058,6 +6473,10 @@ window.lunrData = {
                         "docs": {
                           "Canvas.html#drawShape": {
                             "ref": "Canvas.html#drawShape",
+                            "tf": 664.2857142857143
+                          },
+                          "WebCanvas.html#drawShape": {
+                            "ref": "WebCanvas.html#drawShape",
                             "tf": 664.2857142857143
                           }
                         }
@@ -6076,6 +6495,10 @@ window.lunrData = {
                           "Canvas.html#drawImage": {
                             "ref": "Canvas.html#drawImage",
                             "tf": 660
+                          },
+                          "WebCanvas.html#drawImage": {
+                            "ref": "WebCanvas.html#drawImage",
+                            "tf": 660
                           }
                         }
                       }
@@ -6087,6 +6510,26 @@ window.lunrData = {
           },
           "i": {
             "docs": {},
+            "s": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "y": {
+                      "docs": {
+                        "Application.html#viewport": {
+                          "ref": "Application.html#viewport",
+                          "tf": 10
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "m": {
               "docs": {},
               "e": {
@@ -6287,6 +6730,10 @@ window.lunrData = {
                       "ref": "Application.html",
                       "tf": 110
                     },
+                    "Container.html": {
+                      "ref": "Container.html",
+                      "tf": 110
+                    },
                     "View.html": {
                       "ref": "View.html",
                       "tf": 110
@@ -6347,6 +6794,26 @@ window.lunrData = {
                       "ref": "Length.html",
                       "tf": 110
                     },
+                    "WebCanvas.html": {
+                      "ref": "WebCanvas.html",
+                      "tf": 110
+                    },
+                    "Platform.html": {
+                      "ref": "Platform.html",
+                      "tf": 110
+                    },
+                    "Viewport_Viewport.html": {
+                      "ref": "Viewport_Viewport.html",
+                      "tf": 110
+                    },
+                    "WebViewport_WebViewport.html": {
+                      "ref": "WebViewport_WebViewport.html",
+                      "tf": 110
+                    },
+                    "WebPlatform.html": {
+                      "ref": "WebPlatform.html",
+                      "tf": 110
+                    },
                     "Enum.html": {
                       "ref": "Enum.html",
                       "tf": 122.5
@@ -6361,10 +6828,6 @@ window.lunrData = {
                     },
                     "WidgetList.html": {
                       "ref": "WidgetList.html",
-                      "tf": 110
-                    },
-                    "Container.html": {
-                      "ref": "Container.html",
                       "tf": 110
                     },
                     "Surface.html": {
@@ -6383,6 +6846,10 @@ window.lunrData = {
                   "docs": {
                     "Canvas.html#clear": {
                       "ref": "Canvas.html#clear",
+                      "tf": 766.6666666666666
+                    },
+                    "WebCanvas.html#clear": {
+                      "ref": "WebCanvas.html#clear",
                       "tf": 766.6666666666666
                     }
                   }
@@ -6446,24 +6913,6 @@ window.lunrData = {
                 }
               }
             },
-            "e": {
-              "docs": {},
-              "c": {
-                "docs": {},
-                "k": {
-                  "docs": {
-                    "Shape.html#hitTest": {
-                      "ref": "Shape.html#hitTest",
-                      "tf": 6.25
-                    },
-                    "Shape.html#.hitTest": {
-                      "ref": "Shape.html#.hitTest",
-                      "tf": 5.555555555555555
-                    }
-                  }
-                }
-              }
-            },
             "i": {
               "docs": {},
               "l": {
@@ -6487,6 +6936,24 @@ window.lunrData = {
                           }
                         }
                       }
+                    }
+                  }
+                }
+              }
+            },
+            "e": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "k": {
+                  "docs": {
+                    "Shape.html#hitTest": {
+                      "ref": "Shape.html#hitTest",
+                      "tf": 6.25
+                    },
+                    "Shape.html#.hitTest": {
+                      "ref": "Shape.html#.hitTest",
+                      "tf": 5.555555555555555
                     }
                   }
                 }
@@ -6529,6 +6996,10 @@ window.lunrData = {
                           "ref": "Application.html#application",
                           "tf": 12.5
                         },
+                        "Application.html#viewport": {
+                          "ref": "Application.html#viewport",
+                          "tf": 10
+                        },
                         "Application.html#focusedWidget": {
                           "ref": "Application.html#focusedWidget",
                           "tf": 16.666666666666664
@@ -6548,6 +7019,22 @@ window.lunrData = {
                         "Length.html#toString": {
                           "ref": "Length.html#toString",
                           "tf": 3.571428571428571
+                        },
+                        "Platform.html": {
+                          "ref": "Platform.html",
+                          "tf": 8.333333333333332
+                        },
+                        "Platform.html#name": {
+                          "ref": "Platform.html#name",
+                          "tf": 12.5
+                        },
+                        "Platform.html#.current": {
+                          "ref": "Platform.html#.current",
+                          "tf": 695.8333333333334
+                        },
+                        "WebPlatform.html": {
+                          "ref": "WebPlatform.html",
+                          "tf": 7.142857142857142
                         }
                       },
                       "t": {
@@ -6577,9 +7064,9 @@ window.lunrData = {
                   "docs": {},
                   "m": {
                     "docs": {
-                      "Application.html#.defineCustomElement": {
-                        "ref": "Application.html#.defineCustomElement",
-                        "tf": 7.142857142857142
+                      "Widget.html#id": {
+                        "ref": "Widget.html#id",
+                        "tf": 12.5
                       }
                     }
                   }
@@ -6671,10 +7158,6 @@ window.lunrData = {
                 "docs": {},
                 "a": {
                   "docs": {
-                    "Application.html#canvas": {
-                      "ref": "Application.html#canvas",
-                      "tf": 760
-                    },
                     "Canvas.html": {
                       "ref": "Canvas.html",
                       "tf": 1908.3333333333333
@@ -6702,6 +7185,14 @@ window.lunrData = {
                     "Style.html#apply": {
                       "ref": "Style.html#apply",
                       "tf": 43.33333333333333
+                    },
+                    "WebCanvas.html": {
+                      "ref": "WebCanvas.html",
+                      "tf": 8.333333333333332
+                    },
+                    "WebCanvas.html#clear": {
+                      "ref": "WebCanvas.html#clear",
+                      "tf": 16.666666666666664
                     }
                   },
                   "s": {
@@ -6919,6 +7410,14 @@ window.lunrData = {
                     "docs": {},
                     "n": {
                       "docs": {
+                        "Container.html": {
+                          "ref": "Container.html",
+                          "tf": 1933.3333333333333
+                        },
+                        "Container.html#findId": {
+                          "ref": "Container.html#findId",
+                          "tf": 8.333333333333332
+                        },
                         "View.html": {
                           "ref": "View.html",
                           "tf": 16.666666666666664
@@ -6939,9 +7438,13 @@ window.lunrData = {
                           "ref": "Shape.html#.hitTest",
                           "tf": 5.555555555555555
                         },
-                        "Container.html": {
-                          "ref": "Container.html",
-                          "tf": 1933.3333333333333
+                        "Platform.html": {
+                          "ref": "Platform.html",
+                          "tf": 8.333333333333332
+                        },
+                        "WebPlatform.html": {
+                          "ref": "WebPlatform.html",
+                          "tf": 7.142857142857142
                         }
                       },
                       "e": {
@@ -6971,6 +7474,29 @@ window.lunrData = {
                                                 "tf": 1150
                                               }
                                             }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "f": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {
+                                          "Container.html#findId": {
+                                            "ref": "Container.html#findId",
+                                            "tf": 1150
                                           }
                                         }
                                       }
@@ -7329,6 +7855,10 @@ window.lunrData = {
                         "ref": "CornerRadius.html#isSharp",
                         "tf": 10
                       },
+                      "CornerRadius.html#topLeft": {
+                        "ref": "CornerRadius.html#topLeft",
+                        "tf": 12.5
+                      },
                       "CornerRadius.html#topRight": {
                         "ref": "CornerRadius.html#topRight",
                         "tf": 12.5
@@ -7339,10 +7869,6 @@ window.lunrData = {
                       },
                       "CornerRadius.html#bottomLeft": {
                         "ref": "CornerRadius.html#bottomLeft",
-                        "tf": 12.5
-                      },
-                      "CornerRadius.html#topLeft": {
-                        "ref": "CornerRadius.html#topLeft",
                         "tf": 12.5
                       },
                       "RectangleShape.html#cornerRadius": {
@@ -7405,6 +7931,23 @@ window.lunrData = {
                                       "docs": {},
                                       "p": {
                                         "docs": {},
+                                        "l": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "f": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {
+                                                  "CornerRadius.html#topLeft": {
+                                                    "ref": "CornerRadius.html#topLeft",
+                                                    "tf": 1150
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
                                         "r": {
                                           "docs": {},
                                           "i": {
@@ -7419,23 +7962,6 @@ window.lunrData = {
                                                       "ref": "CornerRadius.html#topRight",
                                                       "tf": 1150
                                                     }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        },
-                                        "l": {
-                                          "docs": {},
-                                          "e": {
-                                            "docs": {},
-                                            "f": {
-                                              "docs": {},
-                                              "t": {
-                                                "docs": {
-                                                  "CornerRadius.html#topLeft": {
-                                                    "ref": "CornerRadius.html#topLeft",
-                                                    "tf": 1150
                                                   }
                                                 }
                                               }
@@ -7798,6 +8324,10 @@ window.lunrData = {
                                         "ref": "Animator.html#endCallback",
                                         "tf": 33.33333333333333
                                       },
+                                      "Widget.html#id": {
+                                        "ref": "Widget.html#id",
+                                        "tf": 33.33333333333333
+                                      },
                                       "Surface.html#shadow": {
                                         "ref": "Surface.html#shadow",
                                         "tf": 33.33333333333333
@@ -7848,10 +8378,6 @@ window.lunrData = {
                                     "ref": "AnimationState.html#.paused",
                                     "tf": 33.33333333333333
                                   },
-                                  "Application.html#.defineCustomElement": {
-                                    "ref": "Application.html#.defineCustomElement",
-                                    "tf": 33.33333333333333
-                                  },
                                   "Visibility.html#.visible": {
                                     "ref": "Visibility.html#.visible",
                                     "tf": 33.33333333333333
@@ -7891,6 +8417,10 @@ window.lunrData = {
                                   "Length.html#.parse": {
                                     "ref": "Length.html#.parse",
                                     "tf": 20
+                                  },
+                                  "Platform.html#.current": {
+                                    "ref": "Platform.html#.current",
+                                    "tf": 33.33333333333333
                                   }
                                 }
                               }
@@ -7932,12 +8462,12 @@ window.lunrData = {
                     "ref": "Widget.html#y",
                     "tf": 8.333333333333332
                   },
-                  "CornerRadius.html#bottomLeft": {
-                    "ref": "CornerRadius.html#bottomLeft",
-                    "tf": 12.5
-                  },
                   "CornerRadius.html#topLeft": {
                     "ref": "CornerRadius.html#topLeft",
+                    "tf": 12.5
+                  },
+                  "CornerRadius.html#bottomLeft": {
+                    "ref": "CornerRadius.html#bottomLeft",
                     "tf": 12.5
                   }
                 }
@@ -8232,6 +8762,14 @@ window.lunrData = {
                       "Length.html#toString": {
                         "ref": "Length.html#toString",
                         "tf": 53.57142857142857
+                      },
+                      "Platform.html#name": {
+                        "ref": "Platform.html#name",
+                        "tf": 50
+                      },
+                      "WebPlatform.html#userAgent": {
+                        "ref": "WebPlatform.html#userAgent",
+                        "tf": 62.5
                       }
                     }
                   }
@@ -8365,6 +8903,14 @@ window.lunrData = {
                       "ref": "Style.html#apply",
                       "tf": 10
                     },
+                    "WebCanvas.html#drawRect": {
+                      "ref": "WebCanvas.html#drawRect",
+                      "tf": 16.666666666666664
+                    },
+                    "WebCanvas.html#drawShape": {
+                      "ref": "WebCanvas.html#drawShape",
+                      "tf": 14.285714285714285
+                    },
                     "Surface.html#background": {
                       "ref": "Surface.html#background",
                       "tf": 12.5
@@ -8480,6 +9026,14 @@ window.lunrData = {
                           "ref": "CycleInterpolator.html",
                           "tf": 5
                         },
+                        "Application.html#findId": {
+                          "ref": "Application.html#findId",
+                          "tf": 12.5
+                        },
+                        "Container.html#findId": {
+                          "ref": "Container.html#findId",
+                          "tf": 8.333333333333332
+                        },
                         "Shape.html#hitTest": {
                           "ref": "Shape.html#hitTest",
                           "tf": 12.5
@@ -8546,10 +9100,6 @@ window.lunrData = {
                   "docs": {},
                   "n": {
                     "docs": {
-                      "Application.html#canvas": {
-                        "ref": "Application.html#canvas",
-                        "tf": 10
-                      },
                       "Application.html#draw": {
                         "ref": "Application.html#draw",
                         "tf": 16.666666666666664
@@ -8577,6 +9127,30 @@ window.lunrData = {
                           "ref": "Application.html#invalidate",
                           "tf": 7.142857142857142
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "h": {
+                    "docs": {
+                      "Application.html#findId": {
+                        "ref": "Application.html#findId",
+                        "tf": 12.5
+                      },
+                      "Container.html#findId": {
+                        "ref": "Container.html#findId",
+                        "tf": 8.333333333333332
                       }
                     }
                   }
@@ -8623,6 +9197,14 @@ window.lunrData = {
                     "StarShape.html": {
                       "ref": "StarShape.html",
                       "tf": 12.5
+                    },
+                    "WebCanvas.html": {
+                      "ref": "WebCanvas.html",
+                      "tf": 8.333333333333332
+                    },
+                    "WebCanvas.html#drawShape": {
+                      "ref": "WebCanvas.html#drawShape",
+                      "tf": 30.95238095238095
                     },
                     "Surface.html": {
                       "ref": "Surface.html",
@@ -8829,18 +9411,18 @@ window.lunrData = {
                                           "docs": {},
                                           "t": {
                                             "docs": {},
-                                            "x": {
-                                              "docs": {
-                                                "ShadowStyle.html#offsetX": {
-                                                  "ref": "ShadowStyle.html#offsetX",
-                                                  "tf": 1150
-                                                }
-                                              }
-                                            },
                                             "i": {
                                               "docs": {
                                                 "ShadowStyle.html#offsetY": {
                                                   "ref": "ShadowStyle.html#offsetY",
+                                                  "tf": 1150
+                                                }
+                                              }
+                                            },
+                                            "x": {
+                                              "docs": {
+                                                "ShadowStyle.html#offsetX": {
+                                                  "ref": "ShadowStyle.html#offsetX",
                                                   "tf": 1150
                                                 }
                                               }
@@ -8914,10 +9496,6 @@ window.lunrData = {
                     },
                     "'": {
                       "docs": {
-                        "ShadowStyle.html#offsetX": {
-                          "ref": "ShadowStyle.html#offsetX",
-                          "tf": 16.666666666666664
-                        },
                         "ShadowStyle.html#offsetY": {
                           "ref": "ShadowStyle.html#offsetY",
                           "tf": 16.666666666666664
@@ -8929,8 +9507,26 @@ window.lunrData = {
                         "ShadowStyle.html#color": {
                           "ref": "ShadowStyle.html#color",
                           "tf": 25
+                        },
+                        "ShadowStyle.html#offsetX": {
+                          "ref": "ShadowStyle.html#offsetX",
+                          "tf": 16.666666666666664
                         }
                       }
+                    }
+                  }
+                }
+              }
+            },
+            "o": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "Platform.html#name": {
+                      "ref": "Platform.html#name",
+                      "tf": 12.5
                     }
                   }
                 }
@@ -8956,6 +9552,10 @@ window.lunrData = {
                             "Canvas.html#drawImage": {
                               "ref": "Canvas.html#drawImage",
                               "tf": 10
+                            },
+                            "WebCanvas.html#drawImage": {
+                              "ref": "WebCanvas.html#drawImage",
+                              "tf": 10
                             }
                           }
                         }
@@ -8968,6 +9568,10 @@ window.lunrData = {
                 "docs": {
                   "Canvas.html#drawImage": {
                     "ref": "Canvas.html#drawImage",
+                    "tf": 10
+                  },
+                  "WebCanvas.html#drawImage": {
+                    "ref": "WebCanvas.html#drawImage",
                     "tf": 10
                   }
                 }
@@ -8985,6 +9589,10 @@ window.lunrData = {
                           "Canvas.html#drawImage": {
                             "ref": "Canvas.html#drawImage",
                             "tf": 10
+                          },
+                          "WebCanvas.html#drawImage": {
+                            "ref": "WebCanvas.html#drawImage",
+                            "tf": 10
                           }
                         }
                       }
@@ -8996,6 +9604,10 @@ window.lunrData = {
                 "docs": {
                   "Canvas.html#drawImage": {
                     "ref": "Canvas.html#drawImage",
+                    "tf": 10
+                  },
+                  "WebCanvas.html#drawImage": {
+                    "ref": "WebCanvas.html#drawImage",
                     "tf": 10
                   }
                 }
@@ -9197,6 +9809,27 @@ window.lunrData = {
                     "TimeAnimator.html": {
                       "ref": "TimeAnimator.html",
                       "tf": 8.333333333333332
+                    },
+                    "Platform.html#initialize": {
+                      "ref": "Platform.html#initialize",
+                      "tf": 12.5
+                    }
+                  }
+                }
+              },
+              "s": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "g": {
+                      "docs": {
+                        "PropertySet.html#merge": {
+                          "ref": "PropertySet.html#merge",
+                          "tf": 25
+                        }
+                      }
                     }
                   }
                 }
@@ -9413,23 +10046,6 @@ window.lunrData = {
                   }
                 }
               }
-            },
-            "g": {
-              "docs": {},
-              "n": {
-                "docs": {},
-                "a": {
-                  "docs": {},
-                  "m": {
-                    "docs": {
-                      "Application.html#.defineCustomElement": {
-                        "ref": "Application.html#.defineCustomElement",
-                        "tf": 33.33333333333333
-                      }
-                    }
-                  }
-                }
-              }
             }
           },
           "o": {
@@ -9444,13 +10060,30 @@ window.lunrData = {
                   "ref": "Widget.html#y",
                   "tf": 8.333333333333332
                 },
-                "CornerRadius.html#topRight": {
-                  "ref": "CornerRadius.html#topRight",
-                  "tf": 12.5
-                },
                 "CornerRadius.html#topLeft": {
                   "ref": "CornerRadius.html#topLeft",
                   "tf": 12.5
+                },
+                "CornerRadius.html#topRight": {
+                  "ref": "CornerRadius.html#topRight",
+                  "tf": 12.5
+                }
+              },
+              "l": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "f": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "CornerRadius.html#topLeft": {
+                          "ref": "CornerRadius.html#topLeft",
+                          "tf": 700
+                        }
+                      }
+                    }
+                  }
                 }
               },
               "r": {
@@ -9467,23 +10100,6 @@ window.lunrData = {
                             "ref": "CornerRadius.html#topRight",
                             "tf": 700
                           }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "l": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "f": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "CornerRadius.html#topLeft": {
-                          "ref": "CornerRadius.html#topLeft",
-                          "tf": 700
                         }
                       }
                     }
@@ -9573,6 +10189,10 @@ window.lunrData = {
                 "docs": {
                   "Canvas.html": {
                     "ref": "Canvas.html",
+                    "tf": 8.333333333333332
+                  },
+                  "WebCanvas.html": {
+                    "ref": "WebCanvas.html",
                     "tf": 8.333333333333332
                   }
                 }
@@ -9676,6 +10296,10 @@ window.lunrData = {
                         "ref": "Application.html#height",
                         "tf": 50
                       },
+                      "Widget.html#id": {
+                        "ref": "Widget.html#id",
+                        "tf": 33.33333333333333
+                      },
                       "Widget.html#x": {
                         "ref": "Widget.html#x",
                         "tf": 50
@@ -9684,16 +10308,16 @@ window.lunrData = {
                         "ref": "Widget.html#y",
                         "tf": 50
                       },
-                      "ShadowStyle.html#offsetX": {
-                        "ref": "ShadowStyle.html#offsetX",
-                        "tf": 50
-                      },
                       "ShadowStyle.html#offsetY": {
                         "ref": "ShadowStyle.html#offsetY",
                         "tf": 50
                       },
                       "ShadowStyle.html#blurAmount": {
                         "ref": "ShadowStyle.html#blurAmount",
+                        "tf": 50
+                      },
+                      "ShadowStyle.html#offsetX": {
+                        "ref": "ShadowStyle.html#offsetX",
                         "tf": 50
                       },
                       "Length.html#valueOf": {
@@ -9881,6 +10505,10 @@ window.lunrData = {
                                 "docs": {},
                                 "h": {
                                   "docs": {
+                                    "CornerRadius.html#topLeft": {
+                                      "ref": "CornerRadius.html#topLeft",
+                                      "tf": 50
+                                    },
                                     "CornerRadius.html#topRight": {
                                       "ref": "CornerRadius.html#topRight",
                                       "tf": 50
@@ -9891,10 +10519,6 @@ window.lunrData = {
                                     },
                                     "CornerRadius.html#bottomLeft": {
                                       "ref": "CornerRadius.html#bottomLeft",
-                                      "tf": 50
-                                    },
-                                    "CornerRadius.html#topLeft": {
-                                      "ref": "CornerRadius.html#topLeft",
                                       "tf": 50
                                     }
                                   }
@@ -9989,6 +10613,34 @@ window.lunrData = {
                           "tf": 683.3333333333334
                         }
                       }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "Platform.html#name": {
+                    "ref": "Platform.html#name",
+                    "tf": 712.5
+                  }
+                }
+              }
+            },
+            "v": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "g": {
+                  "docs": {
+                    "WebPlatform.html#userAgent": {
+                      "ref": "WebPlatform.html#userAgent",
+                      "tf": 12.5
                     }
                   }
                 }
@@ -10105,6 +10757,10 @@ window.lunrData = {
                             "ref": "PropertySet.html",
                             "tf": 8.333333333333332
                           },
+                          "PropertySet.html#merge": {
+                            "ref": "PropertySet.html#merge",
+                            "tf": 6.25
+                          },
                           "Surface.html#~properties": {
                             "ref": "Surface.html#~properties",
                             "tf": 600
@@ -10122,6 +10778,46 @@ window.lunrData = {
                                 "PropertySet.html": {
                                   "ref": "PropertySet.html",
                                   "tf": 1900
+                                }
+                              },
+                              "#": {
+                                "docs": {},
+                                "m": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "g": {
+                                        "docs": {
+                                          "PropertySet.html#merge": {
+                                            "ref": "PropertySet.html#merge",
+                                            "tf": 1150
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "a": {
+                                  "docs": {},
+                                  "p": {
+                                    "docs": {},
+                                    "p": {
+                                      "docs": {},
+                                      "l": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {
+                                            "PropertySet.html#apply": {
+                                              "ref": "PropertySet.html#apply",
+                                              "tf": 1150
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
                                 }
                               }
                             }
@@ -10231,17 +10927,10 @@ window.lunrData = {
                   "StrokeStyle.html": {
                     "ref": "StrokeStyle.html",
                     "tf": 6.25
-                  }
-                }
-              }
-            },
-            "g": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "Application.html#.defineCustomElement": {
-                    "ref": "Application.html#.defineCustomElement",
-                    "tf": 7.142857142857142
+                  },
+                  "WebCanvas.html": {
+                    "ref": "WebCanvas.html",
+                    "tf": 8.333333333333332
                   }
                 }
               }
@@ -10316,6 +11005,138 @@ window.lunrData = {
                     "Length.html#toString": {
                       "ref": "Length.html#toString",
                       "tf": 3.571428571428571
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "l": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "f": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "r": {
+                      "docs": {},
+                      "m": {
+                        "docs": {
+                          "Platform.html": {
+                            "ref": "Platform.html",
+                            "tf": 1908.3333333333333
+                          },
+                          "Platform.html#name": {
+                            "ref": "Platform.html#name",
+                            "tf": 12.5
+                          },
+                          "Platform.html#viewport": {
+                            "ref": "Platform.html#viewport",
+                            "tf": 16.666666666666664
+                          },
+                          "Platform.html#.current": {
+                            "ref": "Platform.html#.current",
+                            "tf": 58.33333333333333
+                          },
+                          "Platform.html#initialize": {
+                            "ref": "Platform.html#initialize",
+                            "tf": 12.5
+                          },
+                          "WebPlatform.html": {
+                            "ref": "WebPlatform.html",
+                            "tf": 7.142857142857142
+                          }
+                        },
+                        "#": {
+                          "docs": {},
+                          "n": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "m": {
+                                "docs": {
+                                  "Platform.html#name": {
+                                    "ref": "Platform.html#name",
+                                    "tf": 1150
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "v": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "w": {
+                                  "docs": {},
+                                  "p": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {
+                                            "Platform.html#viewport": {
+                                              "ref": "Platform.html#viewport",
+                                              "tf": 1150
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "i": {
+                            "docs": {},
+                            "n": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "t": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {
+                                      "Platform.html#initialize": {
+                                        "ref": "Platform.html#initialize",
+                                        "tf": 1150
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        ".": {
+                          "docs": {},
+                          "c": {
+                            "docs": {},
+                            "u": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {
+                                    "Platform.html#.current": {
+                                      "ref": "Platform.html#.current",
+                                      "tf": 1150
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -10423,6 +11244,14 @@ window.lunrData = {
                   "Length.html#.parse": {
                     "ref": "Length.html#.parse",
                     "tf": 36.666666666666664
+                  },
+                  "PropertySet.html#merge": {
+                    "ref": "PropertySet.html#merge",
+                    "tf": 6.25
+                  },
+                  "PropertySet.html#apply": {
+                    "ref": "PropertySet.html#apply",
+                    "tf": 8.333333333333332
                   }
                 },
                 "e": {
@@ -10459,6 +11288,63 @@ window.lunrData = {
                   "View.html": {
                     "ref": "View.html",
                     "tf": 1916.6666666666667
+                  }
+                },
+                "p": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "r": {
+                      "docs": {},
+                      "t": {
+                        "docs": {
+                          "Application.html#viewport": {
+                            "ref": "Application.html#viewport",
+                            "tf": 760
+                          },
+                          "Platform.html#viewport": {
+                            "ref": "Platform.html#viewport",
+                            "tf": 766.6666666666666
+                          },
+                          "Viewport_Viewport.html": {
+                            "ref": "Viewport_Viewport.html",
+                            "tf": 750
+                          }
+                        },
+                        "#": {
+                          "docs": {},
+                          "v": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "w": {
+                                  "docs": {},
+                                  "p": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {
+                                            "Viewport_Viewport.html": {
+                                              "ref": "Viewport_Viewport.html",
+                                              "tf": 1150
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -10694,6 +11580,24 @@ window.lunrData = {
                       }
                     }
                   }
+                },
+                "r": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "d": {
+                      "docs": {
+                        "PropertySet.html#merge": {
+                          "ref": "PropertySet.html#merge",
+                          "tf": 31.25
+                        },
+                        "PropertySet.html#apply": {
+                          "ref": "PropertySet.html#apply",
+                          "tf": 28.333333333333332
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -10893,6 +11797,22 @@ window.lunrData = {
                       "Shape.html#getPath": {
                         "ref": "Shape.html#getPath",
                         "tf": 8.333333333333332
+                      },
+                      "WebCanvas.html#drawShape": {
+                        "ref": "WebCanvas.html#drawShape",
+                        "tf": 16.666666666666664
+                      },
+                      "Platform.html#.current": {
+                        "ref": "Platform.html#.current",
+                        "tf": 12.5
+                      },
+                      "PropertySet.html#merge": {
+                        "ref": "PropertySet.html#merge",
+                        "tf": 31.25
+                      },
+                      "PropertySet.html#apply": {
+                        "ref": "PropertySet.html#apply",
+                        "tf": 48.33333333333333
                       }
                     }
                   }
@@ -10950,27 +11870,27 @@ window.lunrData = {
                   "docs": {},
                   "t": {
                     "docs": {
-                      "ShadowStyle.html#offsetX": {
-                        "ref": "ShadowStyle.html#offsetX",
-                        "tf": 16.666666666666664
-                      },
                       "ShadowStyle.html#offsetY": {
                         "ref": "ShadowStyle.html#offsetY",
                         "tf": 16.666666666666664
-                      }
-                    },
-                    "x": {
-                      "docs": {
-                        "ShadowStyle.html#offsetX": {
-                          "ref": "ShadowStyle.html#offsetX",
-                          "tf": 700
-                        }
+                      },
+                      "ShadowStyle.html#offsetX": {
+                        "ref": "ShadowStyle.html#offsetX",
+                        "tf": 16.666666666666664
                       }
                     },
                     "i": {
                       "docs": {
                         "ShadowStyle.html#offsetY": {
                           "ref": "ShadowStyle.html#offsetY",
+                          "tf": 700
+                        }
+                      }
+                    },
+                    "x": {
+                      "docs": {
+                        "ShadowStyle.html#offsetX": {
+                          "ref": "ShadowStyle.html#offsetX",
                           "tf": 700
                         }
                       }
@@ -11032,6 +11952,14 @@ window.lunrData = {
                     "Shape.html#getPath": {
                       "ref": "Shape.html#getPath",
                       "tf": 33.33333333333333
+                    },
+                    "WebCanvas.html#drawRect": {
+                      "ref": "WebCanvas.html#drawRect",
+                      "tf": 16.666666666666664
+                    },
+                    "WebCanvas.html#drawShape": {
+                      "ref": "WebCanvas.html#drawShape",
+                      "tf": 14.285714285714285
                     }
                   }
                 }
@@ -11046,6 +11974,22 @@ window.lunrData = {
                         "ref": "Application.html#focusedWidget",
                         "tf": 66.66666666666666
                       },
+                      "Application.html#findId": {
+                        "ref": "Application.html#findId",
+                        "tf": 45.83333333333333
+                      },
+                      "Container.html": {
+                        "ref": "Container.html",
+                        "tf": 16.666666666666664
+                      },
+                      "Container.html#children": {
+                        "ref": "Container.html#children",
+                        "tf": 16.666666666666664
+                      },
+                      "Container.html#findId": {
+                        "ref": "Container.html#findId",
+                        "tf": 41.66666666666666
+                      },
                       "View.html": {
                         "ref": "View.html",
                         "tf": 16.666666666666664
@@ -11053,6 +11997,10 @@ window.lunrData = {
                       "Widget.html": {
                         "ref": "Widget.html",
                         "tf": 1910
+                      },
+                      "Widget.html#id": {
+                        "ref": "Widget.html#id",
+                        "tf": 12.5
                       },
                       "Widget.html#x": {
                         "ref": "Widget.html#x",
@@ -11090,194 +12038,9 @@ window.lunrData = {
                         "ref": "WidgetList.html#insert",
                         "tf": 37.5
                       },
-                      "Container.html": {
-                        "ref": "Container.html",
-                        "tf": 16.666666666666664
-                      },
-                      "Container.html#children": {
-                        "ref": "Container.html#children",
-                        "tf": 16.666666666666664
-                      },
                       "Surface.html": {
                         "ref": "Surface.html",
                         "tf": 10
-                      }
-                    },
-                    "#": {
-                      "docs": {},
-                      "x": {
-                        "docs": {
-                          "Widget.html#x": {
-                            "ref": "Widget.html#x",
-                            "tf": 1150
-                          }
-                        }
-                      },
-                      "i": {
-                        "docs": {
-                          "Widget.html#y": {
-                            "ref": "Widget.html#y",
-                            "tf": 1150
-                          }
-                        }
-                      },
-                      "o": {
-                        "docs": {},
-                        "n": {
-                          "docs": {},
-                          "c": {
-                            "docs": {},
-                            "l": {
-                              "docs": {},
-                              "i": {
-                                "docs": {},
-                                "c": {
-                                  "docs": {},
-                                  "k": {
-                                    "docs": {
-                                      "Widget.html#onClick": {
-                                        "ref": "Widget.html#onClick",
-                                        "tf": 1150
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          "p": {
-                            "docs": {},
-                            "o": {
-                              "docs": {},
-                              "i": {
-                                "docs": {},
-                                "n": {
-                                  "docs": {},
-                                  "t": {
-                                    "docs": {},
-                                    "e": {
-                                      "docs": {},
-                                      "r": {
-                                        "docs": {},
-                                        "d": {
-                                          "docs": {},
-                                          "o": {
-                                            "docs": {},
-                                            "w": {
-                                              "docs": {},
-                                              "n": {
-                                                "docs": {
-                                                  "Widget.html#onPointerDown": {
-                                                    "ref": "Widget.html#onPointerDown",
-                                                    "tf": 1150
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        },
-                                        "m": {
-                                          "docs": {},
-                                          "o": {
-                                            "docs": {},
-                                            "v": {
-                                              "docs": {
-                                                "Widget.html#onPointerMove": {
-                                                  "ref": "Widget.html#onPointerMove",
-                                                  "tf": 1150
-                                                }
-                                              }
-                                            }
-                                          }
-                                        },
-                                        "u": {
-                                          "docs": {},
-                                          "p": {
-                                            "docs": {
-                                              "Widget.html#onPointerUp": {
-                                                "ref": "Widget.html#onPointerUp",
-                                                "tf": 1150
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          "f": {
-                            "docs": {},
-                            "o": {
-                              "docs": {},
-                              "c": {
-                                "docs": {},
-                                "u": {
-                                  "docs": {
-                                    "Widget.html#onFocus": {
-                                      "ref": "Widget.html#onFocus",
-                                      "tf": 1150
-                                    }
-                                  },
-                                  "s": {
-                                    "docs": {},
-                                    "l": {
-                                      "docs": {},
-                                      "o": {
-                                        "docs": {},
-                                        "s": {
-                                          "docs": {},
-                                          "t": {
-                                            "docs": {
-                                              "Widget.html#onFocusLost": {
-                                                "ref": "Widget.html#onFocusLost",
-                                                "tf": 1150
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "~": {
-                      "docs": {},
-                      "p": {
-                        "docs": {},
-                        "r": {
-                          "docs": {},
-                          "o": {
-                            "docs": {},
-                            "p": {
-                              "docs": {},
-                              "e": {
-                                "docs": {},
-                                "r": {
-                                  "docs": {},
-                                  "t": {
-                                    "docs": {},
-                                    "i": {
-                                      "docs": {
-                                        "Widget.html#~properties": {
-                                          "ref": "Widget.html#~properties",
-                                          "tf": 1300
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
                       }
                     },
                     "l": {
@@ -11288,13 +12051,13 @@ window.lunrData = {
                           "docs": {},
                           "t": {
                             "docs": {
-                              "WidgetList.html": {
-                                "ref": "WidgetList.html",
-                                "tf": 1900
-                              },
                               "Container.html#children": {
                                 "ref": "Container.html#children",
                                 "tf": 50
+                              },
+                              "WidgetList.html": {
+                                "ref": "WidgetList.html",
+                                "tf": 1900
                               }
                             },
                             "#": {
@@ -11521,6 +12284,191 @@ window.lunrData = {
                           }
                         }
                       }
+                    },
+                    "#": {
+                      "docs": {},
+                      "i": {
+                        "docs": {
+                          "Widget.html#y": {
+                            "ref": "Widget.html#y",
+                            "tf": 1150
+                          }
+                        },
+                        "d": {
+                          "docs": {
+                            "Widget.html#id": {
+                              "ref": "Widget.html#id",
+                              "tf": 1150
+                            }
+                          }
+                        }
+                      },
+                      "x": {
+                        "docs": {
+                          "Widget.html#x": {
+                            "ref": "Widget.html#x",
+                            "tf": 1150
+                          }
+                        }
+                      },
+                      "o": {
+                        "docs": {},
+                        "n": {
+                          "docs": {},
+                          "c": {
+                            "docs": {},
+                            "l": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  "k": {
+                                    "docs": {
+                                      "Widget.html#onClick": {
+                                        "ref": "Widget.html#onClick",
+                                        "tf": 1150
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "p": {
+                            "docs": {},
+                            "o": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "w": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {
+                                                  "Widget.html#onPointerDown": {
+                                                    "ref": "Widget.html#onPointerDown",
+                                                    "tf": 1150
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "m": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "v": {
+                                              "docs": {
+                                                "Widget.html#onPointerMove": {
+                                                  "ref": "Widget.html#onPointerMove",
+                                                  "tf": 1150
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "u": {
+                                          "docs": {},
+                                          "p": {
+                                            "docs": {
+                                              "Widget.html#onPointerUp": {
+                                                "ref": "Widget.html#onPointerUp",
+                                                "tf": 1150
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "f": {
+                            "docs": {},
+                            "o": {
+                              "docs": {},
+                              "c": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {
+                                    "Widget.html#onFocus": {
+                                      "ref": "Widget.html#onFocus",
+                                      "tf": 1150
+                                    }
+                                  },
+                                  "s": {
+                                    "docs": {},
+                                    "l": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {
+                                              "Widget.html#onFocusLost": {
+                                                "ref": "Widget.html#onFocusLost",
+                                                "tf": 1150
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "~": {
+                      "docs": {},
+                      "p": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "p": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {
+                                        "Widget.html#~properties": {
+                                          "ref": "Widget.html#~properties",
+                                          "tf": 1300
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -11540,15 +12488,24 @@ window.lunrData = {
                   }
                 }
               }
-            }
-          },
-          "e": {
-            "docs": {},
-            "b": {
-              "docs": {
-                "Application.html#.defineCustomElement": {
-                  "ref": "Application.html#.defineCustomElement",
-                  "tf": 7.142857142857142
+            },
+            "t": {
+              "docs": {},
+              "h": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "u": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "PropertySet.html#merge": {
+                          "ref": "PropertySet.html#merge",
+                          "tf": 6.25
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -11576,6 +12533,251 @@ window.lunrData = {
                         "Shape.html#.hitTest": {
                           "ref": "Shape.html#.hitTest",
                           "tf": 5.555555555555555
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "b": {
+              "docs": {
+                "WebPlatform.html": {
+                  "ref": "WebPlatform.html",
+                  "tf": 7.142857142857142
+                }
+              },
+              "c": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "v": {
+                      "docs": {},
+                      "a": {
+                        "docs": {
+                          "WebCanvas.html": {
+                            "ref": "WebCanvas.html",
+                            "tf": 1900
+                          }
+                        },
+                        "s": {
+                          "docs": {},
+                          "#": {
+                            "docs": {},
+                            "d": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {},
+                                  "w": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "c": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {
+                                              "WebCanvas.html#drawRect": {
+                                                "ref": "WebCanvas.html#drawRect",
+                                                "tf": 1150
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "s": {
+                                      "docs": {},
+                                      "h": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "p": {
+                                            "docs": {
+                                              "WebCanvas.html#drawShape": {
+                                                "ref": "WebCanvas.html#drawShape",
+                                                "tf": 1150
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "i": {
+                                      "docs": {},
+                                      "m": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {
+                                              "WebCanvas.html#drawImage": {
+                                                "ref": "WebCanvas.html#drawImage",
+                                                "tf": 1150
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "c": {
+                              "docs": {},
+                              "l": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {
+                                        "WebCanvas.html#clear": {
+                                          "ref": "WebCanvas.html#clear",
+                                          "tf": 1150
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "v": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "w": {
+                      "docs": {},
+                      "p": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "WebViewport_WebViewport.html": {
+                                  "ref": "WebViewport_WebViewport.html",
+                                  "tf": 750
+                                }
+                              },
+                              "#": {
+                                "docs": {},
+                                "w": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "b": {
+                                      "docs": {},
+                                      "v": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "w": {
+                                              "docs": {},
+                                              "p": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {
+                                                        "WebViewport_WebViewport.html": {
+                                                          "ref": "WebViewport_WebViewport.html",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "p": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "f": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "m": {
+                              "docs": {
+                                "WebPlatform.html": {
+                                  "ref": "WebPlatform.html",
+                                  "tf": 1900
+                                }
+                              },
+                              "#": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {
+                                              "WebPlatform.html#userAgent": {
+                                                "ref": "WebPlatform.html#userAgent",
+                                                "tf": 1150
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
@@ -11617,6 +12819,14 @@ window.lunrData = {
                       "Shape.html#getPath": {
                         "ref": "Shape.html#getPath",
                         "tf": 33.33333333333333
+                      },
+                      "WebCanvas.html#drawRect": {
+                        "ref": "WebCanvas.html#drawRect",
+                        "tf": 16.666666666666664
+                      },
+                      "WebCanvas.html#drawShape": {
+                        "ref": "WebCanvas.html#drawShape",
+                        "tf": 14.285714285714285
                       }
                     }
                   }
@@ -11895,6 +13105,14 @@ window.lunrData = {
             "Canvas.html#drawShape": {
               "ref": "Canvas.html#drawShape",
               "tf": 14.285714285714285
+            },
+            "WebCanvas.html#drawRect": {
+              "ref": "WebCanvas.html#drawRect",
+              "tf": 16.666666666666664
+            },
+            "WebCanvas.html#drawShape": {
+              "ref": "WebCanvas.html#drawShape",
+              "tf": 14.285714285714285
             }
           }
         },
@@ -11910,6 +13128,14 @@ window.lunrData = {
             },
             "Canvas.html#drawShape": {
               "ref": "Canvas.html#drawShape",
+              "tf": 14.285714285714285
+            },
+            "WebCanvas.html#drawRect": {
+              "ref": "WebCanvas.html#drawRect",
+              "tf": 16.666666666666664
+            },
+            "WebCanvas.html#drawShape": {
+              "ref": "WebCanvas.html#drawShape",
               "tf": 14.285714285714285
             }
           }
@@ -11932,7 +13158,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 1033
+      "length": 1166
     },
     "corpusTokens": [
       "0",
@@ -11945,6 +13171,7 @@ window.lunrData = {
       "ad",
       "add",
       "adding/appli",
+      "agent",
       "amount",
       "anim",
       "animationst",
@@ -11971,8 +13198,8 @@ window.lunrData = {
       "appli",
       "applic",
       "application#appl",
-      "application#canva",
       "application#draw",
+      "application#findid",
       "application#focusedwidget",
       "application#height",
       "application#invalid",
@@ -11984,10 +13211,11 @@ window.lunrData = {
       "application#scalefactor",
       "application#them",
       "application#view",
+      "application#viewport",
       "application#width",
-      "application.definecustomel",
       "array",
       "array.&lt;widget&gt",
+      "associ",
       "axi",
       "b",
       "back",
@@ -12032,6 +13260,7 @@ window.lunrData = {
       "constant",
       "contain",
       "container#children",
+      "container#findid",
       "container'",
       "context",
       "coordin",
@@ -12053,15 +13282,15 @@ window.lunrData = {
       "decelerateinterpol",
       "decelerateinterpolator#interpol",
       "default",
-      "defin",
-      "definecustomel",
       "delay",
+      "descend",
       "desir",
       "destheight",
       "desti",
       "destwidth",
       "destx",
       "dimens",
+      "display",
       "document",
       "draw",
       "drawimag",
@@ -12072,7 +13301,6 @@ window.lunrData = {
       "each",
       "ecmascript",
       "effect",
-      "element",
       "end",
       "endcallback",
       "entir",
@@ -12089,6 +13317,7 @@ window.lunrData = {
       "fillstyl",
       "fillstyle#appli",
       "final",
+      "findid",
       "fling",
       "focus",
       "focusedwidget",
@@ -12119,12 +13348,17 @@ window.lunrData = {
       "horizont",
       "hsv",
       "hsvcolorobject",
+      "id",
+      "identifi",
+      "ignoreerror",
       "imag",
       "index",
       "indexof",
       "indic",
+      "inform",
       "initi",
       "insert",
+      "instanc",
       "instruct",
       "interact",
       "interpol",
@@ -12152,11 +13386,14 @@ window.lunrData = {
       "mani",
       "measur",
       "member",
+      "merg",
       "method",
       "middl",
       "millisecond",
       "more",
       "mosaic",
+      "name",
+      "navig",
       "next",
       "non",
       "nonzero",
@@ -12186,15 +13423,20 @@ window.lunrData = {
       "onpointerup",
       "onres",
       "out",
+      "overrid",
       "overshoot",
       "overshootinterpol",
       "overshootinterpolator#interpol",
-      "page",
       "pars",
       "path",
       "pattern",
       "paus",
       "pixel",
+      "platform",
+      "platform#initi",
+      "platform#nam",
+      "platform#viewport",
+      "platform.curr",
       "point",
       "posit",
       "privat",
@@ -12203,6 +13445,8 @@ window.lunrData = {
       "prop",
       "properti",
       "propertyset",
+      "propertyset#appli",
+      "propertyset#merg",
       "quickli",
       "r",
       "radiu",
@@ -12216,6 +13460,7 @@ window.lunrData = {
       "refer",
       "regist",
       "rel",
+      "relat",
       "relativeto",
       "remov",
       "render",
@@ -12234,6 +13479,7 @@ window.lunrData = {
       "scalefactor",
       "schedul",
       "screen",
+      "search",
       "shadow",
       "shadow'",
       "shadowstyl",
@@ -12248,6 +13494,7 @@ window.lunrData = {
       "shapeheight",
       "shapewidth",
       "sharp",
+      "short",
       "simul",
       "sinusoid",
       "size",
@@ -12276,11 +13523,11 @@ window.lunrData = {
       "surface#shap",
       "surface#strok",
       "surface~properti",
-      "tagnam",
       "target",
       "text",
       "theme",
       "thing",
+      "thisarg",
       "through",
       "time",
       "timeanim",
@@ -12298,21 +13545,35 @@ window.lunrData = {
       "unobserv",
       "unregist",
       "us",
+      "user",
       "user'",
+      "userag",
       "util",
       "v",
       "valu",
       "valueof",
       "vertic",
       "view",
+      "viewport",
+      "viewport#viewport",
       "visibility.gon",
       "visibility.hidden",
       "visibility.vis",
       "visibl",
       "web",
+      "webcanva",
+      "webcanvas#clear",
+      "webcanvas#drawimag",
+      "webcanvas#drawrect",
+      "webcanvas#drawshap",
+      "webplatform",
+      "webplatform#userag",
+      "webviewport",
+      "webviewport#webviewport",
       "whether",
       "widget",
       "widget#i",
+      "widget#id",
       "widget#onclick",
       "widget#onfocu",
       "widget#onfocuslost",
@@ -12334,6 +13595,7 @@ window.lunrData = {
       "widget~properti",
       "width",
       "wind",
+      "without",
       "x",
       "y",
       "zero"
@@ -12923,15 +14185,15 @@ window.lunrData = {
       "summary": "",
       "description": "The current application. A reference for itself."
     },
-    "Application.html#canvas": {
-      "id": "Application.html#canvas",
+    "Application.html#viewport": {
+      "id": "Application.html#viewport",
       "kind": "member",
-      "title": "canvas :Canvas",
-      "longname": "Application#canvas",
-      "name": "canvas",
-      "tags": "Application#canvas canvas",
+      "title": "viewport :Viewport",
+      "longname": "Application#viewport",
+      "name": "viewport",
+      "tags": "Application#viewport viewport",
       "summary": "",
-      "description": "Canvas used for drawing this application on the screen."
+      "description": "Current viewport used for displaying this application."
     },
     "Application.html#focusedWidget": {
       "id": "Application.html#focusedWidget",
@@ -13003,6 +14265,16 @@ window.lunrData = {
       "summary": "",
       "description": ""
     },
+    "Application.html#findId": {
+      "id": "Application.html#findId",
+      "kind": "function",
+      "title": "findId( id ) → {Widget}",
+      "longname": "Application#findId",
+      "name": "findId",
+      "tags": "Application#findId findId",
+      "summary": "",
+      "description": "Search for a Widget with the specified id."
+    },
     "Application.html#draw": {
       "id": "Application.html#draw",
       "kind": "function",
@@ -13011,7 +14283,7 @@ window.lunrData = {
       "name": "draw",
       "tags": "Application#draw draw",
       "summary": "",
-      "description": "Draws the application on screen."
+      "description": "Draw the application on screen."
     },
     "Application.html#invalidate": {
       "id": "Application.html#invalidate",
@@ -13021,17 +14293,38 @@ window.lunrData = {
       "name": "invalidate",
       "tags": "Application#invalidate invalidate",
       "summary": "",
-      "description": "Invalidates the current render, scheduling draw for next frame."
+      "description": "Invalidate the current render and schedule draw for next frame."
     },
-    "Application.html#.defineCustomElement": {
-      "id": "Application.html#.defineCustomElement",
-      "kind": "function",
-      "title": "&lt;static&gt; defineCustomElement( tagName )",
-      "longname": "Application.defineCustomElement",
-      "name": "defineCustomElement",
-      "tags": "Application.defineCustomElement defineCustomElement",
+    "Container.html": {
+      "id": "Container.html",
+      "kind": "class",
+      "title": "Container",
+      "longname": "Container",
+      "name": "Container",
+      "tags": "Container",
       "summary": "",
-      "description": "Defines the Application custom element for using in web pages."
+      "description": "Container that contains Widgets.",
+      "body": ""
+    },
+    "Container.html#children": {
+      "id": "Container.html#children",
+      "kind": "member",
+      "title": "children :WidgetList",
+      "longname": "Container#children",
+      "name": "children",
+      "tags": "Container#children children",
+      "summary": "",
+      "description": "Container's child widgets."
+    },
+    "Container.html#findId": {
+      "id": "Container.html#findId",
+      "kind": "function",
+      "title": "findId( id ) → {Widget}",
+      "longname": "Container#findId",
+      "name": "findId",
+      "tags": "Container#findId findId",
+      "summary": "",
+      "description": "Search for a Widget with the specified id that is descendant of this container."
     },
     "View.html": {
       "id": "View.html",
@@ -13095,6 +14388,16 @@ window.lunrData = {
       "summary": "",
       "description": "A widget that can be drawn on user's screen by the application.",
       "body": ""
+    },
+    "Widget.html#id": {
+      "id": "Widget.html#id",
+      "kind": "member",
+      "title": "&lt;nullable&gt; id :number",
+      "longname": "Widget#id",
+      "name": "id",
+      "tags": "Widget#id id",
+      "summary": "",
+      "description": "Widget instance custom identifier."
     },
     "Widget.html#x": {
       "id": "Widget.html#x",
@@ -13349,6 +14652,16 @@ window.lunrData = {
       "summary": "",
       "description": "Whether all corners are sharp, with 0 radius."
     },
+    "CornerRadius.html#topLeft": {
+      "id": "CornerRadius.html#topLeft",
+      "kind": "member",
+      "title": "topLeft :number|Length",
+      "longname": "CornerRadius#topLeft",
+      "name": "topLeft",
+      "tags": "CornerRadius#topLeft topLeft",
+      "summary": "",
+      "description": "Top-left corner radius."
+    },
     "CornerRadius.html#topRight": {
       "id": "CornerRadius.html#topRight",
       "kind": "member",
@@ -13378,16 +14691,6 @@ window.lunrData = {
       "tags": "CornerRadius#bottomLeft bottomLeft",
       "summary": "",
       "description": "Bottom-left corner radius."
-    },
-    "CornerRadius.html#topLeft": {
-      "id": "CornerRadius.html#topLeft",
-      "kind": "member",
-      "title": "topLeft :number|Length",
-      "longname": "CornerRadius#topLeft",
-      "name": "topLeft",
-      "tags": "CornerRadius#topLeft topLeft",
-      "summary": "",
-      "description": "Top-left corner radius."
     },
     "FillRule.html": {
       "id": "FillRule.html",
@@ -13473,16 +14776,6 @@ window.lunrData = {
       "description": "Style for applying shadows on Canvas drawings.",
       "body": ""
     },
-    "ShadowStyle.html#offsetX": {
-      "id": "ShadowStyle.html#offsetX",
-      "kind": "member",
-      "title": "offsetX :number",
-      "longname": "ShadowStyle#offsetX",
-      "name": "offsetX",
-      "tags": "ShadowStyle#offsetX offsetX",
-      "summary": "",
-      "description": "Shadow's horizontal offset."
-    },
     "ShadowStyle.html#offsetY": {
       "id": "ShadowStyle.html#offsetY",
       "kind": "member",
@@ -13512,6 +14805,16 @@ window.lunrData = {
       "tags": "ShadowStyle#color color",
       "summary": "",
       "description": "Shadow's color."
+    },
+    "ShadowStyle.html#offsetX": {
+      "id": "ShadowStyle.html#offsetX",
+      "kind": "member",
+      "title": "offsetX :number",
+      "longname": "ShadowStyle#offsetX",
+      "name": "offsetX",
+      "tags": "ShadowStyle#offsetX offsetX",
+      "summary": "",
+      "description": "Shadow's horizontal offset."
     },
     "Shape.html": {
       "id": "Shape.html",
@@ -13648,6 +14951,151 @@ window.lunrData = {
       "summary": "",
       "description": "Parse a value into a Length."
     },
+    "WebCanvas.html": {
+      "id": "WebCanvas.html",
+      "kind": "class",
+      "title": "WebCanvas",
+      "longname": "WebCanvas",
+      "name": "WebCanvas",
+      "tags": "WebCanvas",
+      "summary": "",
+      "description": "Canvas for drawing paths, shapes, text and images.",
+      "body": ""
+    },
+    "WebCanvas.html#drawRect": {
+      "id": "WebCanvas.html#drawRect",
+      "kind": "function",
+      "title": "drawRect( x, y, width, height, styles )",
+      "longname": "WebCanvas#drawRect",
+      "name": "drawRect",
+      "tags": "WebCanvas#drawRect drawRect",
+      "summary": "",
+      "description": "Draw a rectangle."
+    },
+    "WebCanvas.html#drawShape": {
+      "id": "WebCanvas.html#drawShape",
+      "kind": "function",
+      "title": "drawShape( x, y, width, height, shape, styles )",
+      "longname": "WebCanvas#drawShape",
+      "name": "drawShape",
+      "tags": "WebCanvas#drawShape drawShape",
+      "summary": "",
+      "description": "Draw a Shape object."
+    },
+    "WebCanvas.html#drawImage": {
+      "id": "WebCanvas.html#drawImage",
+      "kind": "function",
+      "title": "drawImage( image, destX, destY [, destWidth [, destHeight [, srcX [, srcY [, srcWidth [, srcHeight ] ] ] ] ] ] )",
+      "longname": "WebCanvas#drawImage",
+      "name": "drawImage",
+      "tags": "WebCanvas#drawImage drawImage",
+      "summary": "",
+      "description": "Draw an image."
+    },
+    "WebCanvas.html#clear": {
+      "id": "WebCanvas.html#clear",
+      "kind": "function",
+      "title": "clear()",
+      "longname": "WebCanvas#clear",
+      "name": "clear",
+      "tags": "WebCanvas#clear clear",
+      "summary": "",
+      "description": "Clear the entire canvas."
+    },
+    "Platform.html": {
+      "id": "Platform.html",
+      "kind": "class",
+      "title": "Platform",
+      "longname": "Platform",
+      "name": "Platform",
+      "tags": "Platform",
+      "summary": "",
+      "description": "Contains information about the current platform and associated managers.",
+      "body": ""
+    },
+    "Platform.html#name": {
+      "id": "Platform.html#name",
+      "kind": "member",
+      "title": "name :string",
+      "longname": "Platform#name",
+      "name": "name",
+      "tags": "Platform#name name",
+      "summary": "",
+      "description": "Short name of the current platform."
+    },
+    "Platform.html#viewport": {
+      "id": "Platform.html#viewport",
+      "kind": "member",
+      "title": "viewport :Viewport",
+      "longname": "Platform#viewport",
+      "name": "viewport",
+      "tags": "Platform#viewport viewport",
+      "summary": "",
+      "description": "The viewport manager for the platform."
+    },
+    "Platform.html#.current": {
+      "id": "Platform.html#.current",
+      "kind": "member",
+      "title": "&lt;static&gt; current :Platform",
+      "longname": "Platform.current",
+      "name": "current",
+      "tags": "Platform.current current",
+      "summary": "",
+      "description": "A Platform object for the current platform."
+    },
+    "Platform.html#initialize": {
+      "id": "Platform.html#initialize",
+      "kind": "function",
+      "title": "initialize()",
+      "longname": "Platform#initialize",
+      "name": "initialize",
+      "tags": "Platform#initialize initialize",
+      "summary": "",
+      "description": "Initializes platform-related things."
+    },
+    "Viewport_Viewport.html": {
+      "id": "Viewport_Viewport.html",
+      "kind": "class",
+      "title": "Viewport",
+      "longname": "Viewport#Viewport",
+      "name": "Viewport",
+      "tags": "Viewport#Viewport Viewport",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "WebViewport_WebViewport.html": {
+      "id": "WebViewport_WebViewport.html",
+      "kind": "class",
+      "title": "WebViewport",
+      "longname": "WebViewport#WebViewport",
+      "name": "WebViewport",
+      "tags": "WebViewport#WebViewport WebViewport",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "WebPlatform.html": {
+      "id": "WebPlatform.html",
+      "kind": "class",
+      "title": "WebPlatform",
+      "longname": "WebPlatform",
+      "name": "WebPlatform",
+      "tags": "WebPlatform",
+      "summary": "",
+      "description": "Contains information about the current web platform and associated managers.",
+      "body": ""
+    },
+    "WebPlatform.html#userAgent": {
+      "id": "WebPlatform.html#userAgent",
+      "kind": "member",
+      "title": "userAgent :string",
+      "longname": "WebPlatform#userAgent",
+      "name": "userAgent",
+      "tags": "WebPlatform#userAgent userAgent",
+      "summary": "",
+      "description": "Navigator user-agent string."
+    },
     "Enum.html": {
       "id": "Enum.html",
       "kind": "class",
@@ -13680,6 +15128,26 @@ window.lunrData = {
       "summary": "",
       "description": "Utility class for adding/applying properties with defaults for classes.",
       "body": ""
+    },
+    "PropertySet.html#merge": {
+      "id": "PropertySet.html#merge",
+      "kind": "function",
+      "title": "merge( thisArg, overrides ) → {object}",
+      "longname": "PropertySet#merge",
+      "name": "merge",
+      "tags": "PropertySet#merge merge",
+      "summary": "",
+      "description": "Merge default values with overrides, without applying the properties to the object."
+    },
+    "PropertySet.html#apply": {
+      "id": "PropertySet.html#apply",
+      "kind": "function",
+      "title": "apply( object, overrides [, ignoreErrors ] ) → {object}",
+      "longname": "PropertySet#apply",
+      "name": "apply",
+      "tags": "PropertySet#apply apply",
+      "summary": "",
+      "description": "Merge default values with overrides, and apply them to an object."
     },
     "WidgetList.html": {
       "id": "WidgetList.html",
@@ -13791,27 +15259,6 @@ window.lunrData = {
       "tags": "WidgetList~observer",
       "summary": "",
       "description": ""
-    },
-    "Container.html": {
-      "id": "Container.html",
-      "kind": "class",
-      "title": "Container",
-      "longname": "Container",
-      "name": "Container",
-      "tags": "Container",
-      "summary": "",
-      "description": "Container that contains Widgets.",
-      "body": ""
-    },
-    "Container.html#children": {
-      "id": "Container.html#children",
-      "kind": "member",
-      "title": "children :WidgetList",
-      "longname": "Container#children",
-      "name": "children",
-      "tags": "Container#children children",
-      "summary": "",
-      "description": "Container's child widgets."
     },
     "Surface.html": {
       "id": "Surface.html",

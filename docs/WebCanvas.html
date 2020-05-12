@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>ShadowStyle</title>
+		<title>WebCanvas</title>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -126,7 +126,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">class</span>
-				<h1><span class="name">ShadowStyle</span></h1>
+				<h1><span class="name">WebCanvas</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -135,16 +135,68 @@
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="list_class.html">Classes</a></li>
-							<li class="active">ShadowStyle</li>
+							<li class="active">WebCanvas</li>
 						</ol>
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">ShadowStyle</span><span class="signature-params">( <span class="signature-param">offsetX</span>, <span class="signature-param">offsetY</span>, <span class="signature-param">blurAmount</span>, <span class="signature-param">color</span>&nbsp;)</span><span class="signature-type"></span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">WebCanvas</span><span class="signature-params">()</span><span class="signature-type"></span></h2>
 </dt>
 <dd class="symbol-details class" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">Style for applying shadows on Canvas drawings.</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc">Canvas for drawing paths, shapes, text and images.</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="platform_drawing_WebCanvas_index.js.html">platform/drawing/WebCanvas/index.js</a>, <a href="platform_drawing_WebCanvas_index.js.html#line-32">line 32</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+							</dl>
+							<article class="secondary">
+									<h3>Classes</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title class public">
+			<h4 id="WebCanvas" class="class public"><a href="WebCanvas.html"><span class="signature-new">new&nbsp;</span><span class="name">WebCanvas</span><span class="signature-params">()</span><span class="signature-type"></span></a></h4>
+		</dt>
+<dd class="symbol-details class public">
+	<div class="symbol-details-inner">
+	</div>
+</dd>
+									</dl>
+									<h3>Methods</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="drawRect" class="function public"><span class="name">drawRect</span><span class="signature-params">( <span class="signature-param">x</span>, <span class="signature-param">y</span>, <span class="signature-param">width</span>, <span class="signature-param">height</span>, <span class="signature-param">styles</span>&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Draw a rectangle.</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -157,31 +209,38 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>offsetX</code></td>
+								<td><code>x</code></td>
 							<td><span class="param-type">number</span></td>
 							<td class="last">
-									Horizontal offset.
+									The top left X coordinate.
 							</td>
 						</tr>
 						<tr>
-								<td><code>offsetY</code></td>
+								<td><code>y</code></td>
 							<td><span class="param-type">number</span></td>
 							<td class="last">
-									Vertical offset.
+									The top left Y coordinate.
 							</td>
 						</tr>
 						<tr>
-								<td><code>blurAmount</code></td>
+								<td><code>width</code></td>
 							<td><span class="param-type">number</span></td>
 							<td class="last">
-									Blur amount.
+									Width of the rectangle.
 							</td>
 						</tr>
 						<tr>
-								<td><code>color</code></td>
-							<td><span class="param-type"><a href="Color.html">Color</a></span></td>
+								<td><code>height</code></td>
+							<td><span class="param-type">number</span></td>
 							<td class="last">
-									Shadow's color.
+									Height of the rectangle.
+							</td>
+						</tr>
+						<tr>
+								<td><code>styles</code></td>
+							<td><span class="param-type">Array.&lt;<a href="Style.html">Style</a>></span></td>
+							<td class="last">
+									Styles to draw the rectangle with.
 							</td>
 						</tr>
 					</tbody>
@@ -207,7 +266,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="drawing_ShadowStyle_index.js.html">drawing/ShadowStyle/index.js</a>, <a href="drawing_ShadowStyle_index.js.html#line-24">line 24</a></p>
+									<p class="form-control-static"><a href="platform_drawing_WebCanvas_index.js.html">platform/drawing/WebCanvas/index.js</a>, <a href="platform_drawing_WebCanvas_index.js.html#line-104">line 104</a></p>
 								</div>
 							</div>
 			
@@ -217,37 +276,71 @@
 					</form>
 			</div>	</div>
 </dd>
-							</dl>
-							<article class="secondary">
-									<h3>Classes</h3>
-									<dl class="symbol">
 											<hr/>
-											<dt class="symbol-title class public">
-			<h4 id="ShadowStyle" class="class public"><a href="ShadowStyle.html"><span class="signature-new">new&nbsp;</span><span class="name">ShadowStyle</span><span class="signature-params">( <span class="signature-param">offsetX</span>, <span class="signature-param">offsetY</span>, <span class="signature-param">blurAmount</span>, <span class="signature-param">color</span>&nbsp;)</span><span class="signature-type"></span></a></h4>
+											<dt class="symbol-title function public">
+			<h4 id="drawShape" class="function public"><span class="name">drawShape</span><span class="signature-params">( <span class="signature-param">x</span>, <span class="signature-param">y</span>, <span class="signature-param">width</span>, <span class="signature-param">height</span>, <span class="signature-param">shape</span>, <span class="signature-param">styles</span>&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
-<dd class="symbol-details class public">
+<dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-	</div>
-</dd>
-									</dl>
-									<h3>Members</h3>
-									<dl class="symbol">
-											<hr/>
-											<dt class="symbol-title member public">
-			<h4 id="offsetY" class="member public"><span class="name">offsetY</span><span class="signature-type"> :number</span></h4>
-		</dt>
-<dd class="symbol-details member public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shadow's vertical offset.</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Draw a Shape object.</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>x</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									The top left X coordinate.
+							</td>
+						</tr>
+						<tr>
+								<td><code>y</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									The top left Y coordinate.
+							</td>
+						</tr>
+						<tr>
+								<td><code>width</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									Desired width.
+							</td>
+						</tr>
+						<tr>
+								<td><code>height</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									Desired height.
+							</td>
+						</tr>
+						<tr>
+								<td><code>shape</code></td>
+							<td><span class="param-type"><a href="Shape.html">Shape</a></span></td>
+							<td class="last">
+									Shape to be drawn.
+							</td>
+						</tr>
+						<tr>
+								<td><code>styles</code></td>
+							<td><span class="param-type">Array.&lt;<a href="Style.html">Style</a>></span></td>
+							<td class="last">
+									Styles to draw the shape with.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
-							<!-- type -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Type</label>
-								<div class="col-sm-9">
-									<div class="form-control-static type-names"><span class="param-type">number</span></div>
-								</div>
-							</div>
 			
 			
 			
@@ -266,7 +359,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="drawing_ShadowStyle_index.js.html">drawing/ShadowStyle/index.js</a>, <a href="drawing_ShadowStyle_index.js.html#line-50">line 50</a></p>
+									<p class="form-control-static"><a href="platform_drawing_WebCanvas_index.js.html">platform/drawing/WebCanvas/index.js</a>, <a href="platform_drawing_WebCanvas_index.js.html#line-141">line 141</a></p>
 								</div>
 							</div>
 			
@@ -277,21 +370,101 @@
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title member public">
-			<h4 id="blurAmount" class="member public"><span class="name">blurAmount</span><span class="signature-type"> :number</span></h4>
+											<dt class="symbol-title function public">
+			<h4 id="drawImage" class="function public"><span class="name">drawImage</span><span class="signature-params">( <span class="signature-param">image</span>, <span class="signature-param">destX</span>, <span class="signature-param">destY</span> [,&nbsp;<span class="signature-param">destWidth</span> [,&nbsp;<span class="signature-param">destHeight</span> [,&nbsp;<span class="signature-param">srcX</span> [,&nbsp;<span class="signature-param">srcY</span> [,&nbsp;<span class="signature-param">srcWidth</span> [,&nbsp;<span class="signature-param">srcHeight</span>&nbsp;]&nbsp;]&nbsp;]&nbsp;]&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
-<dd class="symbol-details member public">
+<dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shadow's blur amount.</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Draw an image.</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>image</code></td>
+							<td><span class="param-type"><a href="Canvas.html">Canvas</a></span> | <span class="param-type">ImageBitmap</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Image to be drawn. Can be any canvas image source or a Canvas object.
+							</td>
+						</tr>
+						<tr>
+								<td><code>destX</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									The top left X coordinate in the destination canvas at which to place the top-left corner of the source image.
+							</td>
+						</tr>
+						<tr>
+								<td><code>destY</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									The top left Y coordinate in the destination canvas at which to place the top-left corner of the source image.
+							</td>
+						</tr>
+						<tr>
+								<td><code>destWidth</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/>&lt;nullable&gt;<br/></td>
+							<td class="last">
+									The width to draw the image. This allows scaling of the drawn image. If not specified, the image is not scaled in width when drawn.
+							</td>
+						</tr>
+						<tr>
+								<td><code>destHeight</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/>&lt;nullable&gt;<br/></td>
+							<td class="last">
+									The height to draw the image. This allows scaling of the drawn image. If not specified, the image is not scaled in height when drawn. Required if destWidth is provided.
+							</td>
+						</tr>
+						<tr>
+								<td><code>srcX</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									The top left X coordinate of the sub-rectangle of the source image to draw.
+							</td>
+						</tr>
+						<tr>
+								<td><code>srcY</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									The top left Y coordinate of the sub-rectangle of the source image to draw. Required if srcX is provided.
+							</td>
+						</tr>
+						<tr>
+								<td><code>srcWidth</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/>&lt;nullable&gt;<br/></td>
+							<td class="last">
+									The width of the sub-rectangle of the source image to draw. If not specified, the entire rectangle from the specified top-left source coordinates is used.
+							</td>
+						</tr>
+						<tr>
+								<td><code>srcHeight</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/>&lt;nullable&gt;<br/></td>
+							<td class="last">
+									The height of the sub-rectangle of the source image to draw. If not specified, the entire rectangle from the specified top-left source coordinates is used. Required if srcWidth is provided.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
-							<!-- type -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Type</label>
-								<div class="col-sm-9">
-									<div class="form-control-static type-names"><span class="param-type">number</span></div>
-								</div>
-							</div>
 			
 			
 			
@@ -310,7 +483,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="drawing_ShadowStyle_index.js.html">drawing/ShadowStyle/index.js</a>, <a href="drawing_ShadowStyle_index.js.html#line-62">line 62</a></p>
+									<p class="form-control-static"><a href="platform_drawing_WebCanvas_index.js.html">platform/drawing/WebCanvas/index.js</a>, <a href="platform_drawing_WebCanvas_index.js.html#line-180">line 180</a></p>
 								</div>
 							</div>
 			
@@ -321,21 +494,14 @@
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title member public">
-			<h4 id="color" class="member public"><span class="name">color</span><span class="signature-type"> :<a href="Color.html">Color</a></span></h4>
+											<dt class="symbol-title function public">
+			<h4 id="clear" class="function public"><span class="name">clear</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
 		</dt>
-<dd class="symbol-details member public">
+<dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shadow's color.</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Clear the entire canvas.</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
-							<!-- type -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Type</label>
-								<div class="col-sm-9">
-									<div class="form-control-static type-names"><span class="param-type"><a href="Color.html">Color</a></span></div>
-								</div>
-							</div>
 			
 			
 			
@@ -354,51 +520,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="drawing_ShadowStyle_index.js.html">drawing/ShadowStyle/index.js</a>, <a href="drawing_ShadowStyle_index.js.html#line-74">line 74</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title member public">
-			<h4 id="offsetX" class="member public"><span class="name">offsetX</span><span class="signature-type"> :number</span></h4>
-		</dt>
-<dd class="symbol-details member public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shadow's horizontal offset.</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-							<!-- type -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Type</label>
-								<div class="col-sm-9">
-									<div class="form-control-static type-names"><span class="param-type">number</span></div>
-								</div>
-							</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="drawing_ShadowStyle_index.js.html">drawing/ShadowStyle/index.js</a>, <a href="drawing_ShadowStyle_index.js.html#line-38">line 38</a></p>
+									<p class="form-control-static"><a href="platform_drawing_WebCanvas_index.js.html">platform/drawing/WebCanvas/index.js</a>, <a href="platform_drawing_WebCanvas_index.js.html#line-220">line 220</a></p>
 								</div>
 							</div>
 			
