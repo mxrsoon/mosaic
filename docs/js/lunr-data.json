@@ -1317,15 +1317,96 @@
           "relat",
           "thing"
         ],
-        "Viewport_Viewport.html": [
+        "Viewport.html": [
+          "applic",
           "class",
-          "viewport",
-          "viewport#viewport"
+          "repres",
+          "viewport"
         ],
-        "WebViewport_WebViewport.html": [
+        "Viewport.html#onResize": [
+          "event",
+          "handler",
+          "handlerlist",
+          "member",
+          "onres",
+          "resiz",
+          "viewport",
+          "viewport#onres"
+        ],
+        "Viewport.html#width": [
+          "member",
+          "number",
+          "viewport",
+          "viewport#width",
+          "width"
+        ],
+        "Viewport.html#height": [
+          "height",
+          "member",
+          "number",
+          "viewport",
+          "viewport#height"
+        ],
+        "Viewport.html#scaleFactor": [
+          "current",
+          "factor",
+          "member",
+          "number",
+          "scale",
+          "scalefactor",
+          "viewport",
+          "viewport#scalefactor"
+        ],
+        "Viewport.html#canvas": [
+          "canva",
+          "current",
+          "draw",
+          "member",
+          "viewport",
+          "viewport#canva"
+        ],
+        "WebViewport.html": [
+          "applic",
+          "base",
           "class",
-          "webviewport",
-          "webviewport#webviewport"
+          "platform",
+          "repres",
+          "viewport",
+          "web",
+          "webviewport"
+        ],
+        "WebViewport.html#width": [
+          "member",
+          "number",
+          "viewport",
+          "webviewport#width",
+          "width"
+        ],
+        "WebViewport.html#height": [
+          "height",
+          "member",
+          "number",
+          "viewport",
+          "webviewport#height"
+        ],
+        "WebViewport.html#scaleFactor": [
+          "current",
+          "factor",
+          "member",
+          "number",
+          "scale",
+          "scalefactor",
+          "viewport",
+          "webviewport#scalefactor"
+        ],
+        "WebViewport.html#canvas": [
+          "canva",
+          "current",
+          "draw",
+          "member",
+          "viewport",
+          "webcanva",
+          "webviewport#canva"
         ],
         "WebPlatform.html": [
           "associ",
@@ -1540,7 +1621,7 @@
           "typedef"
         ]
       },
-      "length": 167
+      "length": 176
     },
     "tokenStore": {
       "root": {
@@ -1645,6 +1726,14 @@
                       "Widget.html": {
                         "ref": "Widget.html",
                         "tf": 10
+                      },
+                      "Viewport.html": {
+                        "ref": "Viewport.html",
+                        "tf": 12.5
+                      },
+                      "WebViewport.html": {
+                        "ref": "WebViewport.html",
+                        "tf": 7.142857142857142
                       }
                     },
                     "a": {
@@ -3213,6 +3302,10 @@
                     "ref": "TimeAnimator.html",
                     "tf": 8.333333333333332
                   },
+                  "WebViewport.html": {
+                    "ref": "WebViewport.html",
+                    "tf": 7.142857142857142
+                  },
                   "WidgetList.html#get": {
                     "ref": "WidgetList.html#get",
                     "tf": 10
@@ -3699,6 +3792,14 @@
                           "tf": 683.3333333333334
                         }
                       }
+                    }
+                  }
+                },
+                "t": {
+                  "docs": {
+                    "Viewport.html#onResize": {
+                      "ref": "Viewport.html#onResize",
+                      "tf": 12.5
                     }
                   }
                 }
@@ -4380,6 +4481,14 @@
                     "docs": {
                       "Application.html#scaleFactor": {
                         "ref": "Application.html#scaleFactor",
+                        "tf": 12.5
+                      },
+                      "Viewport.html#scaleFactor": {
+                        "ref": "Viewport.html#scaleFactor",
+                        "tf": 12.5
+                      },
+                      "WebViewport.html#scaleFactor": {
+                        "ref": "WebViewport.html#scaleFactor",
                         "tf": 12.5
                       }
                     }
@@ -5211,6 +5320,42 @@
                         "ref": "Platform.html#.current",
                         "tf": 110
                       },
+                      "Viewport.html#onResize": {
+                        "ref": "Viewport.html#onResize",
+                        "tf": 110
+                      },
+                      "Viewport.html#width": {
+                        "ref": "Viewport.html#width",
+                        "tf": 110
+                      },
+                      "Viewport.html#height": {
+                        "ref": "Viewport.html#height",
+                        "tf": 110
+                      },
+                      "Viewport.html#scaleFactor": {
+                        "ref": "Viewport.html#scaleFactor",
+                        "tf": 110
+                      },
+                      "Viewport.html#canvas": {
+                        "ref": "Viewport.html#canvas",
+                        "tf": 110
+                      },
+                      "WebViewport.html#width": {
+                        "ref": "WebViewport.html#width",
+                        "tf": 110
+                      },
+                      "WebViewport.html#height": {
+                        "ref": "WebViewport.html#height",
+                        "tf": 110
+                      },
+                      "WebViewport.html#scaleFactor": {
+                        "ref": "WebViewport.html#scaleFactor",
+                        "tf": 110
+                      },
+                      "WebViewport.html#canvas": {
+                        "ref": "WebViewport.html#canvas",
+                        "tf": 110
+                      },
                       "WebPlatform.html#userAgent": {
                         "ref": "WebPlatform.html#userAgent",
                         "tf": 110
@@ -5409,6 +5554,14 @@
                         "ref": "Length.html",
                         "tf": 10
                       },
+                      "Viewport.html": {
+                        "ref": "Viewport.html",
+                        "tf": 12.5
+                      },
+                      "WebViewport.html": {
+                        "ref": "WebViewport.html",
+                        "tf": 7.142857142857142
+                      },
                       "Surface.html": {
                         "ref": "Surface.html",
                         "tf": 10
@@ -5490,6 +5643,17 @@
                     "Animator.html#resume": {
                       "ref": "Animator.html#resume",
                       "tf": 775
+                    }
+                  }
+                }
+              },
+              "i": {
+                "docs": {},
+                "z": {
+                  "docs": {
+                    "Viewport.html#onResize": {
+                      "ref": "Viewport.html#onResize",
+                      "tf": 12.5
                     }
                   }
                 }
@@ -6412,6 +6576,14 @@
                   "WebCanvas.html#drawImage": {
                     "ref": "WebCanvas.html#drawImage",
                     "tf": 25
+                  },
+                  "Viewport.html#canvas": {
+                    "ref": "Viewport.html#canvas",
+                    "tf": 12.5
+                  },
+                  "WebViewport.html#canvas": {
+                    "ref": "WebViewport.html#canvas",
+                    "tf": 12.5
                   }
                 },
                 "n": {
@@ -6802,13 +6974,13 @@
                       "ref": "Platform.html",
                       "tf": 110
                     },
-                    "Viewport_Viewport.html": {
-                      "ref": "Viewport_Viewport.html",
-                      "tf": 110
+                    "Viewport.html": {
+                      "ref": "Viewport.html",
+                      "tf": 122.5
                     },
-                    "WebViewport_WebViewport.html": {
-                      "ref": "WebViewport_WebViewport.html",
-                      "tf": 110
+                    "WebViewport.html": {
+                      "ref": "WebViewport.html",
+                      "tf": 117.14285714285714
                     },
                     "WebPlatform.html": {
                       "ref": "WebPlatform.html",
@@ -7032,6 +7204,22 @@
                           "ref": "Platform.html#.current",
                           "tf": 695.8333333333334
                         },
+                        "Viewport.html#scaleFactor": {
+                          "ref": "Viewport.html#scaleFactor",
+                          "tf": 12.5
+                        },
+                        "Viewport.html#canvas": {
+                          "ref": "Viewport.html#canvas",
+                          "tf": 12.5
+                        },
+                        "WebViewport.html#scaleFactor": {
+                          "ref": "WebViewport.html#scaleFactor",
+                          "tf": 12.5
+                        },
+                        "WebViewport.html#canvas": {
+                          "ref": "WebViewport.html#canvas",
+                          "tf": 12.5
+                        },
                         "WebPlatform.html": {
                           "ref": "WebPlatform.html",
                           "tf": 7.142857142857142
@@ -7193,6 +7381,14 @@
                     "WebCanvas.html#clear": {
                       "ref": "WebCanvas.html#clear",
                       "tf": 16.666666666666664
+                    },
+                    "Viewport.html#canvas": {
+                      "ref": "Viewport.html#canvas",
+                      "tf": 762.5
+                    },
+                    "WebViewport.html#canvas": {
+                      "ref": "WebViewport.html#canvas",
+                      "tf": 712.5
                     }
                   },
                   "s": {
@@ -9064,6 +9260,14 @@
                     "Application.html#scaleFactor": {
                       "ref": "Application.html#scaleFactor",
                       "tf": 12.5
+                    },
+                    "Viewport.html#scaleFactor": {
+                      "ref": "Viewport.html#scaleFactor",
+                      "tf": 12.5
+                    },
+                    "WebViewport.html#scaleFactor": {
+                      "ref": "WebViewport.html#scaleFactor",
+                      "tf": 12.5
                     }
                   },
                   "f": {
@@ -9080,6 +9284,14 @@
                               "docs": {
                                 "Application.html#scaleFactor": {
                                   "ref": "Application.html#scaleFactor",
+                                  "tf": 700
+                                },
+                                "Viewport.html#scaleFactor": {
+                                  "ref": "Viewport.html#scaleFactor",
+                                  "tf": 700
+                                },
+                                "WebViewport.html#scaleFactor": {
+                                  "ref": "WebViewport.html#scaleFactor",
                                   "tf": 700
                                 }
                               }
@@ -10324,6 +10536,30 @@
                         "ref": "Length.html#valueOf",
                         "tf": 50
                       },
+                      "Viewport.html#width": {
+                        "ref": "Viewport.html#width",
+                        "tf": 50
+                      },
+                      "Viewport.html#height": {
+                        "ref": "Viewport.html#height",
+                        "tf": 50
+                      },
+                      "Viewport.html#scaleFactor": {
+                        "ref": "Viewport.html#scaleFactor",
+                        "tf": 50
+                      },
+                      "WebViewport.html#width": {
+                        "ref": "WebViewport.html#width",
+                        "tf": 50
+                      },
+                      "WebViewport.html#height": {
+                        "ref": "WebViewport.html#height",
+                        "tf": 50
+                      },
+                      "WebViewport.html#scaleFactor": {
+                        "ref": "WebViewport.html#scaleFactor",
+                        "tf": 50
+                      },
                       "WidgetList.html#length": {
                         "ref": "WidgetList.html#length",
                         "tf": 66.66666666666666
@@ -11045,6 +11281,10 @@
                             "ref": "Platform.html#initialize",
                             "tf": 12.5
                           },
+                          "WebViewport.html": {
+                            "ref": "WebViewport.html",
+                            "tf": 7.142857142857142
+                          },
                           "WebPlatform.html": {
                             "ref": "WebPlatform.html",
                             "tf": 7.142857142857142
@@ -11306,35 +11546,167 @@
                             "ref": "Platform.html#viewport",
                             "tf": 766.6666666666666
                           },
-                          "Viewport_Viewport.html": {
-                            "ref": "Viewport_Viewport.html",
-                            "tf": 750
+                          "Viewport.html": {
+                            "ref": "Viewport.html",
+                            "tf": 1912.5
+                          },
+                          "Viewport.html#onResize": {
+                            "ref": "Viewport.html#onResize",
+                            "tf": 12.5
+                          },
+                          "Viewport.html#width": {
+                            "ref": "Viewport.html#width",
+                            "tf": 25
+                          },
+                          "Viewport.html#height": {
+                            "ref": "Viewport.html#height",
+                            "tf": 25
+                          },
+                          "Viewport.html#scaleFactor": {
+                            "ref": "Viewport.html#scaleFactor",
+                            "tf": 12.5
+                          },
+                          "Viewport.html#canvas": {
+                            "ref": "Viewport.html#canvas",
+                            "tf": 12.5
+                          },
+                          "WebViewport.html": {
+                            "ref": "WebViewport.html",
+                            "tf": 7.142857142857142
+                          },
+                          "WebViewport.html#width": {
+                            "ref": "WebViewport.html#width",
+                            "tf": 25
+                          },
+                          "WebViewport.html#height": {
+                            "ref": "WebViewport.html#height",
+                            "tf": 25
+                          },
+                          "WebViewport.html#scaleFactor": {
+                            "ref": "WebViewport.html#scaleFactor",
+                            "tf": 12.5
+                          },
+                          "WebViewport.html#canvas": {
+                            "ref": "WebViewport.html#canvas",
+                            "tf": 12.5
                           }
                         },
                         "#": {
                           "docs": {},
-                          "v": {
+                          "o": {
+                            "docs": {},
+                            "n": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {
+                                      "Viewport.html#onResize": {
+                                        "ref": "Viewport.html#onResize",
+                                        "tf": 1150
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "w": {
                             "docs": {},
                             "i": {
                               "docs": {},
-                              "e": {
+                              "d": {
                                 "docs": {},
-                                "w": {
+                                "t": {
                                   "docs": {},
-                                  "p": {
+                                  "h": {
+                                    "docs": {
+                                      "Viewport.html#width": {
+                                        "ref": "Viewport.html#width",
+                                        "tf": 1150
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "h": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "g": {
+                                  "docs": {},
+                                  "h": {
                                     "docs": {},
-                                    "o": {
+                                    "t": {
+                                      "docs": {
+                                        "Viewport.html#height": {
+                                          "ref": "Viewport.html#height",
+                                          "tf": 1150
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "s": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "f": {
                                       "docs": {},
-                                      "r": {
+                                      "a": {
                                         "docs": {},
-                                        "t": {
-                                          "docs": {
-                                            "Viewport_Viewport.html": {
-                                              "ref": "Viewport_Viewport.html",
-                                              "tf": 1150
+                                        "c": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "r": {
+                                                "docs": {
+                                                  "Viewport.html#scaleFactor": {
+                                                    "ref": "Viewport.html#scaleFactor",
+                                                    "tf": 1150
+                                                  }
+                                                }
+                                              }
                                             }
                                           }
                                         }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "c": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "n": {
+                                "docs": {},
+                                "v": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {
+                                      "Viewport.html#canvas": {
+                                        "ref": "Viewport.html#canvas",
+                                        "tf": 1150
                                       }
                                     }
                                   }
@@ -11617,6 +11989,10 @@
                   "docs": {
                     "Application.html#onResize": {
                       "ref": "Application.html#onResize",
+                      "tf": 700
+                    },
+                    "Viewport.html#onResize": {
+                      "ref": "Viewport.html#onResize",
                       "tf": 700
                     }
                   }
@@ -11960,6 +12336,14 @@
                     "WebCanvas.html#drawShape": {
                       "ref": "WebCanvas.html#drawShape",
                       "tf": 14.285714285714285
+                    },
+                    "Viewport.html#width": {
+                      "ref": "Viewport.html#width",
+                      "tf": 725
+                    },
+                    "WebViewport.html#width": {
+                      "ref": "WebViewport.html#width",
+                      "tf": 725
                     }
                   }
                 }
@@ -12545,6 +12929,10 @@
             "docs": {},
             "b": {
               "docs": {
+                "WebViewport.html": {
+                  "ref": "WebViewport.html",
+                  "tf": 7.142857142857142
+                },
                 "WebPlatform.html": {
                   "ref": "WebPlatform.html",
                   "tf": 7.142857142857142
@@ -12563,6 +12951,10 @@
                           "WebCanvas.html": {
                             "ref": "WebCanvas.html",
                             "tf": 1900
+                          },
+                          "WebViewport.html#canvas": {
+                            "ref": "WebViewport.html#canvas",
+                            "tf": 50
                           }
                         },
                         "s": {
@@ -12675,37 +13067,80 @@
                             "docs": {},
                             "t": {
                               "docs": {
-                                "WebViewport_WebViewport.html": {
-                                  "ref": "WebViewport_WebViewport.html",
-                                  "tf": 750
+                                "WebViewport.html": {
+                                  "ref": "WebViewport.html",
+                                  "tf": 1900
                                 }
                               },
                               "#": {
                                 "docs": {},
                                 "w": {
                                   "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {},
+                                        "h": {
+                                          "docs": {
+                                            "WebViewport.html#width": {
+                                              "ref": "WebViewport.html#width",
+                                              "tf": 1150
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "h": {
+                                  "docs": {},
                                   "e": {
                                     "docs": {},
-                                    "b": {
+                                    "i": {
                                       "docs": {},
-                                      "v": {
+                                      "g": {
                                         "docs": {},
-                                        "i": {
+                                        "h": {
                                           "docs": {},
-                                          "e": {
+                                          "t": {
+                                            "docs": {
+                                              "WebViewport.html#height": {
+                                                "ref": "WebViewport.html#height",
+                                                "tf": 1150
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "s": {
+                                  "docs": {},
+                                  "c": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "l": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "f": {
                                             "docs": {},
-                                            "w": {
+                                            "a": {
                                               "docs": {},
-                                              "p": {
+                                              "c": {
                                                 "docs": {},
-                                                "o": {
+                                                "t": {
                                                   "docs": {},
-                                                  "r": {
+                                                  "o": {
                                                     "docs": {},
-                                                    "t": {
+                                                    "r": {
                                                       "docs": {
-                                                        "WebViewport_WebViewport.html": {
-                                                          "ref": "WebViewport_WebViewport.html",
+                                                        "WebViewport.html#scaleFactor": {
+                                                          "ref": "WebViewport.html#scaleFactor",
                                                           "tf": 1150
                                                         }
                                                       }
@@ -12713,6 +13148,26 @@
                                                   }
                                                 }
                                               }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "c": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "n": {
+                                      "docs": {},
+                                      "v": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {
+                                            "WebViewport.html#canvas": {
+                                              "ref": "WebViewport.html#canvas",
+                                              "tf": 1150
                                             }
                                           }
                                         }
@@ -12827,6 +13282,14 @@
                       "WebCanvas.html#drawShape": {
                         "ref": "WebCanvas.html#drawShape",
                         "tf": 14.285714285714285
+                      },
+                      "Viewport.html#height": {
+                        "ref": "Viewport.html#height",
+                        "tf": 725
+                      },
+                      "WebViewport.html#height": {
+                        "ref": "WebViewport.html#height",
+                        "tf": 725
                       }
                     }
                   }
@@ -12880,7 +13343,12 @@
                   "e": {
                     "docs": {},
                     "r": {
-                      "docs": {},
+                      "docs": {
+                        "Viewport.html#onResize": {
+                          "ref": "Viewport.html#onResize",
+                          "tf": 12.5
+                        }
+                      },
                       "l": {
                         "docs": {},
                         "i": {
@@ -12931,6 +13399,10 @@
                                 },
                                 "Widget.html#onFocusLost": {
                                   "ref": "Widget.html#onFocusLost",
+                                  "tf": 50
+                                },
+                                "Viewport.html#onResize": {
+                                  "ref": "Viewport.html#onResize",
                                   "tf": 50
                                 }
                               }
@@ -13158,7 +13630,7 @@
           }
         }
       },
-      "length": 1166
+      "length": 1229
     },
     "corpusTokens": [
       "0",
@@ -13308,6 +13780,7 @@
       "enumer",
       "even",
       "evenodd",
+      "event",
       "factor",
       "field",
       "fill",
@@ -13337,6 +13810,7 @@
       "goe",
       "gone",
       "h",
+      "handler",
       "handlerlist",
       "height",
       "hex",
@@ -13467,6 +13941,7 @@
       "repeat",
       "repres",
       "represent",
+      "resiz",
       "resum",
       "return",
       "rgb",
@@ -13555,7 +14030,11 @@
       "vertic",
       "view",
       "viewport",
-      "viewport#viewport",
+      "viewport#canva",
+      "viewport#height",
+      "viewport#onres",
+      "viewport#scalefactor",
+      "viewport#width",
       "visibility.gon",
       "visibility.hidden",
       "visibility.vis",
@@ -13569,7 +14048,10 @@
       "webplatform",
       "webplatform#userag",
       "webviewport",
-      "webviewport#webviewport",
+      "webviewport#canva",
+      "webviewport#height",
+      "webviewport#scalefactor",
+      "webviewport#width",
       "whether",
       "widget",
       "widget#i",
@@ -15053,27 +15535,117 @@
       "summary": "",
       "description": "Initializes platform-related things."
     },
-    "Viewport_Viewport.html": {
-      "id": "Viewport_Viewport.html",
+    "Viewport.html": {
+      "id": "Viewport.html",
       "kind": "class",
       "title": "Viewport",
-      "longname": "Viewport#Viewport",
+      "longname": "Viewport",
       "name": "Viewport",
-      "tags": "Viewport#Viewport Viewport",
+      "tags": "Viewport",
       "summary": "",
-      "description": "",
+      "description": "A class to represent application viewports.",
       "body": ""
     },
-    "WebViewport_WebViewport.html": {
-      "id": "WebViewport_WebViewport.html",
+    "Viewport.html#onResize": {
+      "id": "Viewport.html#onResize",
+      "kind": "member",
+      "title": "onResize :HandlerList",
+      "longname": "Viewport#onResize",
+      "name": "onResize",
+      "tags": "Viewport#onResize onResize",
+      "summary": "",
+      "description": "Viewport resize event handlers."
+    },
+    "Viewport.html#width": {
+      "id": "Viewport.html#width",
+      "kind": "member",
+      "title": "width :number",
+      "longname": "Viewport#width",
+      "name": "width",
+      "tags": "Viewport#width width",
+      "summary": "",
+      "description": "Width of the viewport."
+    },
+    "Viewport.html#height": {
+      "id": "Viewport.html#height",
+      "kind": "member",
+      "title": "height :number",
+      "longname": "Viewport#height",
+      "name": "height",
+      "tags": "Viewport#height height",
+      "summary": "",
+      "description": "Height of the viewport."
+    },
+    "Viewport.html#scaleFactor": {
+      "id": "Viewport.html#scaleFactor",
+      "kind": "member",
+      "title": "scaleFactor :number",
+      "longname": "Viewport#scaleFactor",
+      "name": "scaleFactor",
+      "tags": "Viewport#scaleFactor scaleFactor",
+      "summary": "",
+      "description": "Current viewport scale factor."
+    },
+    "Viewport.html#canvas": {
+      "id": "Viewport.html#canvas",
+      "kind": "member",
+      "title": "canvas :Canvas",
+      "longname": "Viewport#canvas",
+      "name": "canvas",
+      "tags": "Viewport#canvas canvas",
+      "summary": "",
+      "description": "A canvas for drawing on the current viewport."
+    },
+    "WebViewport.html": {
+      "id": "WebViewport.html",
       "kind": "class",
       "title": "WebViewport",
-      "longname": "WebViewport#WebViewport",
+      "longname": "WebViewport",
       "name": "WebViewport",
-      "tags": "WebViewport#WebViewport WebViewport",
+      "tags": "WebViewport",
       "summary": "",
-      "description": "",
+      "description": "A class to represent application viewports on web-based platforms.",
       "body": ""
+    },
+    "WebViewport.html#width": {
+      "id": "WebViewport.html#width",
+      "kind": "member",
+      "title": "width :number",
+      "longname": "WebViewport#width",
+      "name": "width",
+      "tags": "WebViewport#width width",
+      "summary": "",
+      "description": "Width of the viewport."
+    },
+    "WebViewport.html#height": {
+      "id": "WebViewport.html#height",
+      "kind": "member",
+      "title": "height :number",
+      "longname": "WebViewport#height",
+      "name": "height",
+      "tags": "WebViewport#height height",
+      "summary": "",
+      "description": "Height of the viewport."
+    },
+    "WebViewport.html#scaleFactor": {
+      "id": "WebViewport.html#scaleFactor",
+      "kind": "member",
+      "title": "scaleFactor :number",
+      "longname": "WebViewport#scaleFactor",
+      "name": "scaleFactor",
+      "tags": "WebViewport#scaleFactor scaleFactor",
+      "summary": "",
+      "description": "Current viewport scale factor."
+    },
+    "WebViewport.html#canvas": {
+      "id": "WebViewport.html#canvas",
+      "kind": "member",
+      "title": "canvas :WebCanvas",
+      "longname": "WebViewport#canvas",
+      "name": "canvas",
+      "tags": "WebViewport#canvas canvas",
+      "summary": "",
+      "description": "A canvas for drawing on the current viewport."
     },
     "WebPlatform.html": {
       "id": "WebPlatform.html",

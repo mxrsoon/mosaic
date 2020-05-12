@@ -30,6 +30,9 @@ function createCanvas() {
     });
 }
 
+/**
+ * A class to represent application viewports on web-based platforms.
+ */
 export class WebViewport extends Viewport {
     /**
      * @param {Platform} platform - The current platform.

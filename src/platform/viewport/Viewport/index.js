@@ -11,6 +11,9 @@ const privates = new PrivateFields(function() {
     };
 });
 
+/**
+ * A class to represent application viewports.
+ */
 export class Viewport extends Abstract {
     /**
      * @param {Platform} platform - The current platform.
