@@ -76,7 +76,7 @@ const privates = new PrivateFields(function(props = {}) {
 			window.addEventListener("pointerdown", this.$.filterPointerEvent("onPointerDown"));
 			window.addEventListener("pointermove", this.$.filterPointerEvent("onPointerMove"));
 			window.addEventListener("pointerup", this.$.filterPointerEvent("onPointerUp"));
-			this.viewport.onResize.add(this.onResize);
+			this.viewport.onResize.add(this.$.resize);
 		}
 	};
 });
