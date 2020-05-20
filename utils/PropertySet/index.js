@@ -30,7 +30,7 @@ export class PropertySet {
 	 * @param {object} overrides - Object containing values that will override the defaults.
 	 * @returns {object} Object containing the final values for the properties.
 	 */
-	merge(thisArg, overrides) {
+	merge(thisArg, overrides = {}) {
 		const defaults = this.defaultsGenerator.call(thisArg);
 		const output = {};
 
