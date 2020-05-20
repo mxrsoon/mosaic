@@ -8,7 +8,8 @@ const properties = new PropertySet(function() {
 	return {
 		background: new ThemeColor("appBarBackground", new ThemeColor("primary", Color.royalBlue)),
 		shadow: new ShadowStyle(0, 4, 6, Color.fromRgb(0, 0, 0, .25)),
-		width: "100%"
+		width: "100%",
+		height: 56
 	};
 });
 
