@@ -1,10 +1,13 @@
 import { PropertySet, PrivateFields } from "../../../utils/index.js";
 import { Length } from "../../../layout/index.js";
+import { Canvas } from "../../canvas/index.js";
 
 /* Default properties for TextOptions class. */
 const properties = new PropertySet(function() {
     return {
-        lineHeight: "120%"
+        lineHeight: "120%",
+        fontSize: null,
+        fontName: null
     };
 });
 
@@ -49,13 +52,27 @@ export class TextOptions {
     }
 
     /**
-     * Measure a text using the passed options.
+     * Text font name.
+     * @type {string}
+     */
+    get fontName() {
+        return privates(this).props.fontName;
+    }
+
+    set fontName(val) {
+        if (typeof(val) === "string" || val instanceof String) {
+            privates(this).props.fontName = val;
+        } else {
+            throw new Error("Font name must be a string");
+        }
+    }
+
+    /**
+     * Measure a text using this object's options.
      * @param {string} text - Text to measure.
-     * @param {TextOptions} textOptions - Text to measure.
      * @returns {TextMetrics} Resulting metrics.
      */
     measure(text) {
-        // TODO: Implement text measuring
-        throw new Error("Not implemented");
+        return Canvas.createForCurrentPlatform().measureText(text, this);
     }
 }

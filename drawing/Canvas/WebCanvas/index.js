@@ -2,6 +2,7 @@ import { PrivateFields } from "../../../utils/index.js";
 import { Style } from "../../index.js";
 import { PropertySet } from "../../../utils/index.js";
 import { Canvas } from "../index.js";
+import { TextOptions, TextMetrics } from "../../text/index.js";
 
 /* Default properties for WebCanvas class. */
 const properties = new PropertySet(function() {
@@ -215,6 +216,20 @@ export class WebCanvas extends Canvas {
 		}
 
 		ctx.restore();
+	}
+
+	measureText(text, textOptions) {
+		const ctx = privates(this).context;
+		ctx.save();
+
+		ctx.font = `${textOptions.fontSize}px ${textOptions.fontName}`;
+		const metrics = ctx.measureText(text);
+
+		return new TextMetrics({
+			ascent: metrics.actualBoundingBoxAscent,
+			descent: metrics.actualBoundingBoxDescent,
+			width: metrics.width
+		});
 	}
 
 	/** Clear the entire canvas. */
