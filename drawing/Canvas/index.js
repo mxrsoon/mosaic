@@ -1,6 +1,7 @@
 import { PrivateFields, Abstract } from "../../utils/index.js";
 import { Style } from "../index.js";
 import { Platform, WebPlatform } from "../../platform/index.js";
+import { TextOptions, TextMetrics } from "../text/index.js";
 
 /**
  * Canvas for drawing paths, shapes, text and images.
@@ -68,6 +69,16 @@ export class Canvas extends Abstract {
 	}
 
 	drawText(text, x, y, styles) {
+		throw new Error("Not implemented");
+	}
+
+	/**
+     * Measure a text using the passed options.
+     * @param {string} text - Text to measure.
+     * @param {TextOptions} textOptions - Text to measure.
+     * @returns {TextMetrics} Resulting metrics.
+     */
+	measureText(text, textOptions) {
 		throw new Error("Not implemented");
 	}
 
