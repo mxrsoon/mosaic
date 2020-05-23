@@ -45,7 +45,7 @@ export class Widget {
 	 * @param {Widget~properties} props - Initial properties.
 	 */
 	constructor(props) {
-		privates.apply(this);
+		privates.setup(this);
 		
 		Object.defineProperty(this, "application", {
 			enumerable: true,
@@ -68,12 +68,12 @@ export class Widget {
 	 * @type {?number}
 	 */
 	get id() {
-		return this.$.props.id;
+		return privates(this).props.id;
 	}
 
 	set id(val) {
 		if (typeof(val) === "string" || val instanceof String || val == null) {
-			this.$.props.id = val;
+			privates(this).props.id = val;
 		} else {
 			throw new Error("Widget ID must be a string or a nullish value");
 		}
@@ -84,11 +84,11 @@ export class Widget {
 	 * @type {number}
 	 */
 	get x() {
-		return this.$.props.x;
+		return privates(this).props.x;
 	}
 	
 	set x(val) {
-		this.$.props.x = val;
+		privates(this).props.x = val;
 		this.invalidate();
 	}
 
@@ -97,11 +97,11 @@ export class Widget {
 	 * @type {number}
 	 */
 	get y() {
-		return this.$.props.y;
+		return privates(this).props.y;
 	}
 
 	set y(val) {
-		this.$.props.y = val;
+		privates(this).props.y = val;
 		this.invalidate();
 	}
 
@@ -114,52 +114,52 @@ export class Widget {
 	}
 
 	get width() {
-		return this.visibility !== Visibility.gone ? this.$.props.width : 0
+		return this.visibility !== Visibility.gone ? privates(this).props.width : 0
 	}
 
 	set width(val) {
-		this.$.props.width = Length.parse(val, () => this.parent ? this.parent.width : 0);
+		privates(this).props.width = Length.parse(val, () => this.parent ? this.parent.width : 0);
 		this.invalidate();
 	}
 	
 	get height() {
-		return this.visibility !== Visibility.gone ? this.$.props.height : 0;
+		return this.visibility !== Visibility.gone ? privates(this).props.height : 0;
 	}
 	
 	set height(val) {
-		this.$.props.height = Length.parse(val, () => this.parent ? this.parent.height : 0);
+		privates(this).props.height = Length.parse(val, () => this.parent ? this.parent.height : 0);
 		this.invalidate();
 	}
 
 	get hitTestEnabled() {
-		return this.$.props.hitTestEnabled;
+		return privates(this).props.hitTestEnabled;
 	}
 
 	set hitTestEnabled(val) {
-		this.$.props.hitTestEnabled = val;
+		privates(this).props.hitTestEnabled = val;
 	}
 
 	get focusable() {
-		return this.$.props.focusable;
+		return privates(this).props.focusable;
 	}
 
 	set focusable(val) {
-		this.$.props.focusable = val;
+		privates(this).props.focusable = val;
 	}
 
 	get visibility() {
-		return this.$.props.visibility;
+		return privates(this).props.visibility;
 	}
 
 	set visibility(val) {
 		if (val instanceof Visibility) {
-			this.$.props.visibility = val;
+			privates(this).props.visibility = val;
 		}
 	}
 
 	/** @type {HandlerList} */
 	get onClick() {
-		return this.$.events.onClick;
+		return privates(this).events.onClick;
 	}
 
 	set onClick(val) {
@@ -168,7 +168,7 @@ export class Widget {
 
 	/** @type {HandlerList} */
 	get onPointerDown() {
-		return this.$.events.onPointerDown;
+		return privates(this).events.onPointerDown;
 	}
 
 	set onPointerDown(val) {
@@ -177,7 +177,7 @@ export class Widget {
 
 	/** @type {HandlerList} */
 	get onPointerMove() {
-		return this.$.events.onPointerMove;
+		return privates(this).events.onPointerMove;
 	}
 
 	set onPointerMove(val) {
@@ -186,7 +186,7 @@ export class Widget {
 
 	/** @type {HandlerList} */
 	get onPointerUp() {
-		return this.$.events.onPointerUp;
+		return privates(this).events.onPointerUp;
 	}
 
 	set onPointerUp(val) {
@@ -195,7 +195,7 @@ export class Widget {
 
 	/** @type {HandlerList} */
 	get onFocus() {
-		return this.$.events.onFocus;
+		return privates(this).events.onFocus;
 	}
 
 	set onFocus(val) {
@@ -204,7 +204,7 @@ export class Widget {
 
 	/** @type {HandlerList} */
 	get onFocusLost() {
-		return this.$.events.onFocusLost;
+		return privates(this).events.onFocusLost;
 	}
 
 	set onFocusLost(val) {

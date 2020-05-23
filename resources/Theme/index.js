@@ -11,7 +11,7 @@ const privates = new PrivateFields(function() {
 
 export class Theme {
     constructor({ colors = {} } = {}) {
-        privates.apply(this);
+        privates.setup(this);
         this.setColors(colors);
     }
 
@@ -23,17 +23,17 @@ export class Theme {
 
     setColor(colorName, color) {
         if (color instanceof Color) {
-            this.$.colors[colorName] = color;
+            privates(this).colors[colorName] = color;
         } else if (typeof(color) === "string") {
-            this.$.colors[colorName] = new ThemeColor(color, Color.transparent);
+            privates(this).colors[colorName] = new ThemeColor(color, Color.transparent);
         } else if (color == null) {
-            this.$.colors[colorName] = undefined;
+            privates(this).colors[colorName] = undefined;
         }
     }
 
     getColor(colorName) {
-        if (this.$.colors[colorName] instanceof Color) {
-            return this.$.colors[colorName];
+        if (privates(this).colors[colorName] instanceof Color) {
+            return privates(this).colors[colorName];
         }
     }
 }

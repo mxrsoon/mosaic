@@ -14,7 +14,7 @@ const privates = new PrivateFields(function() {
 export class RectangleShape extends Shape {
 	constructor(cornerRadius = new CornerRadius(0)) {
         super();
-        privates.apply(this);
+        privates.setup(this);
 
         this.cornerRadius = cornerRadius;
     }
@@ -24,7 +24,7 @@ export class RectangleShape extends Shape {
      * @type {CornerRadius}
      */
 	get cornerRadius() {
-		return this.$.cornerRadius;
+		return privates(this).cornerRadius;
 	}
 
 	set cornerRadius(val) {
@@ -32,7 +32,7 @@ export class RectangleShape extends Shape {
 			throw new Error("Corner radius must be of CornerRadius class");
 		}
 
-		this.$.cornerRadius = val;
+		privates(this).cornerRadius = val;
 	}
 	
 	getPath(width, height) {

@@ -18,10 +18,10 @@ export class CycleInterpolator extends Interpolator {
      */
     constructor(cycles) {
         super();
-        privates.apply(this);
+        privates.setup(this);
 
         if (isFinite(cycles) && cycles >= 1) {
-            this.$.cycles = cycles;
+            privates(this).cycles = cycles;
         } else {
             throw new Error("Cycles must be a number greater than or equal to 1");
         }
@@ -33,6 +33,6 @@ export class CycleInterpolator extends Interpolator {
      * @returns {number} Interpolated value.
      */
     interpolate(progress) {
-        return Math.sin(2 * this.$.cycles * Math.PI * progress);
+        return Math.sin(2 * privates(this).cycles * Math.PI * progress);
     }
 }

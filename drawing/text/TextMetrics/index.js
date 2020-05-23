@@ -9,7 +9,7 @@ const properties = new PropertySet(function() {
     };
 });
 
-/* Private fields for TextOptions class. */
+/* Private fields for TextMetrics class. */
 const privates = new PrivateFields(function(props = {}) {
     return {
         initialized: false,
@@ -25,9 +25,9 @@ const privates = new PrivateFields(function(props = {}) {
  */
 export class TextMetrics {
     constructor(props) {
-        privates.apply(this);
+        privates.setup(this);
         properties.apply(this, props);
-        this.$.initialized = true;
+        privates(this).initialized = true;
     }
 
     get height() {
@@ -35,11 +35,11 @@ export class TextMetrics {
     }
 
     get ascent() {
-        return this.$.props.ascent;
+        return privates(this).props.ascent;
     }
 
     set ascent(val) {
-        if (this.$.initialized) {
+        if (privates(this).initialized) {
             throw new Error("Unable to change TextMetrics after initialization");
         }
 
@@ -47,15 +47,15 @@ export class TextMetrics {
             throw new Error("TextMetrics' ascent must be a number");
         }
 
-        this.$.props.ascent = Number(val);
+        privates(this).props.ascent = Number(val);
     }
 
     get descent() {
-        return this.$.props.descent;
+        return privates(this).props.descent;
     }
 
     set descent(val) {
-        if (this.$.initialized) {
+        if (privates(this).initialized) {
             throw new Error("Unable to change TextMetrics after initialization");
         }
 
@@ -63,15 +63,15 @@ export class TextMetrics {
             throw new Error("TextMetrics' descent must be a number");
         }
 
-        this.$.props.descent = Number(val);
+        privates(this).props.descent = Number(val);
     }
 
     get width() {
-        return this.$.props.width;
+        return privates(this).props.width;
     }
 
     set width(val) {
-        if (this.$.initialized) {
+        if (privates(this).initialized) {
             throw new Error("Unable to change TextMetrics after initialization");
         }
 
@@ -79,6 +79,6 @@ export class TextMetrics {
             throw new Error("TextMetrics' width must be a number");
         }
 
-        this.$.props.width = Number(val);
+        privates(this).props.width = Number(val);
     }
 }

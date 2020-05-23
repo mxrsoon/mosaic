@@ -1,4 +1,4 @@
-import { PropertySet } from "../../utils/index.js";
+import { PropertySet, PrivateFields } from "../../utils/index.js";
 import { Length } from "../../layout/index.js";
 import { Widget } from "../../core/index.js";
 import { ThemeColor } from "../../resources/index.js";
@@ -14,36 +14,46 @@ const properties = new PropertySet(function() {
     };
 });
 
+/* Private fields for Text class */
+const privates = new PrivateFields(function(props = {}) {
+    return {
+        get props() {
+            return props;
+        }
+    };
+});
+
 export class Text extends Widget {
     constructor(props) {
         super(props);
+        privates.setup(this);
         properties.apply(this, props);
     }
 
     get text() {
-        return this.$.props.text;
+        return privates(this).props.text;
     }
 
     set text(val) {
-        this.$.props.text = val;
+        privates(this).props.text = val;
         this.invalidate();
     }
 
     get fontSize() {
-        return this.$.props.fontSize;
+        return privates(this).props.fontSize;
     }
 
     set fontSize(val) {
-        this.$.props.fontSize = val;
+        privates(this).props.fontSize = val;
         this.invalidate();
     }
 
     get fontFamily() {
-        return this.$.props.fontFamily;
+        return privates(this).props.fontFamily;
     }
 
     set fontFamily(val) {
-        this.$.props.fontFamily = val;
+        privates(this).props.fontFamily = val;
         this.invalidate();
     }
 

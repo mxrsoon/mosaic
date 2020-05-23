@@ -30,15 +30,15 @@ const privates = new PrivateFields(function(props = {}) {
         },
         
         get rawProgress() {
-            return Math.min(this.$.currentTime / this.duration, 1);
+            return Math.min(privates(this).currentTime / this.duration, 1);
         },
 
         get progress() {
-            return this.interpolator.interpolate(this.$.rawProgress);
+            return this.interpolator.interpolate(privates(this).rawProgress);
         },
 
         get currentTime() {
-            return Date.now() - this.$.startTime;
+            return Date.now() - privates(this).startTime;
         },
 
         tick() {
@@ -47,18 +47,18 @@ const privates = new PrivateFields(function(props = {}) {
                  * that it's called with raw progress being 1 on animation end even
                  * on millisecond precision scenarios. */
 
-                if (this.$.rawProgress < 1) {
+                if (privates(this).rawProgress < 1) {
                     /* Not reached iteration end. */
-                    this.callback(this.getValue(this.$.progress));
-                    this.$.tickHandler = requestAnimationFrame(this.$.tick);
+                    this.callback(this.getValue(privates(this).progress));
+                    privates(this).tickHandler = requestAnimationFrame(privates(this).tick);
                 } else {
                     /* Reached iteration end. */
-                    this.callback(this.getValue(this.$.progress));
+                    this.callback(this.getValue(privates(this).progress));
 
-                    if (this.$.currentIteration < Math.floor(this.iterations)) {
-                        this.$.currentIteration++;
-                        this.$.startTime = Date.now();
-                        this.$.tickHandler = requestAnimationFrame(this.$.tick);
+                    if (privates(this).currentIteration < Math.floor(this.iterations)) {
+                        privates(this).currentIteration++;
+                        privates(this).startTime = Date.now();
+                        privates(this).tickHandler = requestAnimationFrame(privates(this).tick);
                     } else {
                         this.stop();
 
@@ -84,7 +84,7 @@ export class Animator extends Abstract {
      */
     constructor(props) {
         super();
-        privates.apply(this);
+        privates.setup(this);
         properties.apply(this, props);
     }
 
@@ -93,7 +93,7 @@ export class Animator extends Abstract {
      * @type {AnimationState}
      */
     get state() {
-        return this.$.state;
+        return privates(this).state;
     }
 
     /**
@@ -101,7 +101,7 @@ export class Animator extends Abstract {
      * @type {function}
      */
     get callback() {
-        return this.$.props.callback;
+        return privates(this).props.callback;
     }
 
     set callback(val) {
@@ -110,7 +110,7 @@ export class Animator extends Abstract {
                 throw new Error("Animation callback must be a function");
             }
 
-            this.$.props.callback = val;
+            privates(this).props.callback = val;
         } else {
             throw new Error("Animator properties can only be changed if it's stopped");
         }
@@ -121,7 +121,7 @@ export class Animator extends Abstract {
      * @type {?function}
      */
     get endCallback() {
-        return this.$.props.endCallback;
+        return privates(this).props.endCallback;
     }
 
     set endCallback(val) {
@@ -130,7 +130,7 @@ export class Animator extends Abstract {
                 throw new Error("Animation end callback must be a function or a nullish value");
             }
 
-            this.$.props.endCallback = val;
+            privates(this).props.endCallback = val;
         } else {
             throw new Error("Animator properties can only be changed if it's stopped");
         }
@@ -141,7 +141,7 @@ export class Animator extends Abstract {
      * @type {number}
      */
     get duration() {
-        return this.$.props.duration;
+        return privates(this).props.duration;
     }
 
     set duration(val) {
@@ -150,7 +150,7 @@ export class Animator extends Abstract {
                 throw new Error("Duration must be a finite positive number");
             }
 
-            this.$.props.duration = val;
+            privates(this).props.duration = val;
         } else {
             throw new Error("Animator properties can only be changed if it's stopped");
         }
@@ -161,7 +161,7 @@ export class Animator extends Abstract {
      * @type {number}
      */
     get delay() {
-        return this.$.props.delay;
+        return privates(this).props.delay;
     }
 
     set delay(val) {
@@ -170,7 +170,7 @@ export class Animator extends Abstract {
                 throw new Error("Delay must be a finite positive number");
             }
 
-            this.$.props.delay = val;
+            privates(this).props.delay = val;
         } else {
             throw new Error("Animator properties can only be changed if it's stopped");
         }
@@ -181,7 +181,7 @@ export class Animator extends Abstract {
      * @type {number}
      */
     get iterations() {
-        return this.$.props.iterations;
+        return privates(this).props.iterations;
     }
 
     set iterations(val) {
@@ -190,7 +190,7 @@ export class Animator extends Abstract {
                 throw new Error("Iterations must be a number above or equal to 1");
             }
 
-            this.$.props.iterations = val;
+            privates(this).props.iterations = val;
         } else {
             throw new Error("Animator properties can only be changed if it's stopped");
         }
@@ -201,7 +201,7 @@ export class Animator extends Abstract {
      * @type {Interpolator}
      */
     get interpolator() {
-        return this.$.props.interpolator;
+        return privates(this).props.interpolator;
     }
 
     set interpolator(val) {
@@ -210,7 +210,7 @@ export class Animator extends Abstract {
                 throw new Error("Interpolator must be of Interpolator class");
             }
 
-            this.$.props.interpolator = val;
+            privates(this).props.interpolator = val;
         } else {
             throw new Error("Animator properties can only be changed if it's stopped");
         }
@@ -229,10 +229,10 @@ export class Animator extends Abstract {
      */
     start() {
         if (this.state === AnimationState.stopped) {
-            this.$.state = AnimationState.running;
-            this.$.currentIteration = 1;
-            this.$.startTime = Date.now();
-            this.$.tickHandler = requestAnimationFrame(this.$.tick);
+            privates(this).state = AnimationState.running;
+            privates(this).currentIteration = 1;
+            privates(this).startTime = Date.now();
+            privates(this).tickHandler = requestAnimationFrame(privates(this).tick);
         } else {
             throw new Error("Can only start animator if it's in stopped state");
         }
@@ -242,8 +242,8 @@ export class Animator extends Abstract {
      * Stop the animation.
      */
     stop() {
-        cancelAnimationFrame(this.$.tickHandler);
-        this.$.state = AnimationState.stopped;
+        cancelAnimationFrame(privates(this).tickHandler);
+        privates(this).state = AnimationState.stopped;
     }
 
     /**
@@ -251,9 +251,9 @@ export class Animator extends Abstract {
      */
     pause() {
         if (this.state === AnimationState.running) {
-            cancelAnimationFrame(this.$.tickHandler);
-            this.$.state = AnimationState.paused;
-            this.$.pausedProgress = this.$.rawProgress;
+            cancelAnimationFrame(privates(this).tickHandler);
+            privates(this).state = AnimationState.paused;
+            privates(this).pausedProgress = privates(this).rawProgress;
         } else {
             throw new Error("Can only pause animator if it's in running state");
         }
@@ -264,9 +264,9 @@ export class Animator extends Abstract {
      */
     resume() {
         if (this.state === AnimationState.paused) {
-            this.$.state = AnimationState.running;
-            this.$.startTime = Date.now() - this.$.pausedProgress * this.duration;
-            this.$.tickHandler = requestAnimationFrame(this.$.tick);
+            privates(this).state = AnimationState.running;
+            privates(this).startTime = Date.now() - privates(this).pausedProgress * this.duration;
+            privates(this).tickHandler = requestAnimationFrame(privates(this).tick);
         } else {
             throw new Error("Can only resume animator if it's in paused state");
         }

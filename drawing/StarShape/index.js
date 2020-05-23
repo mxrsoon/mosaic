@@ -14,16 +14,16 @@ const privates = new PrivateFields(function() {
 export class StarShape extends Shape {
 	constructor(spikes = 5) {
         super();
-        privates.apply(this);
+        privates.setup(this);
         this.spikes = spikes;
     }
 
     get spikes() {
-        return this.$.spikes;
+        return privates(this).spikes;
     }
 
     set spikes(val) {
-        this.$.spikes = val;
+        privates(this).spikes = val;
     }
 	
 	getPath(width, height) {

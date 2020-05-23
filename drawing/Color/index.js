@@ -21,14 +21,14 @@ export class Color {
 	 * @param {number} a - Alpha value in [0, 1] range.
 	 */
 	constructor(h, s, v, a = 1) {
-		privates.apply(this);
+		privates.setup(this);
 
 		const hsv = ColorUtils.validateHsv(h, s, v, a);
 
-		this.$.hue = hsv.h;
-		this.$.saturation = hsv.s;
-		this.$.vibrancy = hsv.v;
-		this.$.alpha = hsv.a;
+		privates(this).hue = hsv.h;
+		privates(this).saturation = hsv.s;
+		privates(this).vibrancy = hsv.v;
+		privates(this).alpha = hsv.a;
 	}
 
 	/**
@@ -36,16 +36,16 @@ export class Color {
 	 * @returns {Color~HSVColorObject} The HSV representation of the color.
 	 */
 	toHsv() {
-		const a = this.$.alpha;
+		const a = privates(this).alpha;
 
 		return a === 1 ? {
-			h: this.$.hue,
-			s: this.$.saturation,
-			v: this.$.vibrancy
+			h: privates(this).hue,
+			s: privates(this).saturation,
+			v: privates(this).vibrancy
 		} : {
-			h: this.$.hue,
-			s: this.$.saturation,
-			v: this.$.vibrancy,
+			h: privates(this).hue,
+			s: privates(this).saturation,
+			v: privates(this).vibrancy,
 			a: a
 		};
 	}

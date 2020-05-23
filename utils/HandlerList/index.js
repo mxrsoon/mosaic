@@ -1,21 +1,28 @@
+import { PrivateFields } from "../index.js";
+
+/* Private fields for HandlerList class */
+const privates = new PrivateFields(function() {
+	return {
+		handlers: []
+	};
+});
+
 export class HandlerList {
 	constructor() {
-		this.$ = {
-			handlers: []
-		}
+		privates.setup(this);
 	}
 	
 	add(handler) {
-		if (!this.$.handlers.includes(handler)) {
-			this.$.handlers.push(handler);
+		if (!privates(this).handlers.includes(handler)) {
+			privates(this).handlers.push(handler);
 		}
 	}
 	
 	remove(handler) {
-		const idx = this.$.handlers.indexOf(handler);
+		const idx = privates(this).handlers.indexOf(handler);
 		
 		if (idx >= 0) {
-			this.$.handlers.splice(idx, 1);
+			privates(this).handlers.splice(idx, 1);
 			return true;
 		}
 		
@@ -25,7 +32,7 @@ export class HandlerList {
 	invoke(...args) {
 		let handled = false;
 
-		for (let handler of this.$.handlers) {
+		for (let handler of privates(this).handlers) {
 			handled = handled || handler instanceof HandlerList ? handler.invoke(...args) : handler(...args);
 		}
 

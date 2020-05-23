@@ -6,8 +6,8 @@ import { PropertySet } from "../../../utils/index.js";
 const properties = new PropertySet(function() {
 	return {
         internalCanvas: new OffscreenCanvas(0, 0),
-        height: this.$.internalCanvas ? this.$.internalCanvas.height : 0,
-        width: this.$.internalCanvas ? this.$.internalCanvas.width : 0,
+        height: privates(this).internalCanvas ? privates(this).internalCanvas.height : 0,
+        width: privates(this).internalCanvas ? privates(this).internalCanvas.width : 0,
         scaleFactor: 1,
         resizable: false,
         scalable: false
@@ -31,66 +31,66 @@ const privates = new PrivateFields(function(props = {}) {
 export class WebCanvas extends Canvas {
 	constructor(props) {
         super();
-        privates.apply(this);
+        privates.setup(this);
         props = properties.merge(this, props);
 
-		this.$.internalCanvas = props.internalCanvas;
-        this.$.internalCanvas.style.imageRendering = "pixelated";
-		this.$.context = this.$.internalCanvas.getContext("2d");
-        this.$.context.imageSmoothingEnabled = false;
+		privates(this).internalCanvas = props.internalCanvas;
+        privates(this).internalCanvas.style.imageRendering = "pixelated";
+		privates(this).context = privates(this).internalCanvas.getContext("2d");
+        privates(this).context.imageSmoothingEnabled = false;
 
-        this.$.props.resizable = true;
-        this.$.props.scalable = true;
+        privates(this).props.resizable = true;
+        privates(this).props.scalable = true;
         
         properties.apply(this, props, ["width", "height"]);
 
-        this.$.props.resizable = props.resizable;
-        this.$.props.scalable = props.scalable;
+        privates(this).props.resizable = props.resizable;
+        privates(this).props.scalable = props.scalable;
 	}
 
 	get width() {
-		return this.$.internalCanvas.width;
+		return privates(this).internalCanvas.width;
 	}
 
 	set width(val) {
         if (this.resizable) {
-            this.$.internalCanvas.width = val;
+            privates(this).internalCanvas.width = val;
         } else {
             throw new Error("This canvas is not resizable");
         }
 	}
 	
 	get height() {
-		return this.$.internalCanvas.height;
+		return privates(this).internalCanvas.height;
 	}
     
 	set height(val) {
         if (this.resizable) {
-            this.$.internalCanvas.height = val;
+            privates(this).internalCanvas.height = val;
         } else {
             throw new Error("This canvas is not resizable");
         }
     }
     
 	get scaleFactor() {
-		return this.$.props.scaleFactor;
+		return privates(this).props.scaleFactor;
 	}
 
 	set scaleFactor(val) {
         if (this.scalable) {
-            this.$.props.scaleFactor = val;
-            this.$.context.setTransform(this.scaleFactor, 0, 0, this.scaleFactor, 0, 0);
+            privates(this).props.scaleFactor = val;
+            privates(this).context.setTransform(this.scaleFactor, 0, 0, this.scaleFactor, 0, 0);
         } else {
             throw new Error("This canvas is not scalable");
         }
 	}
     
     get resizable() {
-        return this.$.props.resizable;
+        return privates(this).props.resizable;
     }
 
     get scalable() {
-        return this.$.props.scalable;
+        return privates(this).props.scalable;
     }
     
 	/**
@@ -102,7 +102,7 @@ export class WebCanvas extends Canvas {
 	 * @param {Style[]} styles - Styles to draw the rectangle with.
 	 */
 	drawRect(x, y, width, height, styles) {
-		const ctx = this.$.context;
+		const ctx = privates(this).context;
 		const props = {};
 
 		ctx.save();
@@ -139,7 +139,7 @@ export class WebCanvas extends Canvas {
 	 * @param {Style[]} styles - Styles to draw the shape with.
 	 */
 	drawShape(x, y, width, height, shape, styles) {
-		const ctx = this.$.context;
+		const ctx = privates(this).context;
 		const path = shape.getPath(width, height);
 		const props = {};
 
@@ -179,20 +179,20 @@ export class WebCanvas extends Canvas {
 	 */
 	drawImage(image, destX, destY, destWidth, destHeight, srcX, srcY, srcWidth, srcHeight) {
 		if (image instanceof Canvas) {
-			image = image.$.internalCanvas;
+			image = privates(image).internalCanvas;
 		}
 		
 		if (arguments.length === 3 || arguments.length === 5) {
-			this.$.context.drawImage(image, destX, destY, destWidth, destHeight);
+			privates(this).context.drawImage(image, destX, destY, destWidth, destHeight);
 		} else if (arguments.length === 7 || arguments.length === 9) {
-			this.$.context.drawImage(image, srcX, srcY, srcWidth, srcHeight, destX, destY, destWidth, destHeight);
+			privates(this).context.drawImage(image, srcX, srcY, srcWidth, srcHeight, destX, destY, destWidth, destHeight);
 		} else {
 			throw new Error("Invalid call to drawImage, it must be called with 3, 5, 7 or 9 arguments")
 		}
 	}
 
 	drawText(text, x, y, styles) {
-		const ctx = this.$.context;
+		const ctx = privates(this).context;
 		const props = {};
 
 		ctx.save();
@@ -218,6 +218,6 @@ export class WebCanvas extends Canvas {
 
 	/** Clear the entire canvas. */
 	clear() {
-		this.$.context.clearRect(0, 0, this.width, this.height);
+		privates(this).context.clearRect(0, 0, this.width, this.height);
 	}
 }

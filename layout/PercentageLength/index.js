@@ -12,27 +12,27 @@ const privates = new PrivateFields(function(percentage, relativeTo) {
 export class PercentageLength extends Length {
     constructor(percentage, relativeTo = 1) {
         super(0);
-        privates.apply(this, percentage, relativeTo);
+        privates.setup(this, percentage, relativeTo);
     }
 
     get relativeTo() {
-        return this.$.relativeTo;
+        return privates(this).relativeTo;
     }
 
     set relativeTo(val) {
-        this.$.relativeTo = val;
+        privates(this).relativeTo = val;
     }
 
     get percentage() {
-        return this.$.percentage;
+        return privates(this).percentage;
     }
 
     set percentage(val) {
-        this.$.percentage = val;
+        privates(this).percentage = val;
     }
 
     valueOf() {
-        let relativeValue = this.$.relativeTo;
+        let relativeValue = privates(this).relativeTo;
         
         if (typeof(relativeValue) === "function") {
             relativeValue = relativeValue();

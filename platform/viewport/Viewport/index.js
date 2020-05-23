@@ -20,7 +20,7 @@ export class Viewport extends Abstract {
      */
     constructor(platform) {
         super();
-        privates.apply(this);
+        privates.setup(this);
 
         if (Platform.current == null) {
             throw new Error("Platform not initialized");
@@ -40,7 +40,7 @@ export class Viewport extends Abstract {
      * @type {HandlerList}
      */
     get onResize() {
-        return this.$.events.onResize;
+        return privates(this).events.onResize;
     }
 
     /**

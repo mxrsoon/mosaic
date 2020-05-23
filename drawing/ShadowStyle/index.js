@@ -23,7 +23,7 @@ export class ShadowStyle extends Style {
 	 */
 	constructor(offsetX, offsetY, blurAmount, color) {
 		super();
-		privates.apply(this);
+		privates.setup(this);
 
 		this.offsetX = offsetX;
 		this.offsetY = offsetY;
@@ -36,11 +36,11 @@ export class ShadowStyle extends Style {
 	 * @type {number}
 	 */
 	get offsetX() {
-		return this.$.offsetX;
+		return privates(this).offsetX;
 	}
 
 	set offsetX(val) {
-		this.$.offsetX = val;
+		privates(this).offsetX = val;
 	}
 
 	/**
@@ -48,11 +48,11 @@ export class ShadowStyle extends Style {
 	 * @type {number}
 	 */
 	get offsetY() {
-		return this.$.offsetY;
+		return privates(this).offsetY;
 	}
 
 	set offsetY(val) {
-		this.$.offsetY = val;
+		privates(this).offsetY = val;
 	}
 
 	/**
@@ -60,11 +60,11 @@ export class ShadowStyle extends Style {
 	 * @type {number}
 	 */
 	get blurAmount() {
-		return this.$.blurAmount;
+		return privates(this).blurAmount;
 	}
 
 	set blurAmount(val) {
-		this.$.blurAmount = val;
+		privates(this).blurAmount = val;
 	}
 
 	/**
@@ -72,11 +72,11 @@ export class ShadowStyle extends Style {
 	 * @type {Color}
 	 */
 	get color() {
-		return this.$.color;
+		return privates(this).color;
 	}
 
 	set color(val) {
-		this.$.color = val;
+		privates(this).color = val;
 	}
 
 	apply(props, canvas) {

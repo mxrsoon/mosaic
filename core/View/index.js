@@ -1,4 +1,4 @@
-import { PropertySet } from "../../utils/index.js";
+import { PropertySet, PrivateFields } from "../../utils/index.js";
 import { ThemeColor } from "../../resources/index.js";
 import { Color, FillStyle } from "../../drawing/index.js";
 import { Container } from "../index.js";
@@ -12,21 +12,31 @@ const properties = new PropertySet(function() {
 	};
 });
 
+/* Private fields for View class */
+const privates = new PrivateFields(function(props = {}) {
+    return {
+        get props() {
+            return props;
+        }
+    };
+});
+
 /**
  * A View that contains Widgets.
  */
 export class View extends Container {
 	constructor(props) {
 		super(props);
+		privates.setup(this);
 		properties.apply(this, props);
 	}
 
 	get background() {
-		return this.$.props.background;
+		return privates(this).props.background;
 	}
 
 	set background(val) {
-		this.$.props.background = val;
+		privates(this).props.background = val;
 		this.invalidate();
 	}
 

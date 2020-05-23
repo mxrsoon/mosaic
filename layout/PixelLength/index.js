@@ -11,10 +11,10 @@ const privates = new PrivateFields(function(pixels) {
 export class PixelLength extends Length {
     constructor(pixels) {
         super(0);
-        privates.apply(this, pixels);
+        privates.setup(this, pixels);
     }
 
     valueOf() {
-        return this.$.pixels / (window.devicePixelRatio || 1);
+        return privates(this).pixels / (window.devicePixelRatio || 1);
     }
 }

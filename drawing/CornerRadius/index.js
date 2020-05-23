@@ -31,7 +31,7 @@ export class CornerRadius {
             throw new Error("CornerRadius constructor must be called with 1 or 4 arguments");
         }
 
-        privates.apply(this);
+        privates.setup(this);
 
         this.topLeft = topLeft;
         this.topRight = topRight;
@@ -52,12 +52,12 @@ export class CornerRadius {
      * @type {number|Length}
      * */
     get topLeft() {
-        return this.$.topLeft;
+        return privates(this).topLeft;
     }
 
     set topLeft(val) {
         if (isFinite(val) && val >= 0) {
-            this.$.topLeft = val;
+            privates(this).topLeft = val;
         } else {
             throw new Error("Corner radius must be a finite positive number");
         }
@@ -68,12 +68,12 @@ export class CornerRadius {
      * @type {number|Length}
      * */
     get topRight() {
-        return this.$.topRight;
+        return privates(this).topRight;
     }
 
     set topRight(val) {
         if (isFinite(val) && val >= 0) {
-            this.$.topRight = val;
+            privates(this).topRight = val;
         } else {
             throw new Error("Corner radius must be a finite positive number");
         }
@@ -84,12 +84,12 @@ export class CornerRadius {
      * @type {number|Length}
      * */
     get bottomRight() {
-        return this.$.bottomRight;
+        return privates(this).bottomRight;
     }
 
     set bottomRight(val) {
         if (isFinite(val) && val >= 0) {
-            this.$.bottomRight = val;
+            privates(this).bottomRight = val;
         } else {
             throw new Error("Corner radius must be a finite positive number");
         }
@@ -100,12 +100,12 @@ export class CornerRadius {
      * @type {number|Length}
      * */
     get bottomLeft() {
-        return this.$.bottomLeft;
+        return privates(this).bottomLeft;
     }
 
     set bottomLeft(val) {
         if (isFinite(val) && val >= 0) {
-            this.$.bottomLeft = val;
+            privates(this).bottomLeft = val;
         } else {
             throw new Error("Corner radius must be a finite positive number");
         }

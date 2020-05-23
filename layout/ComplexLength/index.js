@@ -11,15 +11,15 @@ const privates = new PrivateFields(function(calculator) {
 export class ComplexLength extends Length {
     constructor(calculator) {
         super(0);
-        privates.apply(this, calculator);
+        privates.setup(this, calculator);
     }
 
     get calculator() {
-        return this.$.calculator;
+        return privates(this).calculator;
     }
 
     set calculator(val) {
-        this.$.calculator = val;
+        privates(this).calculator = val;
     }
 
     valueOf() {

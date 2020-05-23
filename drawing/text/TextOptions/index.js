@@ -1,7 +1,5 @@
 import { PropertySet, PrivateFields } from "../../../utils/index.js";
 import { Length } from "../../../layout/index.js";
-import { Canvas } from "../../Canvas/index.js";
-import { Platform } from "../../../platform/index.js";
 
 /* Default properties for TextOptions class. */
 const properties = new PropertySet(function() {
@@ -22,7 +20,7 @@ const privates = new PrivateFields(function(props = {}) {
 /** Text rendering options. */
 export class TextOptions {
     constructor(props) {
-        privates.apply(this);
+        privates.setup(this);
         properties.apply(this, props);
     }
 
@@ -31,11 +29,11 @@ export class TextOptions {
      * @type {Length}
      */
     get lineHeight() {
-        return this.$.props.lineHeight;
+        return privates(this).props.lineHeight;
     }
 
     set lineHeight(val) {
-        this.$.props.lineHeight = Length.parse(val, () => this.fontSize || 0);
+        privates(this).props.lineHeight = Length.parse(val, () => this.fontSize || 0);
     }
 
     /**
@@ -43,11 +41,11 @@ export class TextOptions {
      * @type {Length}
      */
     get fontSize() {
-        return this.$.props.fontSize;
+        return privates(this).props.fontSize;
     }
 
     set fontSize(val) {
-        this.$.props.fontSize = Length.parse(val, 0);
+        privates(this).props.fontSize = Length.parse(val, 0);
     }
 
     /**

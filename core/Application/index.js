@@ -72,11 +72,11 @@ const privates = new PrivateFields(function(props = {}) {
 		},
 
 		setupEvents() {
-			window.addEventListener("click", this.$.filterPointerEvent("onClick"));
-			window.addEventListener("pointerdown", this.$.filterPointerEvent("onPointerDown"));
-			window.addEventListener("pointermove", this.$.filterPointerEvent("onPointerMove"));
-			window.addEventListener("pointerup", this.$.filterPointerEvent("onPointerUp"));
-			this.viewport.onResize.add(this.$.resize);
+			window.addEventListener("click", privates(this).filterPointerEvent("onClick"));
+			window.addEventListener("pointerdown", privates(this).filterPointerEvent("onPointerDown"));
+			window.addEventListener("pointermove", privates(this).filterPointerEvent("onPointerMove"));
+			window.addEventListener("pointerup", privates(this).filterPointerEvent("onPointerUp"));
+			this.viewport.onResize.add(privates(this).resize);
 		}
 	};
 });
@@ -90,12 +90,12 @@ export class Application {
 			throw new Error("Only one Application instance per JavaScript context is allowed");
 		}
 
-		privates.apply(this);
+		privates.setup(this);
 		
-		this.$.viewport = Platform.current.viewport;
+		privates(this).viewport = Platform.current.viewport;
 
-		this.$.setupEvents();
-		this.$.resize(this.viewport.width, this.viewport.height);
+		privates(this).setupEvents();
+		privates(this).resize(this.viewport.width, this.viewport.height);
 		
 		properties.apply(this, props);
 
@@ -107,14 +107,14 @@ export class Application {
 	 * @type {Theme}
 	 */
 	get theme() {
-		return this.$.props.theme;
+		return privates(this).props.theme;
 	}
 
 	set theme(val) {
 		if (val instanceof Theme) {
-			this.$.props.theme = val;
+			privates(this).props.theme = val;
 		} else if (val == null) {
-			this.$.props.theme = undefined;
+			privates(this).props.theme = undefined;
 		} else {
 			throw new Error("Invalid theme type");
 		}
@@ -159,7 +159,7 @@ export class Application {
 	 * @type {Viewport}
 	 */
 	get viewport() {
-		return this.$.viewport;
+		return privates(this).viewport;
 	}
 
 	/**
@@ -167,7 +167,7 @@ export class Application {
 	 * @type {Widget}
 	 */
 	get focusedWidget() {
-		return this.$.focusedWidget;
+		return privates(this).focusedWidget;
 	}
 
 	set focusedWidget(val) {
@@ -175,7 +175,7 @@ export class Application {
 		
 		if (val instanceof Widget && val.focusable || val == null) {
 			const lastFocused = this.focusedWidget;
-			this.$.focusedWidget = val;
+			privates(this).focusedWidget = val;
 			
 			if (val) {
 				val.onFocus.invoke();
@@ -194,15 +194,15 @@ export class Application {
 	 * @type {View}
 	 */
 	get view() {
-		return this.$.props.view;
+		return privates(this).props.view;
 	}
 
 	set view(val) {
-		if (this.$.props.view && this.$.props.view.parent === this) {
-			this.$.props.view.parent = undefined;
+		if (privates(this).props.view && privates(this).props.view.parent === this) {
+			privates(this).props.view.parent = undefined;
 		}
 
-		this.$.props.view = val;
+		privates(this).props.view = val;
 
 		if (val) {
 			val.parent = this;
@@ -213,7 +213,7 @@ export class Application {
 
 	/** @type {HandlerList} */
 	get onResize() {
-		return this.$.events.onResize;
+		return privates(this).events.onResize;
 	}
 
 	set onResize(val) {
@@ -222,7 +222,7 @@ export class Application {
 
 	/** @type {HandlerList} */
 	get onClick() {
-		return this.$.events.onClick;
+		return privates(this).events.onClick;
 	}
 
 	set onClick(val) {
@@ -231,7 +231,7 @@ export class Application {
 
 	/** @type {HandlerList} */
 	get onPointerDown() {
-		return this.$.events.onPointerDown;
+		return privates(this).events.onPointerDown;
 	}
 
 	set onPointerDown(val) {
@@ -240,7 +240,7 @@ export class Application {
 
 	/** @type {HandlerList} */
 	get onPointerMove() {
-		return this.$.events.onPointerMove;
+		return privates(this).events.onPointerMove;
 	}
 
 	set onPointerMove(val) {
@@ -249,7 +249,7 @@ export class Application {
 
 	/** @type {HandlerList} */
 	get onPointerUp() {
-		return this.$.events.onPointerUp;
+		return privates(this).events.onPointerUp;
 	}
 
 	set onPointerUp(val) {
@@ -285,10 +285,10 @@ export class Application {
 
 	/** Invalidate the current render and schedule draw for next frame. */
 	invalidate() {
-		if (typeof(this.$.drawHandle) === "undefined") {
-			this.$.drawHandle = requestAnimationFrame(() => {
+		if (typeof(privates(this).drawHandle) === "undefined") {
+			privates(this).drawHandle = requestAnimationFrame(() => {
 				this.draw();
-				this.$.drawHandle = undefined;
+				privates(this).drawHandle = undefined;
 			});
 		}
 	}

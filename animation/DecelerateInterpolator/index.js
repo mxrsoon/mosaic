@@ -19,10 +19,10 @@ export class DecelerateInterpolator extends Interpolator {
      */
     constructor(factor = 1) {
         super();
-        privates.apply(this);
+        privates.setup(this);
 
         if (isFinite(factor) && factor >= 0) {
-            this.$.factor = factor;
+            privates(this).factor = factor;
         } else {
             throw new Error("Factor must be a finite positive number");
         }
@@ -34,6 +34,6 @@ export class DecelerateInterpolator extends Interpolator {
      * @returns {number} Interpolated value.
      */
     interpolate(progress) {
-        return 1 - (1 - progress) ** (2 * this.$.factor);
+        return 1 - (1 - progress) ** (2 * privates(this).factor);
     }
 }

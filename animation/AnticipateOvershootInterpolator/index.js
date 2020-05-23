@@ -31,16 +31,16 @@ export class AnticipateOvershootInterpolator extends Interpolator {
      */
     constructor(tension = 2, extraTension = 1.5) {
         super();
-        privates.apply(this);
+        privates.setup(this);
 
         if (isFinite(tension) && tension >= 0) {
-            this.$.tension = tension;
+            privates(this).tension = tension;
         } else {
             throw new Error("Tension must be a finite positive number");
         }
 
         if (isFinite(extraTension) && extraTension >= 0) {
-            this.$.tension *= extraTension;
+            privates(this).tension *= extraTension;
         } else {
             throw new Error("Extra tension must be a finite positive number");
         }
@@ -53,9 +53,9 @@ export class AnticipateOvershootInterpolator extends Interpolator {
      */
     interpolate(progress) {
         if (progress < .5) {
-            return .5 * a(progress * 2, this.$.tension);
+            return .5 * a(progress * 2, privates(this).tension);
         } else {
-            return .5 * (o(progress * 2 - 2, this.$.tension) + 2);
+            return .5 * (o(progress * 2 - 2, privates(this).tension) + 2);
         }
     }
 }

@@ -1,6 +1,6 @@
 import { Widget, Visibility } from "../../core/index.js";
 import { Color, FillStyle, ShadowStyle, StrokeStyle, Shape, RectangleShape } from "../../drawing/index.js";
-import { PropertySet } from "../../utils/index.js";
+import { PropertySet, PrivateFields } from "../../utils/index.js";
 
 /* Default properties for Surface class. */
 const properties = new PropertySet(function() {
@@ -10,6 +10,15 @@ const properties = new PropertySet(function() {
 		stroke: undefined,
 		shape: new RectangleShape()
 	};
+});
+
+/* Private fields for Surface class */
+const privates = new PrivateFields(function(props = {}) {
+    return {
+        get props() {
+            return props;
+        }
+    };
 });
 
 /**
@@ -22,6 +31,7 @@ export class Surface extends Widget {
      */
 	constructor(props) {
 		super(props);
+		privates.setup(this);
 		properties.apply(this, props);
 	}
 
@@ -30,7 +40,7 @@ export class Surface extends Widget {
      * @type {FillStyle}
      */
 	get background() {
-		return this.$.props.background;
+		return privates(this).props.background;
 	}
 
 	set background(val) {
@@ -40,7 +50,7 @@ export class Surface extends Widget {
             throw new Error("Background must be set to a FillStyle or a Color that will be converted to a FillStyle");
         }
 
-        this.$.props.background = val;
+        privates(this).props.background = val;
         this.invalidate();
 	}
 
@@ -49,7 +59,7 @@ export class Surface extends Widget {
      * @type {?ShadowStyle}
      */
 	get shadow() {
-        return this.$.props.shadow;
+        return privates(this).props.shadow;
 	}
 
 	set shadow(val) {
@@ -57,7 +67,7 @@ export class Surface extends Widget {
 			throw new Error("Shadow must be a ShadowStyle or a nullish value");
         }
         
-		this.$.props.shadow = val;
+		privates(this).props.shadow = val;
 		this.invalidate();
 	}
     
@@ -66,7 +76,7 @@ export class Surface extends Widget {
      * @type {?StrokeStyle}
      */
 	get stroke() {
-		return this.$.props.stroke;
+		return privates(this).props.stroke;
 	}
 
 	set stroke(val) {
@@ -74,7 +84,7 @@ export class Surface extends Widget {
 			throw new Error("Stroke must be a StrokeStyle or a nullish value");
 		}
 
-		this.$.props.stroke = val;
+		privates(this).props.stroke = val;
 		this.invalidate();
 	}
 
@@ -83,7 +93,7 @@ export class Surface extends Widget {
      * @type {Shape}
      */
 	get shape() {
-		return this.$.props.shape;
+		return privates(this).props.shape;
 	}
 
 	set shape(val) {
@@ -91,7 +101,7 @@ export class Surface extends Widget {
 			throw new Error("Shape must be of Shape class");
 		}
 
-		this.$.props.shape = val;
+		privates(this).props.shape = val;
 		this.invalidate();
 	}
 

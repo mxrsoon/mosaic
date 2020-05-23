@@ -1,11 +1,20 @@
 import { Animator, AnimationState } from "../index.js";
-import { PropertySet } from "../../utils/index.js";
+import { PropertySet, PrivateFields } from "../../utils/index.js";
 
 /* Default properties for NumberAnimator class */
 const properties = new PropertySet(function() {
     return {
         from: 0,
         to: 0
+    };
+});
+
+/* Private fields for NumberAnimator class */
+const privates = new PrivateFields(function(props = {}) {
+    return {
+        get props() {
+            return props;
+        }
     };
 });
 
@@ -19,6 +28,7 @@ export class NumberAnimator extends Animator {
      */
     constructor(props) {
         super(props);
+        privates.setup(this);
         properties.apply(this, props);
     }
 
@@ -39,7 +49,7 @@ export class NumberAnimator extends Animator {
      * @type {number}
      */
     get from() {
-        return this.$.props.from;
+        return privates(this).props.from;
     }
 
     set from(val) {
@@ -48,7 +58,7 @@ export class NumberAnimator extends Animator {
                 throw new Error("Animation 'from' property must be a finite number");
             }
 
-            this.$.props.from = val;
+            privates(this).props.from = val;
         } else {
             throw new Error("Animator properties can only be changed if it's stopped");
         }
@@ -59,7 +69,7 @@ export class NumberAnimator extends Animator {
      * @type {number}
      */
     get to() {
-        return this.$.props.to;
+        return privates(this).props.to;
     }
 
     set to(val) {
@@ -68,7 +78,7 @@ export class NumberAnimator extends Animator {
                 throw new Error("Animation 'to' property must be a finite number");
             }
 
-            this.$.props.to = val;
+            privates(this).props.to = val;
         } else {
             throw new Error("Animator properties can only be changed if it's stopped");
         }

@@ -18,10 +18,10 @@ export class AnticipateInterpolator extends Interpolator {
      */
     constructor(tension = 2) {
         super();
-        privates.apply(this);
+        privates.setup(this);
 
         if (isFinite(tension) && tension >= 0) {
-            this.$.tension = tension;
+            privates(this).tension = tension;
         } else {
             throw new Error("Tension must be a finite positive number");
         }
@@ -33,6 +33,6 @@ export class AnticipateInterpolator extends Interpolator {
      * @returns {number} Interpolated value.
      */
     interpolate(progress) {
-        return progress * progress * ((this.$.tension + 1) * progress - this.$.tension);
+        return progress * progress * ((privates(this).tension + 1) * progress - privates(this).tension);
     }
 }

@@ -8,7 +8,7 @@ const privates = new PrivateFields(function() {
         observers: [],
 
         notify(added, removed) {
-            for (let observer of this.$.observers) {
+            for (let observer of privates(this).observers) {
                 observer(this, added, removed);
             }
         }
@@ -23,12 +23,12 @@ export class WidgetList {
      * @param {Widget[]} widgets - Initial widgets to be stored in the list.
      */
     constructor(widgets) {
-        privates.apply(this);
+        privates.setup(this);
 
         if (Array.isArray(widgets)) {
             for (let widget of widgets) {
-                if (widget instanceof Widget && !this.$.list.includes(widget)) {
-                    this.$.list.push(widget);
+                if (widget instanceof Widget && !privates(this).list.includes(widget)) {
+                    privates(this).list.push(widget);
                 }
             }
         }
@@ -39,7 +39,7 @@ export class WidgetList {
      * @type {number}
      */
     get length() {
-        return this.$.list.length;
+        return privates(this).list.length;
     }
 
     /**
@@ -53,8 +53,8 @@ export class WidgetList {
             }
         }
 
-        this.$.list.push(...widgets);
-        this.$.notify([...widgets], []);
+        privates(this).list.push(...widgets);
+        privates(this).notify([...widgets], []);
     }
 
     /**
@@ -63,11 +63,11 @@ export class WidgetList {
      * @returns {boolean} Wheter or not the widget was removed from the list.
      */
     remove(widget) {
-        const idx = this.$.list.indexOf(widget);
+        const idx = privates(this).list.indexOf(widget);
         
         if (idx >= 0) {
-            this.$.list.splice(idx, 1);
-            this.$.notify([], [widget]);
+            privates(this).list.splice(idx, 1);
+            privates(this).notify([], [widget]);
             return true;
         }
 
@@ -80,7 +80,7 @@ export class WidgetList {
      * @returns {number} Position of the widget or -1 if not there.
      */
     indexOf(widget) {
-        return this.$.list.indexOf(widget);
+        return privates(this).list.indexOf(widget);
     }
 
     /**
@@ -89,7 +89,7 @@ export class WidgetList {
      * @returns {Widget} Widget at the specified position.
      */
     get(index) {
-        return this.$.list[index];
+        return privates(this).list[index];
     }
 
     /**
@@ -104,8 +104,8 @@ export class WidgetList {
         }
 
         index = Math.min(Math.max(0, index), this.length);
-        this.$.list.splice(index, 0, widget);
-        this.$.notify([widget], []);
+        privates(this).list.splice(index, 0, widget);
+        privates(this).notify([widget], []);
         return index;
     }
 
@@ -114,8 +114,8 @@ export class WidgetList {
      * @param {WidgetList~observer} callback - Function that will be called when changes occurs.
      */
     observe(callback) {
-        if (!this.$.observers.includes(callback)) {
-            this.$.observers.push(callback);
+        if (!privates(this).observers.includes(callback)) {
+            privates(this).observers.push(callback);
         }
     }
 
@@ -124,10 +124,10 @@ export class WidgetList {
      * @param {WidgetList~observer} callback - Function to unregister.
      */
     unobserve(callback) {
-        const idx = this.$.observers.indexOf(callback);
+        const idx = privates(this).observers.indexOf(callback);
 
         if (idx >= 0) {
-            this.$.observers.splice(idx, 1);
+            privates(this).observers.splice(idx, 1);
         }
     }
 
@@ -140,7 +140,7 @@ export class WidgetList {
     }
 
     [Symbol.iterator]() {
-        return this.$.list.values();
+        return privates(this).list.values();
     }
 }
 

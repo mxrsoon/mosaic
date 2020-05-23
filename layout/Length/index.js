@@ -23,7 +23,7 @@ export class Length {
             throw new Error("Invalid size, must be numeric");
         }
 
-        privates.apply(this, value);
+        privates.setup(this, value);
     }
 
     /**
@@ -32,7 +32,7 @@ export class Length {
      * @returns {number}
      */
     valueOf() {
-        return this.$.value;
+        return privates(this).value;
     }
 
     /**

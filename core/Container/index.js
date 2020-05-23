@@ -42,7 +42,7 @@ export class Container extends Widget {
 	constructor(props) {
         super(props);
 
-        privates.apply(this, new WidgetList(props.children));
+        privates.setup(this, new WidgetList(props.children));
         delete props.children;
 
         properties.apply(this, props);
@@ -52,12 +52,12 @@ export class Container extends Widget {
 			configurable: false,
 
             get() {
-				return this.$.children;
+				return privates(this).children;
 			}
         });
         
-        this.children.observe(this.$.onChildrenChange);
-        this.$.onChildrenChange(this.children, this.children.toArray(), []);
+        this.children.observe(privates(this).onChildrenChange);
+        privates(this).onChildrenChange(this.children, this.children.toArray(), []);
     }
     
     /**
