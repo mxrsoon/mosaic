@@ -48,6 +48,15 @@ export class Platform extends Abstract {
     get viewport() {
         throw new Error("Not implemented");
     }
+
+    /**
+     * Instantiates the Canvas implementation for the platform.
+     * @param {object} props - Canvas initial properties.
+     * @returns {Canvas} Instance of the Canvas implementation for the platform.
+     */
+    createCanvas(props) {
+        throw new Error("Not implemented");
+    }
     
     /**
      * Initializes platform-related things.

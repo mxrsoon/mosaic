@@ -1,6 +1,7 @@
 import { WebViewport } from "../viewport/index.js";
 import { PrivateFields } from "../../utils/index.js";
 import { Platform } from "../index.js";
+import { WebCanvas } from "../drawing/index.js";
 
 /* Private fields for WebPlatform class. */
 const privates = new PrivateFields(function() {
@@ -32,6 +33,10 @@ export class WebPlatform extends Platform {
 
     get viewport() {
         return this.$.viewport;
+    }
+
+    createCanvas(props) {
+        return new WebCanvas(props);
     }
 
     initialize() {
