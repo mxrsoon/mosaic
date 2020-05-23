@@ -1,6 +1,6 @@
 import { Abstract, PrivateFields, HandlerList } from "../../../utils/index.js";
-import { Canvas } from "../../../drawing/index.js";
-import { Platform } from "../../index.js";
+import { Canvas } from "../../../drawing/canvas/index.js";
+import { Platform } from "../../platform/index.js";
 
 /* Private fields for Viewport class. */
 const privates = new PrivateFields(function() {

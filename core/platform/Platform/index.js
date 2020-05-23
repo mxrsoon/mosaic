@@ -1,6 +1,6 @@
-import { Abstract } from "../../utils/index.js";
+import { Abstract } from "../../../utils/index.js";
 import { WebPlatform } from "../index.js";
-import { Viewport } from "../viewport/index.js";
+import { Viewport } from "../../viewport/index.js";
 
 /* Block new instances of the class and changes to some properties. */
 let lock = true;

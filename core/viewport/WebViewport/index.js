@@ -1,6 +1,6 @@
 import { Viewport } from "../index.js";
-import { WebPlatform } from "../../index.js";
-import { WebCanvas } from "../../../../drawing/canvas/index.js";
+import { WebPlatform } from "../../platform/index.js";
+import { WebCanvas } from "../../../drawing/canvas/index.js";
 
 let canvas;
 

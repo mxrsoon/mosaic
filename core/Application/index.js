@@ -1,9 +1,9 @@
 import { PrivateFields, PropertySet, HandlerList } from "../../utils/index.js";
 import { View, Widget } from "../index.js";
-import { Canvas } from "../../drawing/index.js";
+import { Canvas } from "../../drawing/canvas/index.js";
 import { Theme } from "../../resources/index.js";
-import { Platform } from "../../platform/index.js";
-import { Viewport } from "../../platform/viewport/index.js";
+import { Platform } from "../platform/index.js";
+import { Viewport } from "../viewport/index.js";
 
 /* Reference to the Application instance associated with current JS context. */
 let currentApplication;

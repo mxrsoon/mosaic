@@ -1,6 +1,7 @@
 import { PrivateFields } from "../../../utils/index.js";
-import { Canvas, Style } from "../../../drawing/index.js";
+import { Style } from "../../index.js";
 import { PropertySet } from "../../../utils/index.js";
+import { Canvas } from "../index.js";
 
 /* Default properties for WebCanvas class. */
 const properties = new PropertySet(function() {

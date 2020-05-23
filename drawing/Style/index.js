@@ -1,4 +1,4 @@
-import { Canvas } from "../index.js";
+import { Canvas } from "../canvas/index.js";
 import { Abstract } from "../../utils/index.js";
 
 /**

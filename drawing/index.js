@@ -1,4 +1,3 @@
-export * from "./Canvas/index.js";
 export * from "./Color/index.js";
 export * from "./CornerRadius/index.js";
 export * from "./FillRule/index.js";
