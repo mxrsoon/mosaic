@@ -111,12 +111,12 @@ export class Surface extends Widget {
 	}
 
 	draw(canvas) {
-		canvas.drawShape(this.x, this.y, this.width, this.height, this.shape, [
+		canvas.drawShape(this.shape, this.x, this.y, this.width, this.height, [
 			this.background,
 			this.shadow
 		]);
 		
-		canvas.drawShape(this.x, this.y, this.width, this.height, this.shape, [
+		canvas.drawShape(this.shape, this.x, this.y, this.width, this.height, [
 			this.stroke
 		]);
 	}

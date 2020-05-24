@@ -41,14 +41,14 @@ export class Canvas extends Abstract {
 
 	/**
 	 * Draw a Shape object.
+	 * @param {Shape} shape - Shape to be drawn.
 	 * @param {number} x - The top left X coordinate.
 	 * @param {number} y - The top left Y coordinate.
 	 * @param {number} width - Desired width.
 	 * @param {number} height - Desired height.
-	 * @param {Shape} shape - Shape to be drawn.
 	 * @param {Style[]} styles - Styles to draw the shape with.
 	 */
-	drawShape(x, y, width, height, shape, styles) {
+	drawShape(shape, x, y, width, height, styles) {
 		throw new Error("Not implemented");
 	}
 

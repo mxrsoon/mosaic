@@ -143,7 +143,7 @@ export class WebCanvas extends Canvas {
 	 * @param {Shape} shape - Shape to be drawn.
 	 * @param {Style[]} styles - Styles to draw the shape with.
 	 */
-	drawShape(x, y, width, height, shape, styles) {
+	drawShape(shape, x, y, width, height, styles) {
 		const ctx = privates(this).context;
 		const path = shape.getPath(width, height);
 		const props = {};
