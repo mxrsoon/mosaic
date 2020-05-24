@@ -82,7 +82,7 @@ export class Text extends Widget {
     }
 
     draw(canvas) {
-        canvas.drawText(this.text, this.x, this.y, this.textOptions, [
+        canvas.drawTextBlock(this.text, this.x, this.y, this.width, this.height, this.textOptions, [
             new FillStyle(this.color)
         ]);
     }

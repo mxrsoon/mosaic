@@ -23,7 +23,42 @@ const privates = new PrivateFields(function(props = {}) {
         
         get props() {
             return props;
-        }
+		},
+		
+		getLinesFromText(text, maxWidth, textOptions) {
+			const rawLines = text.split(/\n/g);
+			const lines = [];
+
+			for (let rawLine of rawLines) {
+				const words = rawLine.split(/\s/g);
+				let lineText = words.splice(0, 1);
+				let metrics = this.measureText(lineText, textOptions);
+
+				for (let word of words) {
+					const newMetrics = this.measureText(`${lineText} ${word}`, textOptions);
+
+					if (newMetrics.width > maxWidth) {
+						lines.push({
+							text: lineText,
+							metrics: metrics
+						});
+
+						lineText = word;
+						metrics = this.measureText(word, textOptions);
+					} else {
+						lineText += ` ${word}`;
+						metrics = newMetrics;
+					}
+				}
+
+				lines.push({
+					text: lineText,
+					metrics: metrics
+				});
+			}
+
+			return lines;
+		}
 	};
 });
 
@@ -230,6 +265,58 @@ export class WebCanvas extends Canvas {
 		ctx.restore();
 	}
 
+	/**
+     * Draw text using the passed options.
+     * @param {string} text - Text to draw.
+	 * @param {number} x - Text baseline left-most coordinate.
+	 * @param {number} y - Text baseline top-most coordinate.
+	 * @param {number} width - Text block width.
+	 * @param {number} height - Text block height.
+     * @param {TextOptions} textOptions - Text options used to draw.
+	 * @param {Style[]} styles - Styles to draw the text with.
+     */
+	drawTextBlock(text, x, y, width, height, textOptions, styles) {
+		const ctx = privates(this).context;
+		const props = {};
+
+		ctx.save();
+
+		for (let style of styles) {
+			if (style instanceof Style) {
+				style.apply(props, this);
+			}
+		}
+
+		props.font = `${textOptions.fontSize}px ${textOptions.fontName}`;
+		Object.assign(ctx, props);
+
+		const lines = privates(this).getLinesFromText(text, width, textOptions);
+		
+		for (let i = 0; i < lines.length; i++) {
+			const line = lines[i];
+			let baselineY = y + i * textOptions.lineHeight + line.metrics.ascent;
+
+			// Center vertically
+			baselineY += (textOptions.lineHeight - line.metrics.height) / 2;
+			
+			if (props.fillStyle) {
+				ctx.fillText(line.text, x, baselineY);
+			}
+	
+			if (props.strokeStyle) {
+				ctx.strokeText(line.text, x, baselineY);
+			}
+		}
+
+		ctx.restore();
+	}
+
+	/**
+     * Measure a text using the passed options.
+     * @param {string} text - Text to measure.
+     * @param {TextOptions} textOptions - Text to measure.
+     * @returns {TextMetrics} Resulting metrics.
+     */
 	measureText(text, textOptions) {
 		const ctx = privates(this).context;
 		ctx.save();

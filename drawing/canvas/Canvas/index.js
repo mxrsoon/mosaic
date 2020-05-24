@@ -81,6 +81,20 @@ export class Canvas extends Abstract {
 	}
 
 	/**
+     * Draw text using the passed options.
+     * @param {string} text - Text to draw.
+	 * @param {number} x - Text baseline left-most coordinate.
+	 * @param {number} y - Text baseline top-most coordinate.
+	 * @param {number} width - Text block width.
+	 * @param {number} height - Text block height.
+     * @param {TextOptions} textOptions - Text options used to draw.
+	 * @param {Style[]} styles - Styles to draw the text with.
+     */
+	drawTextBlock(text, x, y, width, height, textOptions, styles) {
+		throw new Error("Not implemented");
+	}
+
+	/**
      * Measure a text using the passed options.
      * @param {string} text - Text to measure.
      * @param {TextOptions} textOptions - Text to measure.
