@@ -57,7 +57,7 @@ export class PropertySet {
 		for (let prop in values) {
 			const descriptor = getDescriptor(object, prop);
 
-			if (!descriptor || descriptor.writable || typeof(descriptor.set) === "function") {
+			if (typeof(values[prop]) !== "undefined" && (!descriptor || descriptor.writable || typeof(descriptor.set) === "function")) {
 				try {
 					object[prop] = values[prop];
 				} catch (e) {
