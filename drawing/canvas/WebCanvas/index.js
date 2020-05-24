@@ -47,7 +47,7 @@ export class WebCanvas extends Canvas {
         privates(this).props.resizable = true;
         privates(this).props.scalable = true;
         
-        properties.apply(this, props, ["width", "height"]);
+        properties.apply(this, props);
 
         privates(this).props.resizable = props.resizable;
         privates(this).props.scalable = props.scalable;
