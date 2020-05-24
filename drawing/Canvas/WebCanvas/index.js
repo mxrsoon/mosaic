@@ -37,9 +37,12 @@ export class WebCanvas extends Canvas {
         props = properties.merge(this, props);
 
 		privates(this).internalCanvas = props.internalCanvas;
-        privates(this).internalCanvas.style.imageRendering = "pixelated";
 		privates(this).context = privates(this).internalCanvas.getContext("2d");
-        privates(this).context.imageSmoothingEnabled = false;
+		privates(this).context.imageSmoothingEnabled = false;
+		
+		if (privates(this).internalCanvas.style) {
+			privates(this).internalCanvas.style.imageRendering = "pixelated";
+		}
 
         privates(this).props.resizable = true;
         privates(this).props.scalable = true;
