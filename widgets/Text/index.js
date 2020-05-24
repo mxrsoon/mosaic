@@ -3,14 +3,21 @@ import { Length } from "../../layout/index.js";
 import { Widget } from "../../core/index.js";
 import { ThemeColor } from "../../resources/index.js";
 import { FillStyle, Color, Style } from "../../drawing/index.js";
+import { TextOptions } from "../../drawing/text/index.js";
 
 /* Default properties for Text class. */
 const properties = new PropertySet(function() {
     return {
         text: "",
-        fontSize: new Length(16),
-        fontFamily: "Segoe UI, Roboto, sans-serif",
-        color: new ThemeColor("text", Color.fromHex("#000000d0"))
+        color: new ThemeColor("text", Color.fromHex("#000000d0")),
+        
+        textOptions: new TextOptions({
+            fontSize: new Length(16),
+            fontName: "Segoe UI, Roboto, sans-serif"
+        }),
+
+        fontSize: undefined,
+        fontName: undefined
     };
 });
 
@@ -39,38 +46,44 @@ export class Text extends Widget {
         this.invalidate();
     }
 
+    get textOptions() {
+        return privates(this).props.textOptions;
+    }
+
+    set textOptions(val) {
+        if (typeof(val) !== "object") {
+            throw new Error("Text options must be of TextOptions class or a TextOptions initializer object");
+        }
+
+        if (!(val instanceof TextOptions)) {
+            val = new TextOptions(val);
+        }
+
+        privates(this).props.textOptions = val;
+        this.invalidate();
+
+        // TODO: Add TextOptions onChange listener to invalidate the widget.
+    }
+
     get fontSize() {
-        return privates(this).props.fontSize;
+        return privates(this).props.textOptions.fontSize;
     }
 
     set fontSize(val) {
-        privates(this).props.fontSize = val;
-        this.invalidate();
+        privates(this).props.textOptions.fontSize = val;
     }
 
-    get fontFamily() {
-        return privates(this).props.fontFamily;
+    get fontName() {
+        return privates(this).props.textOptions.fontName;
     }
 
-    set fontFamily(val) {
-        privates(this).props.fontFamily = val;
-        this.invalidate();
+    set fontName(val) {
+        privates(this).props.textOptions.fontName = val;
     }
 
     draw(canvas) {
-        canvas.drawText(this.text, this.x, this.y, [
-            new FillStyle(this.color),
-
-            new (class extends Style {
-                constructor(widget) {
-                    super();
-                    this.widget = widget;
-                }
-
-                apply(props, canvas) {
-                    props.font = `${this.widget.fontSize}px ${this.widget.fontFamily}`;
-                }
-            })(this)
+        canvas.drawText(this.text, this.x, this.y, this.textOptions, [
+            new FillStyle(this.color)
         ]);
     }
 }

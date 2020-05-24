@@ -196,7 +196,15 @@ export class WebCanvas extends Canvas {
 		}
 	}
 
-	drawText(text, x, y, styles) {
+	/**
+     * Draw text using the passed options.
+     * @param {string} text - Text to draw.
+	 * @param {number} x - Text baseline left-most coordinate.
+	 * @param {number} y - Text baseline top-most coordinate.
+     * @param {TextOptions} textOptions - Text options used to draw.
+	 * @param {Style[]} styles - Styles to draw the text with.
+     */
+	drawText(text, x, y, textOptions, styles) {
 		const ctx = privates(this).context;
 		const props = {};
 
@@ -208,6 +216,7 @@ export class WebCanvas extends Canvas {
 			}
 		}
 
+		props.font = `${textOptions.fontSize}px ${textOptions.fontName}`;
 		Object.assign(ctx, props);
 
 		if (props.fillStyle) {
