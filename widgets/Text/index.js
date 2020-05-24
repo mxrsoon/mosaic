@@ -17,8 +17,7 @@ const properties = new PropertySet(function() {
         fontName: undefined,
 
         text: "",
-        color: new ThemeColor("text", Color.fromHex("#000000d0")),
-        padding: 0
+        color: new ThemeColor("text", Color.fromHex("#000000d0"))
     };
 });
 
@@ -80,22 +79,6 @@ export class Text extends Widget {
 
     set fontName(val) {
         privates(this).props.textOptions.fontName = val;
-    }
-
-    /**
-     * Text padding.
-     * @type {Padding}
-     */
-    get padding() {
-        return privates(this).props.padding;
-    }
-
-    set padding(val) {
-        if (!(val instanceof Padding)) {
-            val = new Padding(val);
-        }
-
-        privates(this).props.padding = val;
     }
 
     draw(canvas) {

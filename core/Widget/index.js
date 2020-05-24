@@ -1,5 +1,5 @@
 import { PrivateFields, PropertySet, HandlerList } from "../../utils/index.js";
-import { Length } from "../../layout/index.js";
+import { Length, Padding } from "../../layout/index.js";
 import { Visibility } from "../index.js";
 
 /* Default properties for Widget class. */
@@ -10,6 +10,7 @@ const properties = new PropertySet(function() {
 		y: 0,
 		width: 0,
 		height: 0,
+		padding: 0,
 		hitTestEnabled: true,
 		visibility: Visibility.visible,
 		focusable: false
@@ -130,6 +131,22 @@ export class Widget {
 		privates(this).props.height = Length.parse(val, () => this.parent ? this.parent.height : 0);
 		this.invalidate();
 	}
+
+	/**
+     * Widget's content padding.
+     * @type {Padding}
+     */
+    get padding() {
+        return privates(this).props.padding;
+    }
+
+    set padding(val) {
+        if (!(val instanceof Padding)) {
+            val = new Padding(val);
+        }
+
+        privates(this).props.padding = val;
+    }
 
 	get hitTestEnabled() {
 		return privates(this).props.hitTestEnabled;
