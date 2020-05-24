@@ -96,7 +96,11 @@ export class Container extends Widget {
             if (child.id === id) {
                 return child;
             } else if (child instanceof Container) {
-                return child.findId(id);
+                const result = child.findId(id);
+                
+                if (result) {
+                    return result;
+                }
             }
         }
     }
