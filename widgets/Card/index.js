@@ -1,7 +1,7 @@
 import { Color, ShadowStyle, CornerRadius, RectangleShape } from "../../drawing/index.js";
 import { ThemeColor } from "../../resources/index.js";
 import { PropertySet } from "../../utils/index.js";
-import { Surface } from "../index.js";
+import { SurfaceContainer } from "../index.js";
 
 /* Default properties for Card class. */
 const properties = new PropertySet(function() {
@@ -12,7 +12,7 @@ const properties = new PropertySet(function() {
 	};
 });
 
-export class Card extends Surface {
+export class Card extends SurfaceContainer {
 	constructor(props) {
 		super(props);
 		properties.apply(this, props);
