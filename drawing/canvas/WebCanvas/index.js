@@ -28,7 +28,7 @@ const privates = new PrivateFields(function(props = {}) {
 });
 
 /**
- * Canvas for drawing paths, shapes, text and images.
+ * Web-based canvas for drawing paths, shapes, text and images.
  */
 export class WebCanvas extends Canvas {
 	constructor(props) {
