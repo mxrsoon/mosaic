@@ -1,5 +1,5 @@
 import { PropertySet, PrivateFields } from "../../utils/index.js";
-import { Length } from "../../layout/index.js";
+import { Length, Padding } from "../../layout/index.js";
 import { Widget } from "../../core/index.js";
 import { ThemeColor } from "../../resources/index.js";
 import { FillStyle, Color, Style } from "../../drawing/index.js";
@@ -8,16 +8,17 @@ import { TextOptions } from "../../drawing/text/index.js";
 /* Default properties for Text class. */
 const properties = new PropertySet(function() {
     return {
-        text: "",
-        color: new ThemeColor("text", Color.fromHex("#000000d0")),
-        
         textOptions: new TextOptions({
             fontSize: new Length(16),
             fontName: "Segoe UI, Roboto, sans-serif"
         }),
-
+        
         fontSize: undefined,
-        fontName: undefined
+        fontName: undefined,
+
+        text: "",
+        color: new ThemeColor("text", Color.fromHex("#000000d0")),
+        padding: 0
     };
 });
 
@@ -81,9 +82,31 @@ export class Text extends Widget {
         privates(this).props.textOptions.fontName = val;
     }
 
+    /**
+     * Text padding.
+     * @type {Padding}
+     */
+    get padding() {
+        return privates(this).props.padding;
+    }
+
+    set padding(val) {
+        if (!(val instanceof Padding)) {
+            val = new Padding(val);
+        }
+
+        privates(this).props.padding = val;
+    }
+
     draw(canvas) {
-        canvas.drawTextBlock(this.text, this.x, this.y, this.width, this.height, this.textOptions, [
-            new FillStyle(this.color)
-        ]);
+        canvas.drawTextBlock(
+            this.text,
+            this.x + this.padding.left,
+            this.y + this.padding.top,
+            this.width - this.padding.left - this.padding.right,
+            this.height - this.padding.top - this.padding.bottom,
+            this.textOptions,
+            [new FillStyle(this.color)]
+        );
     }
 }
