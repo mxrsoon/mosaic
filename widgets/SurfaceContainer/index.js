@@ -107,7 +107,7 @@ export class SurfaceContainer extends Container {
 
 	hitTest(x, y) {
 		return this.hitTestEnabled && this.visibility !== Visibility.gone
-			&& this.shape.hitTest(this.width, this.height, x - this.x, y - this.y, this.stroke?.thickness);
+			&& this.shape.hitTest(this.width, this.height, x - this.x, y - this.y, this.stroke ? this.stroke.thickness : undefined);
 	}
 
 	draw(canvas) {
