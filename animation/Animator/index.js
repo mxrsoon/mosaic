@@ -38,7 +38,7 @@ const privates = new PrivateFields(function(props = {}) {
         },
 
         get currentTime() {
-            return Date.now() - privates(this).startTime;
+            return Math.max(Date.now() - privates(this).startTime - this.delay, 0);
         },
 
         tick() {
