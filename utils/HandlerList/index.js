@@ -11,18 +11,23 @@ export class HandlerList {
 	constructor(initialHandlers) {
 		privates.setup(this);
 
-		if (initialHandlers && !Array.isArray(initialHandlers)) {
-			initialHandlers = [initialHandlers];
+		if (initialHandlers) {
+			if (!Array.isArray(initialHandlers)) {
+				initialHandlers = [initialHandlers];
+			}
+
+			for (let handler of initialHandlers) {
+				this.add(handler);
+			}
 		}
 
-		for (let handler of initialHandlers) {
-			this.add(handler);
-		}
 	}
 	
 	add(handler) {
 		if (handler instanceof HandlerList) {
 			handler = handler.invoke;
+		} else if (typeof(handler) !== "function") {
+			throw new Error("Event handler must be a function or HandlerList");
 		}
 
 		if (!privates(this).handlers.includes(handler)) {
