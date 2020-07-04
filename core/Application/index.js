@@ -261,9 +261,35 @@ export class Application {
      * @param {string} id - ID to search for.
      * @returns {?Widget} A widget with the searched ID if it was found, or undefined if not.
      */
-    findId(id) {
+    findById(id) {
         if (this.view) {
-			return this.view.findId(id);
+			return this.view.findById(id);
+		}
+	}
+	
+	/**
+     * Search for a Widget that is an instance of a specified class.
+     * @param {typeof Widget} queryClass - Class that the wanted widget is instance of.
+     * @param {boolean} subClasses - Include widgets that are of subclasses of the requested class in the search.
+     * @returns {?Widget} A widget that is an instance of "queryClass" if found, or undefined if not.
+     */
+    findByClass(queryClass, subClasses = true) {
+        if (this.view) {
+			return this.view.findByClass(queryClass, subClasses);
+		}
+    }
+
+    /**
+     * Search for all Widgets that are instances of a specified class.
+     * @param {typeof Widget} queryClass - Class that the wanted widgets are instances of.
+     * @param {boolean} subClasses - Include widgets that are of subclasses of the requested class in the search.
+     * @returns {Widget[]} Array containing all widgets that are an instances of "queryClass".
+     */
+    findAllByClass(queryClass, subClasses = true) {
+        if (this.view) {
+			return this.view.findAllByClass(queryClass, subClasses);
+		} else {
+			return [];
 		}
     }
 	

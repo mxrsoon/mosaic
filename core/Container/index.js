@@ -91,18 +91,82 @@ export class Container extends Widget {
      * @param {string} id - ID to search for.
      * @returns {?Widget} A widget with the searched ID if it was found, or undefined if not.
      */
-    findId(id) {
+    findById(id) {
         for (let child of this.children) {
             if (child.id === id) {
                 return child;
             } else if (child instanceof Container) {
-                const result = child.findId(id);
+                const result = child.findById(id);
                 
                 if (result) {
                     return result;
                 }
             }
         }
+    }
+
+    /**
+     * Search for a Widget that is an instance of a specified class and descendant of this Container.
+     * @param {typeof Widget} queryClass - Class that the wanted widget is instance of.
+     * @param {boolean} subClasses - Include widgets that are of subclasses of the requested class in the search.
+     * @returns {?Widget} A widget that is an instance of "queryClass" if found, or undefined if not.
+     */
+    findByClass(queryClass, subClasses = true) {
+        if (subClasses) {
+            for (let child of this.children) {
+                if (child instanceof queryClass) {
+                    return child;
+                } else if (child instanceof Container) {
+                    const result = child.findByClass(queryClass, subClasses);
+                    
+                    if (result) {
+                        return result;
+                    }
+                }
+            }
+        } else {
+            for (let child of this.children) {
+                if (child.constructor === queryClass) {
+                    return child;
+                } else if (child instanceof Container) {
+                    const result = child.findByClass(queryClass, subClasses);
+                    
+                    if (result) {
+                        return result;
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * Search for all Widgets that are instances of a specified class and descendants of this Container.
+     * @param {typeof Widget} queryClass - Class that the wanted widgets are instances of.
+     * @param {boolean} subClasses - Include widgets that are of subclasses of the requested class in the search.
+     * @returns {Widget[]} Array containing all widgets that are an instances of "queryClass".
+     */
+    findAllByClass(queryClass, subClasses = true) {
+        const result = [];
+
+        if (subClasses) {
+            for (let child of this.children) {
+                if (child instanceof queryClass) {
+                    result.push(child);
+                } else if (child instanceof Container) {
+                    result.push(...child.findAllByClass(queryClass, subClasses));
+                }
+            }
+        } else {
+            for (let child of this.children) {
+                if (child.constructor === queryClass) {
+                    result.push(child);
+                } else if (child instanceof Container) {
+                    result.push(...child.findAllByClass(queryClass, subClasses));
+                }
+            }
+        }
+
+        return result;
     }
 
     getWidgetsAt(x, y) {
