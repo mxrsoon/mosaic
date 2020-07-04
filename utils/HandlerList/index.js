@@ -13,12 +13,20 @@ export class HandlerList {
 	}
 	
 	add(handler) {
+		if (handler instanceof HandlerList) {
+			handler = handler.invoke;
+		}
+
 		if (!privates(this).handlers.includes(handler)) {
 			privates(this).handlers.push(handler);
 		}
 	}
 	
 	remove(handler) {
+		if (handler instanceof HandlerList) {
+			handler = handler.invoke;
+		}
+
 		const idx = privates(this).handlers.indexOf(handler);
 		
 		if (idx >= 0) {
@@ -33,7 +41,7 @@ export class HandlerList {
 		let handled = false;
 
 		for (let handler of privates(this).handlers) {
-			handled = handled || handler instanceof HandlerList ? handler.invoke(...args) : handler(...args);
+			handled = handled || handler(...args);
 		}
 
 		return handled;
