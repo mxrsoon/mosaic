@@ -8,8 +8,16 @@ const privates = new PrivateFields(function() {
 });
 
 export class HandlerList {
-	constructor() {
+	constructor(initialHandlers) {
 		privates.setup(this);
+
+		if (initialHandlers && !Array.isArray(initialHandlers)) {
+			initialHandlers = [initialHandlers];
+		}
+
+		for (let handler of initialHandlers) {
+			this.add(handler);
+		}
 	}
 	
 	add(handler) {
