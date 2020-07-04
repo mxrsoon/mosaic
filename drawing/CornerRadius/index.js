@@ -1,4 +1,4 @@
-import { PrivateFields } from "../../utils/index.js";
+import { PrivateFields, HandlerList } from "../../utils/index.js";
 import { Length } from "../../layout/index.js";
 
 /* Private fields for CornerRadius class */
@@ -7,7 +7,11 @@ const privates = new PrivateFields(function() {
         topLeft: 0,
         topRight: 0,
         bottomRight: 0,
-        bottomLeft: 0
+        bottomLeft: 0,
+
+        events: {
+            onChange: new HandlerList()
+        }
     };
 });
 
@@ -58,6 +62,7 @@ export class CornerRadius {
     set topLeft(val) {
         if (isFinite(val) && val >= 0) {
             privates(this).topLeft = val;
+            this.onChange.invoke();
         } else {
             throw new Error("Corner radius must be a finite positive number");
         }
@@ -74,6 +79,7 @@ export class CornerRadius {
     set topRight(val) {
         if (isFinite(val) && val >= 0) {
             privates(this).topRight = val;
+            this.onChange.invoke();
         } else {
             throw new Error("Corner radius must be a finite positive number");
         }
@@ -90,6 +96,7 @@ export class CornerRadius {
     set bottomRight(val) {
         if (isFinite(val) && val >= 0) {
             privates(this).bottomRight = val;
+            this.onChange.invoke();
         } else {
             throw new Error("Corner radius must be a finite positive number");
         }
@@ -106,8 +113,18 @@ export class CornerRadius {
     set bottomLeft(val) {
         if (isFinite(val) && val >= 0) {
             privates(this).bottomLeft = val;
+            this.onChange.invoke();
         } else {
             throw new Error("Corner radius must be a finite positive number");
         }
+    }
+    
+    /** @type {HandlerList} */
+    get onChange() {
+        return privates(this).events.onChange;
+    }
+
+    set onChange(val) {
+        throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
     }
 }

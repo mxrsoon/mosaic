@@ -32,7 +32,15 @@ export class RectangleShape extends Shape {
 			throw new Error("Corner radius must be of CornerRadius class");
 		}
 
+		const currentValue = privates(this).cornerRadius;
+
+		if (currentValue) {
+			currentValue.onChange.remove(this.onChange);
+		}
+		
 		privates(this).cornerRadius = val;
+		val.onChange.add(this.onChange);
+		this.onChange.invoke();
 	}
 	
 	getPath(width, height) {

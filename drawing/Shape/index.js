@@ -1,15 +1,38 @@
 import { FillRule } from "../index.js";
 import { Length } from "../../layout/index.js";
-import { Abstract } from "../../utils/index.js";
+import { Abstract, PrivateFields, HandlerList } from "../../utils/index.js";
 
 /* Static private hit testing context */
 const hitTestingContext = new OffscreenCanvas(0, 0).getContext("2d");
+
+/* Private fields for Shape class */
+const privates = new PrivateFields(function() {
+    return {
+        events: {
+            onChange: new HandlerList()
+        }
+    };
+});
 
 /**
  * Represents a shape that can be drawn.
  * @abstract
  */
 export class Shape extends Abstract {
+	constructor() {
+		super();
+		privates.setup(this);
+	}
+
+	/** @type {HandlerList} */
+    get onChange() {
+        return privates(this).events.onChange;
+    }
+
+    set onChange(val) {
+        throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
+	}
+	
 	/**
 	 * Returns a path object for the shape in the desired dimensions.
 	 * @param {number} width - Desired width of the shape.

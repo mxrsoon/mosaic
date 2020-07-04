@@ -24,6 +24,7 @@ export class StarShape extends Shape {
 
     set spikes(val) {
         privates(this).spikes = val;
+        this.onChange.invoke();
     }
 	
 	getPath(width, height) {

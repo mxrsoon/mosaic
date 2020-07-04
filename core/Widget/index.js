@@ -143,9 +143,17 @@ export class Widget {
     set padding(val) {
         if (!(val instanceof Padding)) {
             val = new Padding(val);
-        }
+		}
+		
+		const currentValue = privates(this).props.padding;
 
-        privates(this).props.padding = val;
+		if (currentValue) {
+			currentValue.onChange.remove(this.invalidate);
+		}
+		
+		privates(this).props.padding = val;
+		val.onChange.add(this.invalidate);
+		this.invalidate();
     }
 
 	get hitTestEnabled() {
@@ -244,7 +252,7 @@ export class Widget {
 		
 	}
 	
-	invalidate() {
+	invalidate = () => {
 		if (this.application) {
 			this.application.invalidate();
 		}

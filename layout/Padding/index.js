@@ -1,4 +1,4 @@
-import { PrivateFields } from "../../utils/index.js";
+import { PrivateFields, HandlerList } from "../../utils/index.js";
 import { Length } from "../../layout/index.js";
 
 /* Private fields for Padding class */
@@ -7,7 +7,11 @@ const privates = new PrivateFields(function() {
         top: 0,
         right: 0,
         bottom: 0,
-        left: 0
+        left: 0,
+
+        events: {
+            onChange: new HandlerList()
+        }
     };
 });
 
@@ -63,6 +67,7 @@ export class Padding {
     set top(val) {
         if (isFinite(val) && val >= 0) {
             privates(this).top = val;
+            this.onChange.invoke();
         } else {
             throw new Error("Padding must be a finite positive number");
         }
@@ -79,6 +84,7 @@ export class Padding {
     set right(val) {
         if (isFinite(val) && val >= 0) {
             privates(this).right = val;
+            this.onChange.invoke();
         } else {
             throw new Error("Padding must be a finite positive number");
         }
@@ -95,6 +101,7 @@ export class Padding {
     set bottom(val) {
         if (isFinite(val) && val >= 0) {
             privates(this).bottom = val;
+            this.onChange.invoke();
         } else {
             throw new Error("Padding must be a finite positive number");
         }
@@ -111,8 +118,18 @@ export class Padding {
     set left(val) {
         if (isFinite(val) && val >= 0) {
             privates(this).left = val;
+            this.onChange.invoke();
         } else {
             throw new Error("Padding must be a finite positive number");
         }
+    }
+
+    /** @type {HandlerList} */
+    get onChange() {
+        return privates(this).events.onChange;
+    }
+
+    set onChange(val) {
+        throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
     }
 }

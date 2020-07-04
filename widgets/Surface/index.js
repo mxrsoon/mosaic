@@ -101,7 +101,14 @@ export class Surface extends Widget {
 			throw new Error("Shape must be of Shape class");
 		}
 
+		const currentValue = privates(this).props.shape;
+
+		if (currentValue) {
+			currentValue.onChange.remove(this.invalidate);
+		}
+		
 		privates(this).props.shape = val;
+		val.onChange.add(this.invalidate);
 		this.invalidate();
 	}
 
