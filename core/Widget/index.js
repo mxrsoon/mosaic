@@ -1,4 +1,4 @@
-import { PrivateFields, PropertySet, HandlerList } from "../../utils/index.js";
+import { PrivateFields, PropertySet, EventHandlerList } from "../../utils/index.js";
 import { Length, Padding } from "../../layout/index.js";
 import { Visibility } from "../index.js";
 
@@ -23,12 +23,12 @@ const privates = new PrivateFields(function(props = {}) {
 		drawHandle: undefined,
 
 		events: {
-			onClick: new HandlerList(),
-			onPointerDown: new HandlerList(),
-			onPointerMove: new HandlerList(),
-			onPointerUp: new HandlerList(),
-			onFocus: new HandlerList(),
-			onFocusLost: new HandlerList()
+			onClick: new EventHandlerList(),
+			onPointerDown: new EventHandlerList(),
+			onPointerMove: new EventHandlerList(),
+			onPointerUp: new EventHandlerList(),
+			onFocus: new EventHandlerList(),
+			onFocusLost: new EventHandlerList()
 		},
 		
 		get props() {
@@ -182,7 +182,7 @@ export class Widget {
 		}
 	}
 
-	/** @type {HandlerList} */
+	/** @type {EventHandlerList} */
 	get onClick() {
 		return privates(this).events.onClick;
 	}
@@ -191,7 +191,7 @@ export class Widget {
 		throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
 	}
 
-	/** @type {HandlerList} */
+	/** @type {EventHandlerList} */
 	get onPointerDown() {
 		return privates(this).events.onPointerDown;
 	}
@@ -200,7 +200,7 @@ export class Widget {
 		throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
 	}
 
-	/** @type {HandlerList} */
+	/** @type {EventHandlerList} */
 	get onPointerMove() {
 		return privates(this).events.onPointerMove;
 	}
@@ -209,7 +209,7 @@ export class Widget {
 		throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
 	}
 
-	/** @type {HandlerList} */
+	/** @type {EventHandlerList} */
 	get onPointerUp() {
 		return privates(this).events.onPointerUp;
 	}
@@ -218,7 +218,7 @@ export class Widget {
 		throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
 	}
 
-	/** @type {HandlerList} */
+	/** @type {EventHandlerList} */
 	get onFocus() {
 		return privates(this).events.onFocus;
 	}
@@ -227,7 +227,7 @@ export class Widget {
 		throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
 	}
 
-	/** @type {HandlerList} */
+	/** @type {EventHandlerList} */
 	get onFocusLost() {
 		return privates(this).events.onFocusLost;
 	}

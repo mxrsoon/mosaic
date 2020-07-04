@@ -1,4 +1,4 @@
-import { PrivateFields, HandlerList } from "../../utils/index.js";
+import { PrivateFields, EventHandlerList } from "../../utils/index.js";
 import { Length } from "../../layout/index.js";
 
 /* Private fields for Padding class */
@@ -10,7 +10,7 @@ const privates = new PrivateFields(function() {
         left: 0,
 
         events: {
-            onChange: new HandlerList()
+            onChange: new EventHandlerList()
         }
     };
 });
@@ -124,7 +124,7 @@ export class Padding {
         }
     }
 
-    /** @type {HandlerList} */
+    /** @type {EventHandlerList} */
     get onChange() {
         return privates(this).events.onChange;
     }

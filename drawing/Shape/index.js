@@ -1,6 +1,6 @@
 import { FillRule } from "../index.js";
 import { Length } from "../../layout/index.js";
-import { Abstract, PrivateFields, HandlerList } from "../../utils/index.js";
+import { Abstract, PrivateFields, EventHandlerList } from "../../utils/index.js";
 
 /* Static private hit testing context */
 const hitTestingContext = new OffscreenCanvas(0, 0).getContext("2d");
@@ -9,7 +9,7 @@ const hitTestingContext = new OffscreenCanvas(0, 0).getContext("2d");
 const privates = new PrivateFields(function() {
     return {
         events: {
-            onChange: new HandlerList()
+            onChange: new EventHandlerList()
         }
     };
 });
@@ -24,7 +24,7 @@ export class Shape extends Abstract {
 		privates.setup(this);
 	}
 
-	/** @type {HandlerList} */
+	/** @type {EventHandlerList} */
     get onChange() {
         return privates(this).events.onChange;
     }

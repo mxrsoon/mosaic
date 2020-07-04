@@ -1,4 +1,4 @@
-import { Abstract, PrivateFields, HandlerList } from "../../../utils/index.js";
+import { Abstract, PrivateFields, EventHandlerList } from "../../../utils/index.js";
 import { Canvas } from "../../../drawing/canvas/index.js";
 import { Platform } from "../../platform/index.js";
 
@@ -6,7 +6,7 @@ import { Platform } from "../../platform/index.js";
 const privates = new PrivateFields(function() {
     return {
         events: {
-            onResize: new HandlerList()
+            onResize: new EventHandlerList()
         }
     };
 });
@@ -37,7 +37,7 @@ export class Viewport extends Abstract {
 
     /**
      * Viewport resize event handlers.
-     * @type {HandlerList}
+     * @type {EventHandlerList}
      */
     get onResize() {
         return privates(this).events.onResize;

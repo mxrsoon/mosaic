@@ -1,4 +1,4 @@
-import { PrivateFields, PropertySet, HandlerList } from "../../utils/index.js";
+import { PrivateFields, PropertySet, EventHandlerList } from "../../utils/index.js";
 import { View, Widget } from "../index.js";
 import { Canvas } from "../../drawing/canvas/index.js";
 import { Theme } from "../../resources/index.js";
@@ -24,11 +24,11 @@ const privates = new PrivateFields(function(props = {}) {
 		focusedWidget: undefined,
 
 		events: {
-			onClick: new HandlerList(),
-			onPointerDown: new HandlerList(),
-			onPointerMove: new HandlerList(),
-			onPointerUp: new HandlerList(),
-			onResize: new HandlerList()
+			onClick: new EventHandlerList(),
+			onPointerDown: new EventHandlerList(),
+			onPointerMove: new EventHandlerList(),
+			onPointerUp: new EventHandlerList(),
+			onResize: new EventHandlerList()
 		},
 
 		get props() {
@@ -211,7 +211,7 @@ export class Application {
 		this.invalidate();
 	}
 
-	/** @type {HandlerList} */
+	/** @type {EventHandlerList} */
 	get onResize() {
 		return privates(this).events.onResize;
 	}
@@ -220,7 +220,7 @@ export class Application {
 		throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
 	}
 
-	/** @type {HandlerList} */
+	/** @type {EventHandlerList} */
 	get onClick() {
 		return privates(this).events.onClick;
 	}
@@ -229,7 +229,7 @@ export class Application {
 		throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
 	}
 
-	/** @type {HandlerList} */
+	/** @type {EventHandlerList} */
 	get onPointerDown() {
 		return privates(this).events.onPointerDown;
 	}
@@ -238,7 +238,7 @@ export class Application {
 		throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
 	}
 
-	/** @type {HandlerList} */
+	/** @type {EventHandlerList} */
 	get onPointerMove() {
 		return privates(this).events.onPointerMove;
 	}
@@ -247,7 +247,7 @@ export class Application {
 		throw new Error("Event handler lists are readonly, use the 'add(handler)' function");
 	}
 
-	/** @type {HandlerList} */
+	/** @type {EventHandlerList} */
 	get onPointerUp() {
 		return privates(this).events.onPointerUp;
 	}

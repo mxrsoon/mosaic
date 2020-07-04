@@ -1,13 +1,13 @@
 import { PrivateFields } from "../index.js";
 
-/* Private fields for HandlerList class */
+/* Private fields for EventHandlerList class */
 const privates = new PrivateFields(function() {
 	return {
 		handlers: []
 	};
 });
 
-export class HandlerList {
+export class EventHandlerList {
 	constructor(initialHandlers) {
 		privates.setup(this);
 
@@ -24,10 +24,10 @@ export class HandlerList {
 	}
 	
 	add(handler) {
-		if (handler instanceof HandlerList) {
+		if (handler instanceof EventHandlerList) {
 			handler = handler.invoke;
 		} else if (typeof(handler) !== "function") {
-			throw new Error("Event handler must be a function or HandlerList");
+			throw new Error("Event handler must be a function or EventHandlerList");
 		}
 
 		if (!privates(this).handlers.includes(handler)) {
@@ -36,7 +36,7 @@ export class HandlerList {
 	}
 	
 	remove(handler) {
-		if (handler instanceof HandlerList) {
+		if (handler instanceof EventHandlerList) {
 			handler = handler.invoke;
 		}
 
