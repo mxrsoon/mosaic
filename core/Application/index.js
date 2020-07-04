@@ -24,7 +24,14 @@ const privates = new PrivateFields(function(props = {}) {
 		focusedWidget: undefined,
 
 		events: {
-			onClick: new EventHandlerList(),
+			onClick: new EventHandlerList(({ widgets }) => {
+				if (widgets.length > 0 && widgets[0].focusable) {
+					widgets[0].focus();
+				} else {
+					this.focusedWidget = undefined;
+				}
+			}),
+
 			onPointerDown: new EventHandlerList(),
 			onPointerMove: new EventHandlerList(),
 			onPointerUp: new EventHandlerList(),
@@ -54,19 +61,9 @@ const privates = new PrivateFields(function(props = {}) {
 						}
 					}
 
-					if (!handled) {
-						this[handlerName].invoke({ x: e.clientX, y: e.clientY });
-					}
-
-					if (handlerName === "onClick") {
-						if (widgets.length > 0 && widgets[0].focusable) {
-							this.focusedWidget = widgets[0];
-						} else {
-							this.focusedWidget = undefined;
-						}
-					}
+					this[handlerName].invoke({ x: e.clientX, y: e.clientY, widgets: widgets, handled: handled });
 				} else {
-					this[handlerName].invoke({ x: e.clientX, y: e.clientY });
+					this[handlerName].invoke({ x: e.clientX, y: e.clientY, widgets: [], handled: false });
 				}
 			};
 		},
