@@ -292,7 +292,6 @@ export class Application {
 	
 	/** Draw the application on screen. */
 	draw() {
-		/** @type {Canvas} */
 		const canvas = this.viewport.canvas;
 
 		canvas.width = window.innerWidth * this.scaleFactor;
