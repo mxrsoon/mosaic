@@ -1,6 +1,7 @@
 import { PrivateFields, PropertySet, EventHandlerList } from "../../utils/index.js";
 import { Length, Padding } from "../../layout/index.js";
 import { Visibility } from "../index.js";
+import { Application } from "../index.js";
 
 /* Default properties for Widget class. */
 const properties = new PropertySet(function() {
@@ -47,21 +48,19 @@ export class Widget {
 	 */
 	constructor(props) {
 		privates.setup(this);
-		
-		Object.defineProperty(this, "application", {
-			enumerable: true,
-			configurable: false,
-			
-			get() {
-				if (this.parent) {
-					return this.parent.application;
-				}
-				
-				return undefined;
-			}
-		});
-
 		properties.apply(this, props);
+	}
+
+	/** 
+	 * Application which this Widget is associated to.
+	 * @type {?Application}
+	 */
+	get application() {
+		if (this.parent) {
+			return this.parent.application;
+		}
+		
+		return undefined;
 	}
 
 	/** 
