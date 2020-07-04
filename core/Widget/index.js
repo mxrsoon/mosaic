@@ -172,6 +172,10 @@ export class Widget {
 		privates(this).props.focusable = val;
 	}
 
+	get focused() {
+		return this.application && this.application.focusedWidget === this;
+	}
+
 	get visibility() {
 		return privates(this).props.visibility;
 	}
