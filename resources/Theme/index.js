@@ -31,6 +31,11 @@ export class Theme {
         }
     }
 
+    /**
+     * Gets a color from the theme by it's name.
+     * @param {string} colorName - Color name.
+     * @returns {?Color} Color whose key matches the given name.
+     */
     getColor(colorName) {
         if (privates(this).colors[colorName] instanceof Color) {
             return privates(this).colors[colorName];

@@ -1,7 +1,4 @@
-import { PrivateFields, Abstract } from "../../../utils/index.js";
-import { Style } from "../../index.js";
-import { TextOptions, TextMetrics } from "../../text/index.js";
-import { Platform } from "../../../core/platform/index.js";
+import { Abstract } from "../../../utils/index.js";
 
 /**
  * Canvas for drawing paths, shapes, text and images.
@@ -107,14 +104,5 @@ export class Canvas extends Abstract {
 	/** Clear the entire canvas. */
 	clear() {
 		throw new Error("Not implemented");
-	}
-
-	/** 
-	 * Instantiates the Canvas implementation for the current platform.
-	 * @param {object} props - Canvas initial properties.
-	 * @returns {Canvas} Instance of the Canvas implementation for the current platform.
-	 */
-	static createForCurrentPlatform(props) {
-		return Platform.current.createCanvas(props);
 	}
 }

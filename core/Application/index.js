@@ -1,9 +1,7 @@
 import { PrivateFields, PropertySet, EventHandlerList } from "../../utils/index.js";
 import { View, Widget } from "../index.js";
-import { Canvas } from "../../drawing/canvas/index.js";
 import { Theme } from "../../resources/index.js";
-import { Platform } from "../platform/index.js";
-import { Viewport } from "../viewport/index.js";
+import { Viewport } from "mosaic/platform/core/index.js"
 
 /* Reference to the Application instance associated with current JS context. */
 let currentApplication;
@@ -19,7 +17,6 @@ const properties = new PropertySet(function() {
 /* Private fields for Application class. */
 const privates = new PrivateFields(function(props = {}) {
 	return {
-		viewport: undefined,
 		drawHandle: undefined,
 		focusedWidget: undefined,
 
@@ -88,8 +85,6 @@ export class Application {
 		}
 
 		privates.setup(this);
-		
-		privates(this).viewport = Platform.current.viewport;
 
 		privates(this).setupEvents();
 		privates(this).resize(this.viewport.width, this.viewport.height);
@@ -152,11 +147,11 @@ export class Application {
 	}
 
 	/**
-	 * Current viewport used for displaying this application.
+	 * The viewport used for displaying this application.
 	 * @type {Viewport}
 	 */
 	get viewport() {
-		return privates(this).viewport;
+		return Viewport;
 	}
 
 	/**

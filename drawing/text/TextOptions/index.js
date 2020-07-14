@@ -1,6 +1,6 @@
 import { PropertySet, PrivateFields } from "../../../utils/index.js";
 import { Length } from "../../../layout/index.js";
-import { Canvas } from "../../canvas/index.js";
+import { Canvas } from "mosaic/platform/drawing/index.js";
 
 /* Default properties for TextOptions class. */
 const properties = new PropertySet(function() {
@@ -73,6 +73,6 @@ export class TextOptions {
      * @returns {TextMetrics} Resulting metrics.
      */
     measure(text) {
-        return Canvas.createForCurrentPlatform().measureText(text, this);
+        return new Canvas().measureText(text, this);
     }
 }
