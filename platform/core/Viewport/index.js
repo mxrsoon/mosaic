@@ -1,13 +1,6 @@
 import { EventHandlerList, Static } from "../../../utils/index.js";
 import { Canvas } from "../../drawing/Canvas/index.js";
 
-/* Private fields for Viewport class. */
-const privates = {
-    events: {
-        onResize: new EventHandlerList()
-    }
-};
-
 /**
  * A class to represent application viewports.
  */
@@ -17,7 +10,7 @@ export class Viewport extends Static {
      * @type {EventHandlerList}
      */
     static get onResize() {
-        return privates.events.onResize;
+        throw new Error("Not implemented");
     }
 
     /**
