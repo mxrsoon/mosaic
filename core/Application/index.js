@@ -47,20 +47,20 @@ const privates = new PrivateFields(function(props = {}) {
 		filterPointerEvent(handlerName) {
 			return (e) => {
 				if (this.view) {
-					const widgets = this.view.getWidgetsAt(e.clientX, e.clientY);
+					const widgets = this.view.getWidgetsAt(e.x, e.y);
 					let handled = false;
 
 					for (let widget of widgets) {
-						handled = widget[handlerName].invoke({ x: e.offsetX - widget.x, y: e.offsetY - widget.y });
+						handled = widget[handlerName].invoke({ x: e.x - widget.x, y: e.y - widget.y });
 						
 						if (handled) {
 							break;
 						}
 					}
 
-					this[handlerName].invoke({ x: e.clientX, y: e.clientY, widgets: widgets, handled: handled });
+					this[handlerName].invoke({ x: e.x, y: e.y, widgets: widgets, handled: handled });
 				} else {
-					this[handlerName].invoke({ x: e.clientX, y: e.clientY, widgets: [], handled: false });
+					this[handlerName].invoke({ x: e.x, y: e.y, widgets: [], handled: false });
 				}
 			};
 		},
