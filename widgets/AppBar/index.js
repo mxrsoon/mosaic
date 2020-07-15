@@ -1,7 +1,7 @@
-import { Color, ShadowStyle } from "../../drawing/index.js";
-import { ThemeColor } from "../../resources/index.js";
-import { PropertySet } from "../../utils/index.js";
-import { Surface } from "../index.js";
+import { Color, ShadowStyle } from "@mosaic/drawing/index.js";
+import { ThemeColor } from "@mosaic/resources/index.js";
+import { PropertySet } from "@mosaic/utils/index.js";
+import { Surface } from "@mosaic/widgets/index.js";
 
 /* Default properties for AppBar class. */
 const properties = new PropertySet(function() {

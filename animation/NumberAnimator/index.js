@@ -1,5 +1,5 @@
-import { Animator, AnimationState } from "../index.js";
-import { PropertySet, PrivateFields } from "../../utils/index.js";
+import { Animator, AnimationState } from "@mosaic/animation/index.js";
+import { PropertySet, PrivateFields } from "@mosaic/utils/index.js";
 
 /* Default properties for NumberAnimator class */
 const properties = new PropertySet(function() {

@@ -1,5 +1,5 @@
-import { EventHandlerList, Static } from "../../../utils/index.js";
-import { Canvas } from "../../drawing/Canvas/index.js";
+import { EventHandlerList, Static } from "@mosaic/utils/index.js";
+import { Canvas } from "@mosaic/platform/drawing/Canvas/index.js";
 
 /**
  * A class to represent application viewports.

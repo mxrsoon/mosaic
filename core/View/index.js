@@ -1,7 +1,7 @@
-import { PropertySet, PrivateFields } from "../../utils/index.js";
-import { ThemeColor } from "../../resources/index.js";
-import { Color, FillStyle } from "../../drawing/index.js";
-import { Container } from "../index.js";
+import { PropertySet, PrivateFields } from "@mosaic/utils/index.js";
+import { ThemeColor } from "@mosaic/resources/index.js";
+import { Color, FillStyle } from "@mosaic/drawing/index.js";
+import { Container } from "@mosaic/core/index.js";
 
 /* Default properties for Container class. */
 const properties = new PropertySet(function() {

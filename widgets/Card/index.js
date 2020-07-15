@@ -1,7 +1,7 @@
-import { Color, ShadowStyle, CornerRadius, RectangleShape } from "../../drawing/index.js";
-import { ThemeColor } from "../../resources/index.js";
-import { PropertySet } from "../../utils/index.js";
-import { SurfaceContainer } from "../index.js";
+import { Color, ShadowStyle, CornerRadius, RectangleShape } from "@mosaic/drawing/index.js";
+import { ThemeColor } from "@mosaic/resources/index.js";
+import { PropertySet } from "@mosaic/utils/index.js";
+import { SurfaceContainer } from "@mosaic/widgets/index.js";
 
 /* Default properties for Card class. */
 const properties = new PropertySet(function() {

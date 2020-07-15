@@ -1,7 +1,6 @@
-import { PrivateFields, PropertySet, EventHandlerList } from "../../utils/index.js";
-import { Length, Padding } from "../../layout/index.js";
-import { Visibility } from "../index.js";
-import { Application } from "../index.js";
+import { PrivateFields, PropertySet, EventHandlerList } from "@mosaic/utils/index.js";
+import { Length, Padding } from "@mosaic/layout/index.js";
+import { Visibility, Application } from "@mosaic/core/index.js";
 
 /* Default properties for Widget class. */
 const properties = new PropertySet(function() {

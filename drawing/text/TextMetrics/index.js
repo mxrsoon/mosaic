@@ -1,4 +1,4 @@
-import { PrivateFields, PropertySet } from "../../../utils/index.js";
+import { PrivateFields, PropertySet } from "@mosaic/utils/index.js";
 
 /* Default properties for TextOptions class. */
 const properties = new PropertySet(function() {

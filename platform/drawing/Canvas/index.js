@@ -1,4 +1,4 @@
-import { Abstract } from "../../../utils/index.js";
+import { Abstract } from "@mosaic/utils/index.js";
 
 /**
  * Canvas for drawing paths, shapes, text and images.

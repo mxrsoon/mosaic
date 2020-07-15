@@ -1,4 +1,4 @@
-import { Style, Color } from "../index.js";
+import { Style, Color } from "@mosaic/drawing/index.js";
 
 /**
  * Draw style that applies a fill color to paths being drawn.

@@ -1,5 +1,5 @@
-import { Length } from "../index.js";
-import { PrivateFields } from "../../utils/index.js";
+import { Length } from "@mosaic/layout/index.js";
+import { PrivateFields } from "@mosaic/utils/index.js";
 
 /* Private fields for PixelLength class */
 const privates = new PrivateFields(function(pixels) {

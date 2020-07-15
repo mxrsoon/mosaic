@@ -1,4 +1,4 @@
-import { PrivateFields } from "../index.js";
+import { PrivateFields } from "@mosaic/utils/index.js";
 
 /* Private fields for EventHandlerList class */
 const privates = new PrivateFields(function() {

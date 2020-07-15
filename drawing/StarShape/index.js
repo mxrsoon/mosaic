@@ -1,5 +1,5 @@
-import { Shape } from "../index.js";
-import { PrivateFields } from "../../utils/index.js";
+import { Shape } from "@mosaic/drawing/index.js";
+import { PrivateFields } from "@mosaic/utils/index.js";
 
 /* Private fields for StarShape class. */
 const privates = new PrivateFields(function() {

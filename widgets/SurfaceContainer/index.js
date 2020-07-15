@@ -1,6 +1,6 @@
-import { Container, Visibility } from "../../core/index.js";
-import { Color, FillStyle, ShadowStyle, StrokeStyle, Shape, RectangleShape } from "../../drawing/index.js";
-import { PropertySet, PrivateFields } from "../../utils/index.js";
+import { Container, Visibility } from "@mosaic/core/index.js";
+import { Color, FillStyle, ShadowStyle, StrokeStyle, Shape, RectangleShape } from "@mosaic/drawing/index.js";
+import { PropertySet, PrivateFields } from "@mosaic/utils/index.js";
 
 /* Default properties for SurfaceContainer class. */
 const properties = new PropertySet(function() {

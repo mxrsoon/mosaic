@@ -1,5 +1,5 @@
-import { Static } from "../../utils/index.js";
-import { Viewport } from "../core/index.js";
+import { Static } from "@mosaic/utils/index.js";
+import { Viewport } from "@mosaic/platform/core/index.js";
 
 /**
  * Contains information about the current platform and associated managers.

@@ -1,5 +1,5 @@
-import { Shape, CornerRadius } from "../index.js";
-import { PrivateFields } from "../../utils/index.js";
+import { Shape, CornerRadius } from "@mosaic/drawing/index.js";
+import { PrivateFields } from "@mosaic/utils/index.js";
 
 /* Private fields for RectangleShape class. */
 const privates = new PrivateFields(function() {

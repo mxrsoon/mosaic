@@ -1,7 +1,6 @@
-import { PrivateFields } from "../../utils/index.js";
-import { Color } from "../../drawing/index.js";
-import { Theme } from "../index.js";
-import { Application } from "../../core/index.js";
+import { PrivateFields } from "@mosaic/utils/index.js";
+import { Color } from "@mosaic/drawing/index.js";
+import { Application } from "@mosaic/core/index.js";
 
 /* Private fields for ThemeColor class */
 const privates = new PrivateFields(function(name, defColor) {

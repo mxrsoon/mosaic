@@ -1,4 +1,4 @@
-import { Static } from "../index.js";
+import { Static } from "@mosaic/utils/index.js";
 
 export class ColorUtils extends Static {
 	static validateHsv(h, s, v, a) {

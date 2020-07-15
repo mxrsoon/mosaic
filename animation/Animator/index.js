@@ -1,8 +1,8 @@
-import { PrivateFields, PropertySet, Abstract } from "../../utils/index.js";
-import { Interpolator, LinearInterpolator } from "../index.js";
+import { PrivateFields, PropertySet, Abstract } from "@mosaic/utils/index.js";
+import { Interpolator, LinearInterpolator } from "@mosaic/animation/index.js";
 
 /** @ignore */
-import { Enum } from "../../utils/index.js";
+import { Enum } from "@mosaic/utils/index.js";
 
 /* Default properties for Animator class */
 const properties = new PropertySet(function() {

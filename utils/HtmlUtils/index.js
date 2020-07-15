@@ -1,4 +1,4 @@
-import { Static } from "../index.js";
+import { Static } from "@mosaic/utils/index.js";
 
 export class HtmlUtils extends Static {
     static documentReady() {
