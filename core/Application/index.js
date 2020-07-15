@@ -288,11 +288,6 @@ export class Application {
 	/** Draw the application on screen. */
 	draw() {
 		const canvas = this.viewport.canvas;
-
-		canvas.width = this.viewport.width * this.scaleFactor;
-		canvas.height = this.viewport.height * this.scaleFactor;
-		canvas.scaleFactor = this.scaleFactor;
-		
 		canvas.clear();
 		
 		if (this.view) {
