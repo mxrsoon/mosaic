@@ -5,5 +5,4 @@ export * from "./PrivateFields/index.js";
 export * from "./PropertySet/index.js";
 export * from "./EventHandlerList/index.js";
 export * from "./ColorUtils/index.js";
-export * from "./HtmlUtils/index.js";
 export * from "./WidgetList/index.js";
