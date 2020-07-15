@@ -7,4 +7,4 @@ After some more progress in development, this readme will be updated.
 Mosaic's (incomplete) documentation can be found [here](https://wazybr.github.io/mosaic-docs/).
 
 # Sample application
-A very simple application using Mosaic can be seen [here](https://wazybr.github.io/mosaic-sample/). It will be updated as the framework evolves.
+A very simple application using Mosaic can be seen [here](https://wazybr.github.io/mosaic-sample/), and it's source is [here](https://github.com/wazybr/mosaic-sample). It will be updated as the framework evolves.
