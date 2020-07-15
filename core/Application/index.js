@@ -1,7 +1,7 @@
-import { PrivateFields, PropertySet, EventHandlerList } from "@mosaic/utils/index.js";
-import { View, Widget } from "@mosaic/core/index.js";
-import { Theme } from "@mosaic/resources/index.js";
-import { Viewport } from "@mosaic/platform/core/index.js"
+import { PrivateFields, PropertySet, EventHandlerList } from "#mosaic/utils/index.js";
+import { View, Widget } from "#mosaic/core/index.js";
+import { Theme } from "#mosaic/resources/index.js";
+import { Viewport } from "#mosaic/platform/core/index.js"
 
 /* Reference to the Application instance associated with current JS context. */
 let currentApplication;

@@ -1,5 +1,5 @@
-import { Interpolator } from "@mosaic/animation/index.js";
-import { PrivateFields } from "@mosaic/utils/index.js";
+import { Interpolator } from "#mosaic/animation/index.js";
+import { PrivateFields } from "#mosaic/utils/index.js";
 
 /* Private fields for OvershootInterpolator class. */
 const privates = new PrivateFields(function() {

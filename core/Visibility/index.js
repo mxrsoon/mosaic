@@ -1,4 +1,4 @@
-import { Enum } from "@mosaic/utils/index.js";
+import { Enum } from "#mosaic/utils/index.js";
 
 /**
  * Enumerated values that indicates visibility state.

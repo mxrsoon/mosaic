@@ -1,5 +1,5 @@
-import { PrivateFields, EventHandlerList } from "@mosaic/utils/index.js";
-import { Length } from "@mosaic/layout/index.js";
+import { PrivateFields, EventHandlerList } from "#mosaic/utils/index.js";
+import { Length } from "#mosaic/layout/index.js";
 
 /* Private fields for CornerRadius class */
 const privates = new PrivateFields(function() {

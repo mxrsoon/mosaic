@@ -1,4 +1,4 @@
-import { Animator } from "@mosaic/animation/index.js";
+import { Animator } from "#mosaic/animation/index.js";
 
 /**
  * Class used for animating time-based things.

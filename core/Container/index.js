@@ -1,5 +1,5 @@
-import { Widget } from "@mosaic/core/index.js";
-import { PrivateFields, WidgetList, PropertySet } from "@mosaic/utils/index.js";
+import { Widget } from "#mosaic/core/index.js";
+import { PrivateFields, WidgetList, PropertySet } from "#mosaic/utils/index.js";
 
 /* Default properties for Container class. */
 const properties = new PropertySet(function() {

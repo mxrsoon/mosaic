@@ -1,4 +1,4 @@
-import { Abstract } from "@mosaic/utils/index.js";
+import { Abstract } from "#mosaic/utils/index.js";
 
 /**
  * Represents a drawing style that can be applied to a canvas draw instruction.

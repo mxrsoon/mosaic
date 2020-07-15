@@ -1,9 +1,9 @@
-import { PropertySet, PrivateFields } from "@mosaic/utils/index.js";
-import { Length } from "@mosaic/layout/index.js";
-import { Widget } from "@mosaic/core/index.js";
-import { ThemeColor } from "@mosaic/resources/index.js";
-import { FillStyle, Color } from "@mosaic/drawing/index.js";
-import { TextOptions } from "@mosaic/drawing/text/index.js";
+import { PropertySet, PrivateFields } from "#mosaic/utils/index.js";
+import { Length } from "#mosaic/layout/index.js";
+import { Widget } from "#mosaic/core/index.js";
+import { ThemeColor } from "#mosaic/resources/index.js";
+import { FillStyle, Color } from "#mosaic/drawing/index.js";
+import { TextOptions } from "#mosaic/drawing/text/index.js";
 
 /* Default properties for Text class. */
 const properties = new PropertySet(function() {

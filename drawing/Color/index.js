@@ -1,4 +1,4 @@
-import { PrivateFields, ColorUtils } from "@mosaic/utils/index.js";
+import { PrivateFields, ColorUtils } from "#mosaic/utils/index.js";
 
 /* Private fields for Color class */
 const privates = new PrivateFields(function() {

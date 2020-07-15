@@ -1,4 +1,4 @@
-import { Interpolator } from "@mosaic/animation/index.js";
+import { Interpolator } from "#mosaic/animation/index.js";
 
 /**
  * An interpolator where the change bounces at the end.

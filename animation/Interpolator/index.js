@@ -1,4 +1,4 @@
-import { Abstract } from "@mosaic/utils/index.js";
+import { Abstract } from "#mosaic/utils/index.js";
 
 /**
  * Interpolator class to be used with Animators.

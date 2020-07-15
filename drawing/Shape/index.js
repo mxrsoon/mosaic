@@ -1,6 +1,6 @@
-import { FillRule } from "@mosaic/drawing/index.js";
-import { Length } from "@mosaic/layout/index.js";
-import { Abstract, PrivateFields, EventHandlerList } from "@mosaic/utils/index.js";
+import { FillRule } from "#mosaic/drawing/index.js";
+import { Length } from "#mosaic/layout/index.js";
+import { Abstract, PrivateFields, EventHandlerList } from "#mosaic/utils/index.js";
 
 /* Static private hit testing context */
 const hitTestingContext = new OffscreenCanvas(0, 0).getContext("2d");

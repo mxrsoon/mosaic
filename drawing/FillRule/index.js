@@ -1,4 +1,4 @@
-import { Enum } from "@mosaic/utils/index.js";
+import { Enum } from "#mosaic/utils/index.js";
 
 /**
  * Enumerated values for path-filling rules.

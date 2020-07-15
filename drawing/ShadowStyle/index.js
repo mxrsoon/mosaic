@@ -1,5 +1,5 @@
-import { Style, Color } from "@mosaic/drawing/index.js";
-import { PrivateFields } from "@mosaic/utils/index.js";
+import { Style, Color } from "#mosaic/drawing/index.js";
+import { PrivateFields } from "#mosaic/utils/index.js";
 
 /* Private fields for ShadowStyle class. */
 const privates = new PrivateFields(function() {

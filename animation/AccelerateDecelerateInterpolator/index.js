@@ -1,4 +1,4 @@
-import { Interpolator } from "@mosaic/animation/index.js";
+import { Interpolator } from "#mosaic/animation/index.js";
 
 /**
  * An interpolator where the rate of change starts and ends slowly but accelerates through the middle.

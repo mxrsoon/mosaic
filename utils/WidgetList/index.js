@@ -1,5 +1,5 @@
-import { PrivateFields } from "@mosaic/utils/index.js";
-import { Widget } from "@mosaic/core/index.js";
+import { PrivateFields } from "#mosaic/utils/index.js";
+import { Widget } from "#mosaic/core/index.js";
 
 /* Private fields for WidgetList class */
 const privates = new PrivateFields(function() {

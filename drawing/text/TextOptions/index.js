@@ -1,6 +1,6 @@
-import { PropertySet, PrivateFields } from "@mosaic/utils/index.js";
-import { Length } from "@mosaic/layout/index.js";
-import { Canvas } from "@mosaic/platform/drawing/index.js";
+import { PropertySet, PrivateFields } from "#mosaic/utils/index.js";
+import { Length } from "#mosaic/layout/index.js";
+import { Canvas } from "#mosaic/platform/drawing/index.js";
 
 /* Default properties for TextOptions class. */
 const properties = new PropertySet(function() {
