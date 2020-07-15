@@ -29,7 +29,7 @@ export class ComplexLength extends Length {
             value = this.calculator();
         }
 
-        if (!window.isFinite(value)) {
+        if (!isFinite(value)) {
             throw new Error("Calculator function must return a finite numeric value");
         }
 

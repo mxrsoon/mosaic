@@ -66,10 +66,10 @@ const privates = new PrivateFields(function(props = {}) {
 		},
 
 		setupEvents() {
-			window.addEventListener("click", privates(this).filterPointerEvent("onClick"));
-			window.addEventListener("pointerdown", privates(this).filterPointerEvent("onPointerDown"));
-			window.addEventListener("pointermove", privates(this).filterPointerEvent("onPointerMove"));
-			window.addEventListener("pointerup", privates(this).filterPointerEvent("onPointerUp"));
+			this.viewport.onClick.add(privates(this).filterPointerEvent("onClick"));
+			this.viewport.onPointerDown.add(privates(this).filterPointerEvent("onPointerDown"));
+			this.viewport.onPointerMove.add(privates(this).filterPointerEvent("onPointerMove"));
+			this.viewport.onPointerUp.add(privates(this).filterPointerEvent("onPointerUp"));
 			this.viewport.onResize.add(privates(this).resize);
 		}
 	};
@@ -289,8 +289,8 @@ export class Application {
 	draw() {
 		const canvas = this.viewport.canvas;
 
-		canvas.width = window.innerWidth * this.scaleFactor;
-		canvas.height = window.innerHeight * this.scaleFactor;
+		canvas.width = this.viewport.width * this.scaleFactor;
+		canvas.height = this.viewport.height * this.scaleFactor;
 		canvas.scaleFactor = this.scaleFactor;
 		
 		canvas.clear();

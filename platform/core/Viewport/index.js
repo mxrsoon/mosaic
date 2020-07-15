@@ -6,6 +6,38 @@ import { Canvas } from "@mosaic/platform/drawing/Canvas/index.js";
  */
 export class Viewport extends Static {
     /**
+     * Viewport click event handlers.
+     * @type {EventHandlerList}
+     */
+    static get onClick() {
+        throw new Error("Not implemented");
+    }
+
+    /**
+     * Viewport pointer down event handlers.
+     * @type {EventHandlerList}
+     */
+    static get onPointerDown() {
+        throw new Error("Not implemented");
+    }
+
+    /**
+     * Viewport pointer move event handlers.
+     * @type {EventHandlerList}
+     */
+    static get onPointerMove() {
+        throw new Error("Not implemented");
+    }
+
+    /**
+     * Viewport pointer up event handlers.
+     * @type {EventHandlerList}
+     */
+    static get onPointerUp() {
+        throw new Error("Not implemented");
+    }
+
+    /**
      * Viewport resize event handlers.
      * @type {EventHandlerList}
      */
