@@ -20,11 +20,18 @@ const privates = new PrivateFields(function(props = {}) {
     };
 });
 
+/* Shared Canvas for text measurement */
+let measurementCanvas;
+
 /** Text rendering options. */
 export class TextOptions {
     constructor(props) {
         privates.setup(this);
         properties.apply(this, props);
+
+        if (!measurementCanvas) {
+            measurementCanvas = new Canvas();
+        }
     }
 
     /**
@@ -73,6 +80,6 @@ export class TextOptions {
      * @returns {TextMetrics} Resulting metrics.
      */
     measure(text) {
-        return new Canvas().measureText(text, this);
+        return measurementCanvas.measureText(text, this);
     }
 }

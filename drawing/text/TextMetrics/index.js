@@ -1,13 +1,4 @@
-import { PrivateFields, PropertySet } from "#mosaic/utils/index.js";
-
-/* Default properties for TextOptions class. */
-const properties = new PropertySet(function() {
-    return {
-        ascent: 0,
-        descent: 0,
-        width: 0
-    };
-});
+import { PrivateFields } from "#mosaic/utils/index.js";
 
 /* Private fields for TextMetrics class. */
 const privates = new PrivateFields(function(props = {}) {
@@ -24,9 +15,13 @@ const privates = new PrivateFields(function(props = {}) {
  * Class for representing text metrics.
  */
 export class TextMetrics {
-    constructor(props) {
+    constructor(props = {}) {
         privates.setup(this);
-        properties.apply(this, props);
+
+        this.ascent = props.ascent;
+        this.descent = props.descent;
+        this.width = props.width;
+
         privates(this).initialized = true;
     }
 
