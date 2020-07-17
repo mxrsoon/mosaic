@@ -286,19 +286,19 @@ export class Application {
     }
 	
 	/** Draw the application on screen. */
-	draw() {
+	draw = () => {
 		const canvas = this.viewport.canvas;
 		canvas.clear();
 		
 		privates(this).drawHandle = undefined;
-		
+
 		if (this.view) {
 			this.view.draw(canvas);
 		}
 	}
 
 	/** Invalidate the current render and schedule draw for next frame. */
-	invalidate() {
+	invalidate = () => {
 		if (typeof(privates(this).drawHandle) === "undefined") {
 			privates(this).drawHandle = requestAnimationFrame(this.draw);
 		}
