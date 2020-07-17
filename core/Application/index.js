@@ -290,6 +290,8 @@ export class Application {
 		const canvas = this.viewport.canvas;
 		canvas.clear();
 		
+		privates(this).drawHandle = undefined;
+		
 		if (this.view) {
 			this.view.draw(canvas);
 		}
@@ -298,10 +300,7 @@ export class Application {
 	/** Invalidate the current render and schedule draw for next frame. */
 	invalidate() {
 		if (typeof(privates(this).drawHandle) === "undefined") {
-			privates(this).drawHandle = requestAnimationFrame(() => {
-				this.draw();
-				privates(this).drawHandle = undefined;
-			});
+			privates(this).drawHandle = requestAnimationFrame(this.draw);
 		}
 	}
 
